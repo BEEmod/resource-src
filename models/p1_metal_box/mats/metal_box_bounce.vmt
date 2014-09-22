@@ -1,0 +1,23 @@
+"VertexLitGeneric"
+{
+	"$baseTexture" "models\props_ingame/Metal_box"
+
+
+	//"$bumpmap" "models\props_ingame\Metal_box_normal"
+	
+	"$phongexponenttexture" "models\props_ingame\Metal_box_exponent"
+
+
+  "$selfillum" 1
+
+	$bumpmap "paint/prop_paint_normal"
+	$phong 1
+	$phongexponent 50
+	$phongfresnelranges "[1 2 4]"
+	$phongboost 2
+	$model 1
+	$nodecal 1
+	$detail "paint/prop_paint_blue"
+	$detailScale 1
+	$detailblendmode 2
+}
