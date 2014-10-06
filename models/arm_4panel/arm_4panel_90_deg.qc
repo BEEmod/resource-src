@@ -2,10 +2,11 @@
 
 $modelname "props_ingame/tspen/arm_4panel_static_90.mdl"
 
-$bodygroup "Body"
-{
-	studio "arm_4panel_reference.smd"
-}
+//$staticprop
+
+$body "Body" "arm_4panel_reference.smd"
+
+$sequence "idle" "arm_4panel_anims/ramp_90_deg_open.smd"
 
 $cdmaterials "models/anim_wp/"
 
@@ -25,11 +26,6 @@ $texturegroup "skinfamilies"
 	}
 }
 
-// Model uses material "models\anim_wp\arm_64x64.vmt"
-// Model uses material "models\anim_wp\arm64x64_rail.vmt"
-
-$attachment "panel_attach" "panel_attach" 0 0 0 rotate 0 0 0
-
 $surfaceprop "metalpanel"
 
 $contents "solid"
@@ -43,8 +39,3 @@ $contents "solid"
 // $cbox 0 0 0 0 0 0
 
 // The hitbox info below was automatically generated when compiled because no hitbox info was provided.
-
-$sequence "idle" "arm_4panel_anims\ramp_90_deg.smd" {
-}
-
-$staticprop
