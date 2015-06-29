@@ -44,4 +44,6 @@ Icon
 *.vmx
 *.log
 *.prt
+*.bsp
+*.lin
 *.filelist.txt
