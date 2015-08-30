@@ -1,6 +1,6 @@
 // Created by Crowbar 0.19.0.0
 
-$modelname "props_ingame/cust_fizz.mdl"
+$modelname "BEE2/props_ingame/cust_fizz.mdl"
 
 $bodygroup "Body"
 {
@@ -16,7 +16,7 @@ $lod 25
 	replacemodel "fizzler_dynamic_reference.smd" "fizzler_dynamic_fizzler_reference_lod2.smd"
 }
 
-$cdmaterials "models\props_ingame\cust_fizz"
+$cdmaterials "BEE2\models\props_ingame\cust_fizz"
 
 $texturegroup "skinfamilies"
 {
