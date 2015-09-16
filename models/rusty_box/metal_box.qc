@@ -24,6 +24,7 @@ $lod 90
 
 $mostlyopaque
 
+$cdmaterials ""
 //$renamematerial "props/metal_box" "props/metal_box_skin003.vmt"
 
 $texturegroup "skinfamilies"
@@ -32,42 +33,36 @@ $texturegroup "skinfamilies"
 		"models/props/metal_box_skin003.vmt"
 	}
 	{
-		"models/props/metal_box_skin001.vmt"
+		"BEE2/models/props_ingame/metal_box_rusty/comp.vmt"
 	}
 	{
-		//"props/metal_box_skin002.vmt"
 		"models/props/metal_box_skin005.vmt"
 	}
 	{
 		"models/props/metal_box_skin003.vmt"
 	}
 	{
-		"models/props/metal_box_skin004.vmt"
-		//"props_ingame/metal_box_rusty/comp_on.vmt"
+		"BEE2/models/props_ingame/metal_box_rusty/comp_on.vmt"
 	}
 	{
 		"models/props/metal_box_skin005.vmt"
 	}
 	{
-		//"props/metal_box_bounce.vmt"
 		"BEE2/models/props_ingame/metal_box_rusty/bounce.vmt"
 	}
 	{
-		//"props/metal_box_speed.vmt"
 		"BEE2/models/props_ingame/metal_box_rusty/speed.vmt"
 	}
 	{
-		"models/props/metal_box_skin001_bounce.vmt"
+		"BEE2/models/props_ingame/metal_box_rusty/comp_bounce.vmt"
 	}
 	{
-		"models/props/metal_box_skin001_speed.vmt"
+		"BEE2/models/props_ingame/metal_box_rusty/comp_speed.vmt"
 	}
 	{
-		//"props/metal_box_skin002_bounce.vmt"
 		"BEE2/models/props_ingame/metal_box_rusty/on_bounce.vmt"
 	}
 	{
-		//"props/metal_box_skin002_speed.vmt"
 		"BEE2/models/props_ingame/metal_box_rusty/on_speed.vmt"
 	}
 }
@@ -100,8 +95,6 @@ $contents "solid"
 // The hitbox info below was automatically generated when compiled because no hitbox info was provided.
 // $hboxset "default"
 // $hbox 0 "static_prop" -17.816082 -17.816082 -17.815485 17.81583 17.816082 17.81583
-
-
 
 
 $sequence "idle" "metal_box_anims/idle.smd" {
