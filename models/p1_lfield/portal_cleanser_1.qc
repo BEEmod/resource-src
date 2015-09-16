@@ -1,6 +1,6 @@
 // Created by Crowbar 0.19.0.0
 
-$modelname "props_ingame/p1_lfield.mdl"
+$modelname "BEE2/props_ingame/p1_lfield.mdl"
 
 $staticprop
 
@@ -14,7 +14,7 @@ $lod 40
 	replacemodel "portal_cleanser_1_reference.smd" "portal_cleanser_1_reference_lod1.smd"
 }
 
-$cdmaterials "models\props_ingame\"
+$cdmaterials "BEE2/models/props_ingame/p1_lfield"
 
 // Model uses material "portal_cleanser.vmt"
 

@@ -2,7 +2,7 @@
 
 $modelname "BEE2/props_ingame/p1_switch.mdl"
 
-$cdmaterials "models/props_ingame/p1_switch"
+$cdmaterials "BEE2/models/props_ingame/p1_switch"
 
 $bodygroup "Body"
 {
@@ -47,9 +47,6 @@ $sequence "down" "switch001_anims\down.smd" {
 
 $sequence "up" "switch001_anims\up.smd" {
 	fps 30
-	{
-		event AE_CL_PLAYSOUND 0 "BEE2/p1/btn_up.wav"
-	}
 }
 
 $sequence "idle_down" "switch001_anims\idle_down.smd" {
@@ -60,9 +57,6 @@ $sequence "press" "switch001_anims\press.smd" {
 	fps 30
 	{
 		event AE_CL_PLAYSOUND 0 "BEE2/p1/btn_down.wav"
-	}
-	{
-		event AE_CL_PLAYSOUND 18 "BEE2/p1/btn_up.wav"
 	}
 }
 

@@ -1,4 +1,4 @@
-$modelname "props_ingame/p1_metal_box.mdl"
+$modelname "BEE2/props_ingame/p1_metal_box.mdl"
 $model "Body" "metal_box_reference.smd"
 $lod 15
  {
@@ -16,7 +16,7 @@ $lod 80
  {
   replacemodel "metal_box_reference" "lod4_metal_box_reference"
 }
-$cdmaterials "models/props_ingame/p1_metal_box"
+$cdmaterials "BEE2/models/props_ingame/p1_metal_box"
 $texturegroup skinfamilies
 {
 	{ "metal_box.vmt" } // stand deact
