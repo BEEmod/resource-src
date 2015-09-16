@@ -20,6 +20,8 @@ $lod 90
 	replacemodel "reflection_cube_reference.smd" "reflection_cube_reference_lod3.smd"
 }
 
+$cdmaterials ""
+
 $mostlyopaque
 
 $texturegroup "skinfamilies"
