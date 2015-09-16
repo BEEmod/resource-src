@@ -1,6 +1,6 @@
 // Created by Crowbar 0.19.0.0
 
-$modelname "props_ingame/metal_box_rusty.mdl"
+$modelname "BEE2/props_ingame/metal_box_rusty.mdl"
 
 $staticprop
 
@@ -24,53 +24,51 @@ $lod 90
 
 $mostlyopaque
 
-$cdmaterials "models/"
-
 //$renamematerial "props/metal_box" "props/metal_box_skin003.vmt"
 
 $texturegroup "skinfamilies"
 {
 	{
-		"props/metal_box_skin003.vmt"
+		"models/props/metal_box_skin003.vmt"
 	}
 	{
-		"props/metal_box_skin001.vmt"
+		"models/props/metal_box_skin001.vmt"
 	}
 	{
 		//"props/metal_box_skin002.vmt"
-		"props/metal_box_skin005.vmt"
+		"models/props/metal_box_skin005.vmt"
 	}
 	{
-		"props/metal_box_skin003.vmt"
+		"models/props/metal_box_skin003.vmt"
 	}
 	{
-		"props/metal_box_skin004.vmt"
+		"models/props/metal_box_skin004.vmt"
 		//"props_ingame/metal_box_rusty/comp_on.vmt"
 	}
 	{
-		"props/metal_box_skin005.vmt"
+		"models/props/metal_box_skin005.vmt"
 	}
 	{
 		//"props/metal_box_bounce.vmt"
-		"props_ingame/metal_box_rusty/bounce.vmt"
+		"BEE2/models/props_ingame/metal_box_rusty/bounce.vmt"
 	}
 	{
 		//"props/metal_box_speed.vmt"
-		"props_ingame/metal_box_rusty/speed.vmt"
+		"BEE2/models/props_ingame/metal_box_rusty/speed.vmt"
 	}
 	{
-		"props/metal_box_skin001_bounce.vmt"
+		"models/props/metal_box_skin001_bounce.vmt"
 	}
 	{
-		"props/metal_box_skin001_speed.vmt"
+		"models/props/metal_box_skin001_speed.vmt"
 	}
 	{
 		//"props/metal_box_skin002_bounce.vmt"
-		"props_ingame/metal_box_rusty/on_bounce.vmt"
+		"BEE2/models/props_ingame/metal_box_rusty/on_bounce.vmt"
 	}
 	{
 		//"props/metal_box_skin002_speed.vmt"
-		"props_ingame/metal_box_rusty/on_speed.vmt"
+		"BEE2/models/props_ingame/metal_box_rusty/on_speed.vmt"
 	}
 }
 

@@ -1,6 +1,6 @@
 // Created by Crowbar 0.19.0.0
 
-$modelname "props_ingame/reflection_cube_rusty.mdl"
+$modelname "BEE2/props_ingame/reflection_cube_rusty.mdl"
 
 $bodygroup "Body"
 {
@@ -22,21 +22,19 @@ $lod 90
 
 $mostlyopaque
 
-$cdmaterials "models/"
-
 $texturegroup "skinfamilies"
 {
 	{
-		"props/reflecto_cube_shell_rusted.vmt"
+		"models/props/reflecto_cube_shell_rusted.vmt"
 	}
 	{
-		"props/reflecto_cube_shell_rusted.vmt"
+		"models/props/reflecto_cube_shell_rusted.vmt"
 	}
 	{
-		"props_ingame/reflecto_cube_dirty_bounce.vmt"
+		"BEE2/models/props_ingame/reflecto_cube_dirty_bounce.vmt"
 	}
 	{
-		"props_ingame/reflecto_cube_dirty_speed.vmt"
+		"BEE2/models/props_ingame/reflecto_cube_dirty_speed.vmt"
 	}
 	// {
 		// "reflecto_cube_shell_schrodinger.vmt"
