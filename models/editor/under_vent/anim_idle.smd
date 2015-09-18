@@ -1,0 +1,18 @@
+version 1
+nodes
+0 "base" -1
+1 "vert" 0
+2 "north" 1
+3 "south" 1
+4 "east" 1
+5 "west" 1
+end
+skeleton
+time 0
+0  0 0 0  0 0 0
+1  0 0 0  0 0 0
+2  0 0 0  0 0 0
+3  0 0 0  0 0 0
+4  0 0 0  0 0 0
+5  0 0 0  0 0 0
+end
