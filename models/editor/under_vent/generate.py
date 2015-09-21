@@ -28,8 +28,11 @@ time {time}
  5  {nhoriz} 0 0\t0 0 0
 """
 
-H_FRAMES = range(0, 34, 2)
-V_FRAMES = [0, 2] + list(range(4, 64, 4))
+H_FRAMES = range(0, 38, 4)
+V_FRAMES = [0, 4] + list(range(4, 64, 8))
+
+assert len(H_FRAMES) == len(V_FRAMES)
+
 for file, horiz, vert in [
         ('anim_expand.smd', H_FRAMES, V_FRAMES),
         ('anim_contract.smd', H_FRAMES[::-1], V_FRAMES[::-1]),
