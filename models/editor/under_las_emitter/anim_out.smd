@@ -1,0 +1,16 @@
+version 1
+nodes
+0 "base"       -1
+1 "lens_b"     0
+2 "lens_t"     1
+3 "cable"      0
+4 "electrics"  3
+end
+skeleton
+time 0
+ 0  0 0 0	0 0 0
+ 1  0 0 24	0 0 2.268928
+ 2  0 0 16	0 0 2.268928
+ 3  0 -8.0 15	 0 0 0
+ 4  0 -12 12	 0 0 0
+end
