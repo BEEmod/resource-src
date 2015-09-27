@@ -1,8 +1,8 @@
 $modelname "props_map_editor/under_las_catcher_offset.mdl"
 
-$body "Body" "laser_catcher_offset.smd"
-
 $origin 0 -32 0
+
+$body "Body" "laser_catcher_offset.smd"
 
 $cdmaterials "BEE2/models/props_map_editor/"
 
