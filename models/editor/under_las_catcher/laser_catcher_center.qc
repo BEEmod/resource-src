@@ -1,8 +1,9 @@
 $modelname "props_map_editor/under_las_catcher_center.mdl"
 
+$origin 0 0 0
+
 $body "Body" "laser_catcher_center.smd"
 
-$origin 0 0 0
 
 $cdmaterials "BEE2/models/props_map_editor/"
 
@@ -10,14 +11,14 @@ $sequence "idle" "anim_idle.smd" {
 	fps 30
 }
 
-$sequence "expand" "anim_expand.smd" {
+$sequence "expand" "anim_expand_cent.smd" {
 	fps 30
 }
 
-$sequence "contract" "anim_contract.smd" {
+$sequence "contract" "anim_contract_cent.smd" {
 	fps 30
 }
 
-$sequence "expand_idle" "anim_out.smd" {
+$sequence "expand_idle" "anim_out_cent.smd" {
 	fps 30
 }

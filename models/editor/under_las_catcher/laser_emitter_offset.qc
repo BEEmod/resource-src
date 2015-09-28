@@ -6,18 +6,18 @@ $body "Body" "laser_catcher_offset.smd"
 
 $cdmaterials "BEE2/models/props_map_editor/"
 
-$sequence "idle" "anim_idle.smd" {
+$sequence "idle" "laser_catcher_offset.smd" {
 	fps 30
 }
 
-$sequence "expand" "anim_expand.smd" {
+$sequence "expand" "anim_expand_off.smd" {
 	fps 30
 }
 
-$sequence "contract" "anim_contract.smd" {
+$sequence "contract" "anim_contract_off.smd" {
 	fps 30
 }
 
-$sequence "expand_idle" "anim_out.smd" {
+$sequence "expand_idle" "anim_out_off.smd" {
 	fps 30
 }
