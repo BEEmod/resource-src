@@ -1,6 +1,6 @@
-$modelname "props_map_editor/ts_under_dropper.mdl"
+$modelname "props_map_editor/under_dropper.mdl"
 
-$cdmaterials "models/props_map_editor/tspen"
+$cdmaterials "BEE2/models/props_map_editor/"
 $body "Body" "ts_under_dropper_ref.smd"
 $origin 0 0 64
 
