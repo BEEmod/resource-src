@@ -1,0 +1,18 @@
+version 1
+nodes
+0 "base" -1
+1 "top"   0
+2 "north" 0
+3 "south" 0
+4 "east"  0
+5 "west"  0
+end
+skeleton
+time 0
+ 0  0 0 16	0 0 0
+ 1  0 0 2.666667	0 0 0
+ 2  0 8 0	0 0 0
+ 3  0 -8 0	0 0 0
+ 4  8 0 0	0 0 0
+ 5  -8 0 0	0 0 0
+end
