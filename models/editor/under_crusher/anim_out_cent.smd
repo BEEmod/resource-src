@@ -1,0 +1,10 @@
+version 1
+nodes
+0 "base"       -1
+1 "crusher"    0
+end
+skeleton
+time 0
+ 0  0 0 0	0 0 0
+ 1  0 0 234	0 0 0
+end
