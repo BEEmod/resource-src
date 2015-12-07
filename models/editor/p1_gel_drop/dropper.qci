@@ -1,0 +1,35 @@
+$bodygroup "Body"
+{
+	studio "dropper_reference.smd"
+}
+
+// props_map_editor for glass, p1_gel_dropper/ for the light variants
+$cdmaterials "models/props_map_editor/" "BEE2/models/props_map_editor/p1_gel_dropper/"
+
+// Model uses material "models\props_map_editor\item_dropper.vmt"
+// Model uses material "models\props_map_editor\glass.vmt"
+
+$surfaceprop "metalpanel"
+
+$contents "solid"
+
+$sequence "idle" "dropper_anims\idle.smd" {
+	fps 30
+}
+
+$sequence "explodeOut" "dropper_anims\explodeOut.smd" {
+	fps 30
+}
+
+$sequence "explodeIn" "dropper_anims\explodeIn.smd" {
+	fps 30
+}
+
+$sequence "disappear" "dropper_anims\disappear.smd" {
+	fps 30
+}
+
+$sequence "reappear" "dropper_anims\reappear.smd" {
+	fps 30
+}
+
