@@ -1,6 +1,6 @@
 // Created by Crowbar 0.19.0.0
 
-$modelname "BEE2/props_ingame/p1_light.mdl"
+$modelname "BEE2/props_p1/fake_light_hole.mdl"
 
 $staticprop
 
@@ -9,7 +9,7 @@ $bodygroup "Body"
 	studio "glass_lightcover_reference.smd"
 }
 
-$cdmaterials "BEE2/models/props_ingame/p1_light/"
+$cdmaterials "BEE2/models/props_p1/fake_light_hole/"
 
 $texturegroup "skinfamilies"
 {
