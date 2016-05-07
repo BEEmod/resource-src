@@ -1,0 +1,61 @@
+
+$SurfaceProp "metalpanel"
+
+$Contents "solid"
+
+$MaxEyeDeflection 90
+
+$MostlyOpaque
+
+$renamematerial "laser_receptacle" "laser_receptacle_rusty"
+$renamematerial "wall_glass" "wall_glass_rusty"
+
+$CDMaterials "BEE2\models\props_ingame\" "models\props\" 
+
+$Attachment "lens_center" "lens" 0 -8 0 rotate 0 0 0
+$Attachment "laser_target" "root" 0 28 0 rotate 0 0 0
+$Attachment "particle_emitter" "root" 0 28 0 rotate 0 0 0
+
+$CBox 0 0 0 0 0 0
+
+$BBox -32 -32.052 -32 32 32.017 47
+
+
+$Sequence "idle" {
+	"laser_receptacle_anims\idle.smd"
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+}
+
+$Sequence "spin" {
+	"laser_receptacle_anims\spin.smd"
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+	loop
+}
+
+$Sequence "CloseIdle" {
+	"laser_receptacle_anims\CloseIdle.smd"
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+}
+
+$Sequence "OpenIdle" {
+	"laser_receptacle_anims\OpenIdle.smd"
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+}
+
+$CollisionModel "laser_receptacle_physics.smd"
+{
+	$mass 120
+	$inertia 1
+	$damping 0
+	$rotdamping 0
+	$concave
+
+}
