@@ -1,0 +1,23 @@
+$staticprop
+
+$cdmaterials "BEE2/models/props_p1/floor_button/"
+
+$surfaceprop "metal"
+
+$contents "solid"
+
+$bbox -64 -64 0 64 64 16
+
+$sequence "idle" "button_base_reference.smd" {
+	fps 30
+}
+
+$collisionmodel "button_base_physics.smd"
+{
+	$mass 120
+	$inertia 1
+	$damping 0
+	$rotdamping 0
+	$concave
+}
+
