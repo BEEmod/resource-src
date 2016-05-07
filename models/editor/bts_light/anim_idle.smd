@@ -1,0 +1,14 @@
+version 1
+nodes
+0 "cage"   -1
+1 "fixture" 0
+2 "wire_n"  0
+3 "wire_s"  0
+end
+skeleton
+time 0
+ 0  0 0 0	0 0 0
+ 1  0 0 0	0 0 0
+ 2  0 0 0	0 0 0
+ 3  0 0 0	0 0 0
+end
