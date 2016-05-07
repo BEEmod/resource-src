@@ -9,19 +9,16 @@ $bodygroup "studio"
 	studio "p1_pgun.smd"
 }
 
-
-$definebone "valvebiped.portalgun_reference" "ValveBiped.Base" 0.000000 0.000000 0.000000 -1.570796 0.000000 0.000000
-
 $texturegroup "skinfamilies"
 {
 	{
 		"v_portalgun.vmt"
 	}
 	{
-		"v_portalgun.vmt"
+		"v_portalgun_blue.vmt"
 	}
 	{
-		"v_portalgun.vmt"
+		"v_portalgun_orange.vmt"
 	}
 }
 
@@ -48,6 +45,8 @@ $attachment "Beam_point3" "ValveBiped.Front_Cover" -0.03 2.38 -3.7 rotate 0 0 0
 $attachment "Beam_point4" "ValveBiped.Front_Cover" -0.04 2.36 -4 rotate 0 0 0
 $attachment "Beam_point5" "ValveBiped.Front_Cover" -0.05 2.35 -4.3 rotate 0 0 0
 $attachment "Inside_effects" "ValveBiped.Front_Cover" 0 2.2 0 rotate 0 0 0
+
+$definebone "valvebiped.portalgun_reference" "ValveBiped.Base" 0.000000 0.000000 0.000000 -1.570796 0.000000 0.000000
 
 $surfaceprop "default"
 
@@ -113,17 +112,17 @@ $sequence "dryfire" "p1_pgun_anims\pickup_fail.smd" {
 	node "Ready"
 }
 
+$sequence "idle_layer" "p1_pgun_anims\idle.smd" {
+	fps 30
+	loop
+	realtime
+}
+
 $sequence "idle" "p1_pgun_anims\idle.smd" {
 	fps 30
 	"ACT_VM_IDLE" 1
 	loop
 	node "Ready"
-}
-
-$sequence "idle_layer" "p1_pgun_anims\idle.smd" {
-	fps 30
-	loop
-	realtime
 }
 
 $sequence "idle_to_carrying" "p1_pgun_anims\pickup.smd" {
