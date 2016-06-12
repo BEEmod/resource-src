@@ -2,7 +2,7 @@ $modelname "props_map_editor/tspen_logic_flip_flop.mdl"
 
 $model "Body" "logic_gate.smd"
 
-$cdmaterials "models/props_map_editor/palette/tspen/"
+$cdmaterials "models/props_map_editor/palette/logic/tspen/"
 
 $renamematerial "logic_gate" "flip_flop"
 
