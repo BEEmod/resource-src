@@ -11,20 +11,20 @@ $bodygroup "Body"
 $cdmaterials "BEE2\models\props_ingame\p1_ball"
 
 $texturegroup "skinfamilies"
-{
 	{
+		{
 		"sphere.vmt"
-	}
-	{
+		}
+		{
 		"sphere.vmt"
-	}
-	{
+		}
+		{
 		"sphere_bounce.vmt"
-	}
-	{
+		}
+		{
 		"sphere_speed.vmt"
+		}
 	}
-}
 
 $surfaceprop "sphere2"
 
@@ -35,18 +35,22 @@ $sequence "idle" "sphere_anims\idle.smd" {
 }
 
 $collisionmodel "sphere_physics.smd"
-{
+	{
 	$mass 75
 	$inertia 1
 	$damping 0.35
 	$rotdamping 0
-}
+	}
 
 
 $keyvalues
-{
-	prop_data 
 	{
+	prop_data 
+		{
 		"base" "Metal.large"
+		}
+	physgun_interactions
+		{
+		preferred_carryangles 	"0 0 0"
+		}
 	}
-}
