@@ -18,6 +18,8 @@ $CDMaterials "models\props_bts\"
 
 $CBox 0 0 0 0 0 0
 
+$illumposition 0 0 8
+
 $BBox -28.496 -28.496 -3.556 28.496 28.496 5.652
 
 $DefineBone "static_prop" "" 0 0 0 0 0 0 0 0 0 0 0 0
