@@ -1,14 +1,9 @@
-// Created by Crowbar 0.19.0.0
-
-$modelname "props_map_editor/bee2_fizz_error.mdl"
-
 $bodygroup "Body"
 {
-	studio "fizzler_ref.smd"
+	studio "fizzler_cust_ref.smd"
 }
 
-$cdmaterials	"BEE2/models/props_map_editor/fizzler/"
-$renamematerial "fizzler" "fizzler"
+$cdmaterials	"BEE2/models/props_map_editor/fizzler/" "models/props_map_editor/"
 	
 $surfaceprop "metalpanel"
 
