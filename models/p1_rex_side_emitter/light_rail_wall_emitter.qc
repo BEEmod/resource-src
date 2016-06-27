@@ -15,6 +15,11 @@ $BodyGroup "Body"
 
 $renamematerial "light_rail_wall_emitter" "side_emitter"
 
+$texturegroup "skinfamilies" {
+	{ "side_emitter" }
+	{ "side_emitter_dirty" }
+}
+
 $SurfaceProp "metal"
 
 $Contents "solid"

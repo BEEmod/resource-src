@@ -9,12 +9,16 @@ $BodyGroup "Body"
 	studio "glados_floorlight_reference.smd"
 }
 
+$texturegroup "skinfamilies" {
+	{ "lab_floorlight" "lab_floorlight_glass" }
+	{ "lab_floorlight_dirty" "lab_floorlight_glass_dirty" }
+}
 
 $SurfaceProp "metal"
 
 $Contents "solid"
 
-$CDMaterials "models\props_bts\"
+$CDMaterials "models\props_bts\" "BEE2/models/props_p1/"
 
 $CBox 0 0 0 0 0 0
 
