@@ -1,6 +1,6 @@
 // Created by Crowbar 0.34.0.0
 
-$ModelName "BEE2/props_ingame/rex_pellet_launcher_inf.mdl"
+$ModelName "BEE2/props_ingame/pellet_launcher_inf.mdl"
 
 $BodyGroup "Body"
 {

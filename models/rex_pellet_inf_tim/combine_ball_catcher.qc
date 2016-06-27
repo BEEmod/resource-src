@@ -1,6 +1,6 @@
 // Created by Crowbar 0.34.0.0
 
-$ModelName "BEE2/props_ingame/rex_pellet_catcher_timed.mdl"
+$ModelName "BEE2/props_ingame/pellet_catcher_timed.mdl"
 
 $BodyGroup "Body"
 {
