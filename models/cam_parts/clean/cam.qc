@@ -15,3 +15,10 @@ $LOD 60
 {
 	replacemodel "cam_ref.smd" "cam_ref_lod2.smd"
 }
+
+$CollisionModel "cam_phy.smd"
+{
+	$mass 20
+	$inertia 1
+	$concave
+}
