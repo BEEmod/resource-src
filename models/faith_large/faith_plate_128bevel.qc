@@ -33,6 +33,8 @@ $attachment "light_r" "faithplatebone_15" 20 0 1.5 rotate 0 0 0
 
 $surfaceprop "no_decal"
 
+$mostlyopaque // Help with transparency - render solid then transparent parts...
+
 $contents "solid"
 
 $bbox -64 -64 -64 64 64 0
