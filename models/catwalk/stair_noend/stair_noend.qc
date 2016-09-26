@@ -12,7 +12,13 @@ $lod 50
 	replacemodel "hanging_stair_128_reference.smd" "hanging_stair_128_hanging_stair_128_lod1.smd"
 }
 
-$cdmaterials "models/props_bts/"
+$texturegroup "skinfamilies"
+{
+	{ "railing_bts" }
+	{ "catwalk_rusty" }
+}
+
+$cdmaterials "models/props_bts/" "BEE2/models/props_overgrown/"
 
 $surfaceprop "metalgrate"
 
