@@ -16,7 +16,18 @@ $LOD 50
 
 $Contents "solid"
 
-$CDMaterials "models/props_factory/"
+$CDMaterials "models/props_factory/" "BEE2/models/props_overgrown/"
+
+$texturegroup "skinfamilies"
+{
+	{
+		"conveyor_belt"
+	}
+	{
+		"conveyor_belt_rusty"
+	}
+}
+
 
 $Sequence "BindPose" {
 	"conveyor_belt_anims\BindPose.smd"
