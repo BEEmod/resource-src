@@ -1,4 +1,5 @@
 $modelname "BEE2/props_ingame/p1_metal_box.mdl"
+
 $model "Body" "metal_box_reference.smd"
 $lod 15
  {
@@ -37,13 +38,12 @@ $texturegroup skinfamilies
 }
 $hboxset "default"
 $hbox 0 "polymsh" -19.796  -19.797  -19.795  19.796  19.795  19.795
-$surfaceprop "metalpanel"
-$keyvalues  { prop_data { "base" "Metal.small"  } } 
-$illumposition -0.000 0.000 -0.001
-$sequence idle "idle" ACT_IDLE 1 fps 30.00
-$collisionmodel "phymodel.smd" {
+$surfaceprop "Metal_Box"
+$keyvalues  { prop_data { "base" "Metal.small"  } }
 
-	$concave
+$sequence idle "idle" ACT_IDLE 1 fps 30.00
+
+$collisionmodel "phymodel.smd" {
 	$mass 40.0
 	$inertia 1.00
 	$damping 0.10
