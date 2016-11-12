@@ -1,6 +1,6 @@
 // Created by Crowbar 0.19.0.0
 
-$modelname "props_map_editor/paint_dropper_editor_reflection.mdl"
+$modelname "props_map_editor/paint_dropper_editor_grey.mdl"
 
 $bodygroup "body"
 {
