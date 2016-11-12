@@ -1,0 +1,10 @@
+// Originally from Rantis / August
+
+$origin 0 -64 0
+
+$model "default" "vactube_128_straight_grid.smd"
+
+// Vactube model, black border, arrow
+$cdmaterials "BEE2/models/props_map_editor/vactube/" "BEE2/models/props_map_editor" "models/props_map_editor"
+
+$sequence BindPose "BindPose"
