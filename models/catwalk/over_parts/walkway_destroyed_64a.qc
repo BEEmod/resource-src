@@ -1,6 +1,6 @@
 // Created by Crowbar 0.34.0.0
 
-$ModelName "props_bts\walkway_destroyed_64a.mdl"
+$ModelName "BEE2/catwalk/overgrown/walkway_destroyed_64a.mdl"
 
 $StaticProp
 
