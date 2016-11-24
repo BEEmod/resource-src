@@ -1,0 +1,16 @@
+// Created by Crowbar 0.36.0.0
+
+$StaticProp
+
+$SurfaceProp "metal"
+
+$Contents "solid"
+
+$CDMaterials "BEE2/models/props_ingame/"
+
+$Sequence "BindPose" {
+	"BindPose.smd"
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+}
