@@ -35,6 +35,8 @@ $SurfaceProp "metal"
 
 $origin 0 0 8
 
+$attachment "light" "faith_pate_paddle_alter_direction" 22 1 1 rotate 270 180 0
+
 $Sequence "idle" {
 	"faith_plate_mapeditor_anims\idle.smd"
 	fadein 0.2
