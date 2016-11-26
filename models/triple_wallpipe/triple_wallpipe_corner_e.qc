@@ -2,7 +2,7 @@
 
 $include "triple_wallpipe.qci"
 
-$ModelName "BEE2/triple_wallpipe_nocull/corner_e.mdl"
+$ModelName "BEE2/triple_wallpipe/corner_e.mdl"
 
 $BodyGroup "default"
 {

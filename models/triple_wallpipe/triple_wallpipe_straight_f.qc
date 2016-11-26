@@ -2,7 +2,7 @@
 
 $include "triple_wallpipe.qci"
 
-$ModelName "BEE2/triple_wallpipe_nocull/straight_f.mdl"
+$ModelName "BEE2/triple_wallpipe/straight_f.mdl"
 
 $StaticProp
 
