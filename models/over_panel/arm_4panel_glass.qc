@@ -1,22 +1,31 @@
 // Created by Crowbar 0.19.0.0
 
-$modelname "BEE2/props_ingame/over_panel/glass_pan.mdl"
+$modelname "BEE2/props_overgrown/glass_pan.mdl"
 
 $bodygroup "Body"
 {
 	studio "arm_4panel_glass_reference.smd"
 }
 
+$texturegroup "skinfamilies" {
+	{ "arm_64x64_rusty" }
+	{ "arm_64x64_rusty_error" }
+	{ "arm_64x64_rusty_off" }
+}
+
+// For: shattered glass, arm64 skin, railing (black-wall), glass-fracture
 $cdmaterials "BEE2/models/props_ingame/" "models/anim_wp/" "metal/" "models/props_destruction/"
 
-$attachment "panel_attach" "panel_attach" 0 0 0 rotate 0 0 0
+$attachment "panel_attach" "panel_attach" -32 0 -32 rotate 90 90 0
 
 $surfaceprop "glass"
 $jointsurfaceprop "arms_4panel_root" "metalgrate" // The grating surface underneath
 $jointsurfaceprop "panel_attach" "solidmetal"
-$jointsurfaceprop "armA_top03" "glass"
+$jointsurfaceprop "armA_top03" "brokenglass"
 
 $contents "solid"
+
+$mostlyopaque
 
 $sequence "idle" "arm_4panel_glass_anims\idle.smd" {
 	fps 30
