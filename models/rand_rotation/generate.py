@@ -14,7 +14,7 @@ skeleton
 
 frame_temp = """\
 time {time}
- 0  {x} {y} {z}\t{pit} {yaw} {rol}
+ 0  0 0 0\t{pit} {yaw} {rol}
 """
 
 def limit(x, num):
@@ -23,10 +23,9 @@ def limit(x, num):
 def iter_speed(old, mom, lim):
     old += random.randint(-mom, mom)
     return limit(old, lim)
-    
-OFF = 4
 
-for index in range(1, 11):
+
+for index in range(1, 50 + 1):
     print('Making #' + str(index))
     with open('anim_{}.smd'.format(index), 'w') as f:
         f.write(header)
@@ -39,14 +38,6 @@ for index in range(1, 11):
         pit_sp = yaw_sp = rol_sp = 0
         
         for _ in range(40):
-            x_sp = iter_speed(x_sp, 2, 10)
-            x = limit(x + x_sp, OFF)
-            
-            y_sp = iter_speed(y_sp, 2, 10)
-            y = limit(y + y_sp, OFF)
-            
-            z_sp = iter_speed(z_sp, 2, 10)
-            z = limit(z + z_sp, OFF)
             
             pit_sp = iter_speed(pit_sp, 10, 50)
             pit = (pit + pit_sp) % 360
@@ -58,6 +49,8 @@ for index in range(1, 11):
             rol = (rol + rol_sp) % 360
             
             frames.append((x, y, z, pit, yaw, rol))
+        # Run forward then backward, this ensures all anims start and end at 0 0 0,
+        # which makes transitions seamless.
         frames += reversed(frames)
         
         for time, (x, y, z, pit, yaw, rol) in enumerate(frames):
