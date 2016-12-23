@@ -5,7 +5,7 @@ $StaticProp
 $SurfaceProp "metalgrate"
 
 //$cdMaterials "models/props_underground/underground_fizzler"
-$cdMaterials "BEE2/models/props_ingame/under_cust_fizz/"
+$cdMaterials "BEE2/models/props_underground/cust_fizz/"
 
 $Contents "solid"
 
