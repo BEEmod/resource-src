@@ -1,6 +1,10 @@
 // Created by Crowbar 0.19.0.0
 
 $modelname "BEE2/props_ingame/cust_fizz_static.mdl"
+$cdmaterials "BEE2\models\props_ingame\cust_fizz"
+
+// $modelname "backstock/fizzler_color_static.mdl"
+// $cdmaterials "models/backstock/fizzler_color/"
 
 $staticprop
 
@@ -18,7 +22,6 @@ $lod 25
 	replacemodel "fizzler_dynamic_reference.smd" "fizzler_dynamic_fizzler_reference_lod2.smd"
 }
 
-$cdmaterials "BEE2\models\props_ingame\cust_fizz"
 
 $texturegroup "skinfamilies"
 {
