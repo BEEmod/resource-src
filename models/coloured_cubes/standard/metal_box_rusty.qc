@@ -1,6 +1,6 @@
 // Created by Crowbar 0.19.0.0
 
-$modelname "BEE2/cube_color/clean_standard.mdl"
+$modelname "BEE2/cube_color/rusty_standard.mdl"
 
 $bodygroup "Body"
 {
@@ -22,7 +22,7 @@ $lod 90
 
 $mostlyopaque
 
-$cdmaterials "BEE2/models/cube_color/clean_cube/" "BEE2/models/cube_color/"
+$cdmaterials "BEE2/models/cube_color/rusty_cube/" "BEE2/models/cube_color/"
 
 $texturegroup "skinfamilies"
 {

@@ -1,6 +1,6 @@
 // Created by Crowbar 0.19.0.0
 
-$modelname "BEE2/cube_color/clean_reflect.mdl"
+$modelname "BEE2/cube_color/rusty_reflect.mdl"
 
 $bodygroup "Body"
 {
@@ -22,16 +22,18 @@ $lod 90
 
 $mostlyopaque
 
-$cdmaterials "BEE2/models/cube_color/" "BEE2/models/cube_color/reflect_clean/" "models/props"
+$cdmaterials "BEE2/models/cube_color/" "BEE2/models/cube_color/reflect_rusty/" "models/props"
+
+$renamematerial "tint_noglow" "tint_rusty"
 
 // Use the original glass, it doesn't seem actually obey rendercolor
 // Which is good.
 
 $texturegroup "skinfamilies" {
-	{ "tint_noglow" "frame" }
-	{ "tint_noglow" "frame" }
-	{ "tint_noglow_bounce" "frame_bounce" }
-	{ "tint_noglow_speed" "frame_speed" }
+	{ "tint_rusty" "frame" }
+	{ "tint_rusty" "frame" }
+	{ "tint_rusty_bounce" "frame_bounce" }
+	{ "tint_rusty_speed" "frame_speed" }
 }
 
 // Model uses material "reflecto_cube_shell.vmt"
