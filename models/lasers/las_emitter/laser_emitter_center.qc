@@ -1,38 +1,28 @@
 // Created by Crowbar 0.19.0.0
 
-$modelname "BEE2/props_ingame/lasers/emitter_noback.mdl"
+$modelname "BEE2/props_p1/laser_emitter.mdl"
 
 $bodygroup "Body"
 {
 	studio "laser_emitter_center_reference.smd"
 }
 
-$lod 20
-{
-	replacemodel "laser_emitter_center_reference.smd" "laser_emitter_center_reference_lod1.smd"
-}
-$lod 40
-{
-	replacemodel "laser_emitter_center_reference.smd" "laser_emitter_center_reference_lod2.smd"
-}
-$lod 80
-{
-	replacemodel "laser_emitter_center_reference.smd" "laser_emitter_center_reference_lod3.smd"
-}
+// $lod 20
+// {
+	// replacemodel "laser_emitter_center_reference.smd" "laser_emitter_center_reference_lod1.smd"
+// }
+// $lod 40
+// {
+	// replacemodel "laser_emitter_center_reference.smd" "laser_emitter_center_reference_lod2.smd"
+// }
+// $lod 80
+// {
+	// replacemodel "laser_emitter_center_reference.smd" "laser_emitter_center_reference_lod3.smd"
+// }
 
 $mostlyopaque
 
-$cdmaterials "models\props\"
-
-$texturegroup "skinfamilies"
-{
-	{
-		"Laser_emitter.vmt"
-	}
-	{
-		"laser_emitter_rusted.vmt"
-	}
-}
+$cdmaterials "BEE2/models/props_p1/" "models/props/"
 
 // Model uses material "Laser_emitter.vmt"
 // Model uses material "wall_glass.vmt"
@@ -55,8 +45,6 @@ $contents "solid"
 // The hitbox info below was automatically generated when compiled because no hitbox info was provided.
 // $hboxset "default"
 // $hbox 0 "root" -32 -32.000004 0 32 32.000008 51.871883
-
-
 
 
 $sequence "idle" "anims\idle.smd" {
