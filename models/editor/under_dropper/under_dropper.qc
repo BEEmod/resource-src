@@ -1,10 +1,14 @@
-$modelname "props_map_editor/under_dropper_orig.mdl"
+// New model, using original meshes.
+
+$modelname "props_map_editor/under_dropper.mdl"
 
 $cdmaterials "BEE2/models/props_map_editor/"
-$body "Body" "ts_under_dropper_ref.smd"
+
+$body "Body" "under_dropper_ref.smd"
+
 $origin 0 0 64
 
-$sequence "idle" "ts_under_dropper_ref.smd" {
+$sequence "idle" "under_dropper_ref.smd" {
 	fps 30
 }
 $sequence "explodeOut" "anims\out.smd" {
