@@ -1,0 +1,13 @@
+$staticprop
+$scale "1.000000"
+$cdmaterials "BEE2/models/props_p1/light_hole"
+$surfaceprop "metalpanel"
+
+$texturegroup skinfamilies {
+	{ "light_white"  "wall_white"  }
+	{ "light_orange" "wall_orange" }
+	{ "light_black"  "wall_black"  }
+	{ "light_blue"   "wall_blue"   }
+}
+//metalwall048b.vmt invis light_white
+$contents notsolid

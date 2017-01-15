@@ -1,0 +1,7 @@
+$staticprop
+
+$cdmaterials "BEE2/models/props_p1/light_hole"
+
+$surfaceprop "metalpanel"
+
+$contents notsolid
