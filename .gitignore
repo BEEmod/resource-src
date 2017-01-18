@@ -51,3 +51,6 @@ Icon
 
 # Don't commit textures/, these are just copies of P2 VTFs as PNG so blender can read them.
 textures/
+
+# Don't commit decompiled model files, we can get those easily.
+decompiled*/
