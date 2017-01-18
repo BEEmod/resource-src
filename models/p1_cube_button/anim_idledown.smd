@@ -1,0 +1,11 @@
+// Created by Crowbar 0.36.0.0
+version 1
+nodes
+  0 "box_socket_root" -1
+  1 "box_socket_top" 0
+end
+skeleton
+  time 0
+    0 0.000000 0.000000 0.000000 1.570792 0.000003 -0.000003
+    1 0.000000 11.640625 0.000000 0.000000 0.000000 0.000000
+end
