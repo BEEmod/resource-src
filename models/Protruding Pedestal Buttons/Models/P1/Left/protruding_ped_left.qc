@@ -1,12 +1,18 @@
 // Created by Crowbar 0.36.0.0
 
-$ModelName "props_map_editor/protruding_ped_right.mdl"
+$ModelName "props_map_editor/p1_protruding_ped_left.mdl"
 
 $BodyGroup "Body"
 {
-	studio "protruding_ped_right_reference.smd"
+	studio "protruding_ped_left_reference.smd"
 }
 
+
+$renamematerial "hazard_orange_03b" "protrud_frames_p1" 
+
+$renamematerial "pedestal_button" "p1_ped_button" 
+
+$renamematerial "grid0b" "protrud_wall"
 
 $SurfaceProp "metalpanel"
 
@@ -14,7 +20,7 @@ $Contents "solid"
 
 $MaxEyeDeflection 90
 
-$CDMaterials ""
+$CDMaterials "models/props_map_editor"
 
 $CBox 0 0 0 0 0 0
 
@@ -39,28 +45,28 @@ $DefineBone "pedbut_geo_8" "pedbut_explode_top_07" 0 0 0 0 0 0 0 0 0 0 0 0
 
 
 $Sequence "idle" {
-	"protruding_ped_right_anims\idle.smd"
+	"protruding_ped_left_anims\idle.smd"
 	fadein 0.2
 	fadeout 0.2
 	fps 30
 }
 
 $Sequence "explodeOut" {
-	"protruding_ped_right_anims\explodeOut.smd"
+	"protruding_ped_left_anims\explodeOut.smd"
 	fadein 0.2
 	fadeout 0.2
 	fps 30
 }
 
 $Sequence "explodeIn" {
-	"protruding_ped_right_anims\explodeIn.smd"
+	"protruding_ped_left_anims\explodeIn.smd"
 	fadein 0.2
 	fadeout 0.2
 	fps 30
 }
 
 $Sequence "push" {
-	"protruding_ped_right_anims\push.smd"
+	"protruding_ped_left_anims\push.smd"
 	fadein 0.2
 	fadeout 0.2
 	fps 30

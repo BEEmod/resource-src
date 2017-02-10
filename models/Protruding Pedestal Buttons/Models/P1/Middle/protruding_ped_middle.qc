@@ -1,12 +1,18 @@
 // Created by Crowbar 0.36.0.0
 
-$ModelName "props_map_editor/protruding_ped_middle.mdl"
+$ModelName "props_map_editor/p1_protruding_ped_middle.mdl"
 
 $BodyGroup "Body"
 {
 	studio "protruding_ped_middle_reference.smd"
 }
 
+
+$renamematerial "hazard_orange_03b" "protrud_frames_p1" 
+
+$renamematerial "pedestal_button" "p1_ped_button" 
+
+$renamematerial "grid0b" "protrud_wall"
 
 $SurfaceProp "metalpanel"
 

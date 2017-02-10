@@ -1,10 +1,10 @@
 // Created by Crowbar 0.36.0.0
 
-$ModelName "props_map_editor/protruding_ped_left.mdl"
+$ModelName "props_map_editor/over_protruding_ped_right.mdl"
 
 $BodyGroup "Body"
 {
-	studio "protruding_ped_left_reference.smd"
+	studio "protruding_ped_right_reference.smd"
 }
 
 
@@ -39,28 +39,28 @@ $DefineBone "pedbut_geo_8" "pedbut_explode_top_07" 0 0 0 0 0 0 0 0 0 0 0 0
 
 
 $Sequence "idle" {
-	"protruding_ped_left_anims\idle.smd"
+	"protruding_ped_right_anims\idle.smd"
 	fadein 0.2
 	fadeout 0.2
 	fps 30
 }
 
 $Sequence "explodeOut" {
-	"protruding_ped_left_anims\explodeOut.smd"
+	"protruding_ped_right_anims\explodeOut.smd"
 	fadein 0.2
 	fadeout 0.2
 	fps 30
 }
 
 $Sequence "explodeIn" {
-	"protruding_ped_left_anims\explodeIn.smd"
+	"protruding_ped_right_anims\explodeIn.smd"
 	fadein 0.2
 	fadeout 0.2
 	fps 30
 }
 
 $Sequence "push" {
-	"protruding_ped_left_anims\push.smd"
+	"protruding_ped_right_anims\push.smd"
 	fadein 0.2
 	fadeout 0.2
 	fps 30
