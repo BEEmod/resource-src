@@ -33,6 +33,9 @@ $sequence "down" "switch001_anims\down.smd" {
 
 $sequence "up" "switch001_anims\up.smd" {
 	fps 30
+	{
+		event AE_CL_PLAYSOUND 0 "bee2.P1.button_up"
+	}
 }
 
 $sequence "idle_down" "switch001_anims\idle_down.smd" {
