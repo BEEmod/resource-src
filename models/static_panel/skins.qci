@@ -1,0 +1,16 @@
+$SurfaceProp "metalpanel"
+
+$Contents "solid"
+
+$mostlyopaque
+
+$CDMaterials "models/anim_wp"
+
+$texturegroup "skinfamilies" {
+	{ "arm_64x64" }
+	{ "arm_64x64_rusty" }
+	{ "arm_64x64_rusty_off" }
+	{ "arm_64x64_rusty_error" }
+	// { "arm_64x64_off" }
+	// { "arm_64x64_error" }
+}
