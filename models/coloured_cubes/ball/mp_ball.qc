@@ -12,14 +12,14 @@ $SurfaceProp "sphere2"
 
 $Contents "solid"
 
-$cdmaterials "BEE2/models/cube_color/"
+$cdmaterials "BEE2/models/cube_color/clean_ball" "BEE2/models/cube_color/"
 
 $TextureGroup "skinfamilies"
 {
-	{ "color_ball_off"    }
-	{ "color_ball_on"     }
-	{ "color_ball_bounce" }
-	{ "color_ball_speed"  }
+	{ "ball_off"    }
+	{ "ball_on"     }
+	{ "ball_bounce" }
+	{ "ball_speed"  }
 }
 
 $CBox 0 0 0 0 0 0
