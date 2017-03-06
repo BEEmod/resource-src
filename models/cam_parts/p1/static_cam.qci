@@ -6,11 +6,5 @@ $Contents "solid"
 
 $CDMaterials "models\props\"
 
-$TextureGroup "skinfamilies"
-{
-	{ "camera"        }
-	{ "camera_skin02" }
-}
-
 $sequence "BindPose" "idle.smd" {
 }
