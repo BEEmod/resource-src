@@ -1,6 +1,6 @@
 // Created by Crowbar 0.19.0.0
 
-$modelname "BEE2/props_ingame/lasers/catcher_noback.mdl"
+$modelname "BEE2/props_p1/laser_catcher.mdl"
 
 $bodygroup "Body"
 {
@@ -18,22 +18,13 @@ $lod 100
 
 $opaque
 
-$cdmaterials "models\props\"
+$cdmaterials "BEE2/models/props_p1/" "models/props/"
 
-$texturegroup "skinfamilies"
-{
-	{
-		"Laser_catcher.vmt"
-	}
-	{
-		"laser_catcher_on.vmt"
-	}
-	{
-		"laser_catcher_rusted.vmt"
-	}
-	{
-		"laser_catcher_rusted_on.vmt"
-	}
+$texturegroup "skinfamilies" {
+	{ "Laser_catcher.vmt" }
+	{ "laser_catcher_on.vmt" }
+	{ "Laser_catcher_rusted.vmt" }
+	{ "laser_catcher_rusted_on.vmt" }
 }
 
 // Model uses material "Laser_catcher.vmt"
@@ -65,13 +56,12 @@ $sequence "spin" "laser_catcher_center_anims\spin.smd" {
 	loop
 }
 
-$collisionmodel "laser_catcher_center_physics.smd"
+$collisionmodel "laser_catcher_physbox.smd"
 {
 	$mass 120
 	$inertia 1
 	$damping 0
 	$rotdamping 0
 	$concave
-
 }
 
