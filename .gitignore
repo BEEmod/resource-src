@@ -54,3 +54,6 @@ textures/
 
 # Don't commit decompiled model files, we can get those easily.
 decompiled*/
+
+// Don't commit Blender's backups.
+*.blend1
