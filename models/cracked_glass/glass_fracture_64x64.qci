@@ -1,0 +1,19 @@
+$staticprop
+$origin 0 0 32
+$mostlyopaque
+$cdmaterials "models\props_destruction\"
+$surfaceprop "glass"
+$contents "solid"
+$bbox -1 -32 0 1 32 64
+
+$sequence "idle" "idle.smd" {
+	fps 30
+}
+
+$collisionmodel "physics_64x64.smd"
+{
+	$mass 1
+	$inertia 1
+	$damping 0
+	$rotdamping 0
+}
