@@ -10,5 +10,5 @@ $BodyGroup "Body"
 $include "skins_glass.qci"
 
 $Sequence "idle" {
-	"arm_4panel_glass_anims/idle.smd"
+	"idle.smd"
 }
