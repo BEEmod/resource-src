@@ -1,19 +1,38 @@
 // Created by Crowbar 0.36.0.0
 
-$ModelName "dest_ap/port_button_body.mdl"
+$ModelName "dest_ap/port_button.mdl"
 
 $BodyGroup "Body"
 {
 	studio "switch_main_ref.smd"
 }
 
+$BodyGroup "Button"
+{
+	studio "switch_top_frm0.smd"
+	studio "switch_top_frm1.smd"
+	studio "switch_top_frm2.smd"
+	studio "switch_top_frm3.smd"
+	studio "switch_top_frm4.smd"
+}
+
 $LOD 15
 {
 	replacemodel "switch_main_ref.smd" "switch_main_lod1.smd"
+	replacemodel "switch_top_frm0.smd" "switch_top_lod1_frm0.smd"
+	replacemodel "switch_top_frm1.smd" "switch_top_lod1_frm1.smd"
+	replacemodel "switch_top_frm2.smd" "switch_top_lod1_frm2.smd"
+	replacemodel "switch_top_frm3.smd" "switch_top_lod1_frm3.smd"
+	replacemodel "switch_top_frm4.smd" "switch_top_lod1_frm4.smd"
 }
 $LOD 35
 {
 	replacemodel "switch_main_ref.smd" "switch_main_lod2.smd"
+	replacemodel "switch_top_frm0.smd" "switch_top_lod2_frm0.smd"
+	replacemodel "switch_top_frm1.smd" "switch_top_lod2_frm1.smd"
+	replacemodel "switch_top_frm2.smd" "switch_top_lod2_frm2.smd"
+	replacemodel "switch_top_frm3.smd" "switch_top_lod2_frm3.smd"
+	replacemodel "switch_top_frm4.smd" "switch_top_lod2_frm4.smd"
 }
 
 $SurfaceProp "metal_box"
