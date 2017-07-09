@@ -1,6 +1,6 @@
 // Created by Crowbar 0.19.0.0
 
-$modelname "BEE2/props_ingame/circuit_breaker_anim.mdl"
+$modelname "BEE2/props_bts/circuit_breaker_anim.mdl"
 
 $definebone "lights" "" 0 0 0 0 0 0 0 0 0 0 0 0
 
@@ -41,6 +41,9 @@ $sequence "flick"	"anim/open_anim.smd" {
 	fps 24
 	{
 	event AE_CL_PLAYSOUND 0 "World.PaintSwitchOpen"
+	// Sparks when the lever contacts.
+	event AE_CL_CREATE_PARTICLE_EFFECT 13 "env_sparks_omni start_at_attachment spark_1"
+	event AE_CL_CREATE_PARTICLE_EFFECT 13 "env_sparks_omni start_at_attachment spark_2"
 	}	
 }
 
@@ -55,6 +58,12 @@ $sequence "flick_reset"	"anim/press_anim.smd" {
 	fps 24
 	{
 	event AE_CL_PLAYSOUND 0 "World.PaintSwitchOpen" 
+	
+	// Sparks when the lever contacts.
+	event AE_CL_CREATE_PARTICLE_EFFECT 13 "env_sparks_omni start_at_attachment spark_1"
+	event AE_CL_CREATE_PARTICLE_EFFECT 13 "env_sparks_omni start_at_attachment spark_2"
+	
+	// Reset
 	event AE_CL_PLAYSOUND 25 "World.LightPowerOnSwitch" 
 	}
 }
