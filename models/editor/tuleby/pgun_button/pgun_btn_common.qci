@@ -1,0 +1,39 @@
+
+$SurfaceProp "metalpanel"
+
+$Contents "solid"
+
+$CDMaterials "models/props_map_editor/"
+
+$CBox 0 0 0 0 0 0
+
+$BBox -61.126 -61.126 -64 61.126 61.126 0
+
+
+$Sequence "idle" {
+	"buttonweight_anims\idle.smd"
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+}
+
+$Sequence "explodeOut" {
+	"buttonweight_anims\explodeOut.smd"
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+}
+
+$Sequence "explodeIn" {
+	"buttonweight_anims\explodeIn.smd"
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+}
+
+$Sequence "push" {
+	"buttonweight_anims\push.smd"
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+}
