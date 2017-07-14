@@ -1,0 +1,102 @@
+// Created by Crowbar 0.36.0.0
+
+$ModelName "BEE2/props_clean/tuleby/reflecto_bomb_cube.mdl"
+
+$BodyGroup "cube"
+{
+	studio "bomb_cube_ref.smd"
+}
+
+$BodyGroup "lights"
+{
+	blank
+	studio "light/bomb_cube_lights_01.smd"
+	studio "light/bomb_cube_lights_02.smd"
+	studio "light/bomb_cube_lights_03.smd"
+	studio "light/bomb_cube_lights_04.smd"
+	studio "light/bomb_cube_lights_05.smd"
+	studio "light/bomb_cube_lights_06.smd"
+	studio "light/bomb_cube_lights_07.smd"
+	studio "light/bomb_cube_lights_08.smd"
+	studio "light/bomb_cube_lights_09.smd"
+	studio "light/bomb_cube_lights_10.smd"
+	studio "light/bomb_cube_lights_11.smd"
+	studio "light/bomb_cube_lights_12.smd"
+	studio "light/bomb_cube_lights_13.smd"
+	studio "light/bomb_cube_lights_14.smd"
+	studio "light/bomb_cube_lights_15.smd"
+	studio "light/bomb_cube_lights_16.smd"
+	studio "light/bomb_cube_lights_17.smd"
+	studio "light/bomb_cube_lights_18.smd"
+	studio "light/bomb_cube_lights_19.smd"
+	studio "light/bomb_cube_lights_20.smd"
+	studio "light/bomb_cube_lights_21.smd"
+	studio "light/bomb_cube_lights_22.smd"
+	studio "light/bomb_cube_lights_23.smd"
+	studio "light/bomb_cube_lights_24.smd"
+	studio "light/bomb_cube_lights_25.smd"
+	studio "light/bomb_cube_lights_26.smd"
+	studio "light/bomb_cube_lights_27.smd"
+	studio "light/bomb_cube_lights_28.smd"
+	studio "light/bomb_cube_lights_29.smd"
+	studio "light/bomb_cube_lights_30.smd"
+}
+
+$LOD 40
+{
+	replacemodel "bomb_cube_ref.smd" "bomb_cube_lod1.smd"
+	// Swap to a solid colour, the split isn't visible.
+	replacematerial "reflecto_bomb_lights" "reflecto_bomb_lights_cheap"
+}
+$LOD 60
+{
+	replacemodel "bomb_cube_ref.smd" "bomb_cube_lod2.smd"
+	replacematerial "reflecto_bomb_lights" "reflecto_bomb_lights_cheap"
+}
+// Kill off the lights, we're too far away to see those clearly.
+$LOD 90
+{
+	replacemodel "bomb_cube_ref.smd" "bomb_cube_lod3.smd"
+	removemesh "bee2/models/props_clean/tuleby/reflecto_bomb_lights"
+}
+
+$SurfaceProp "reflective"
+
+$Contents "solid"
+
+$MostlyOpaque
+
+$CDMaterials "BEE2/models/props_clean/tuleby/"
+
+$TextureGroup "skinfamilies"
+{
+	{ "reflecto_bomb_shell" }
+	{ "reflecto_bomb_shell" }
+	{ "reflecto_bomb_shell_bounce" }
+	{ "reflecto_bomb_shell_speed" }
+}
+
+$Attachment "focus" "polymsh70" 0 0 20 rotate 0 0 0
+
+$CBox 0 0 0 0 0 0
+
+
+$Sequence "idle" {
+	"anims/idle.smd"
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+}
+
+$CollisionModel "bomb_cube_phy.smd"
+{
+	$mass 40
+}
+
+$KeyValues
+{
+	prop_data 
+	{
+		"base" "Metal.small"
+	}
+}
