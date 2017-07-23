@@ -1,0 +1,24 @@
+
+
+$SurfaceProp "metalpanel"
+
+$Contents "solid"
+
+
+$CDMaterials "BEE2/models/props_map_editor/tuleby/"
+
+$Sequence "idle_ground" {
+	"anim_idle_ground.smd"
+	fps 30
+}
+
+$Sequence "explodeOut" {
+	"anim_explodeOut.smd"
+	fps 30
+}
+
+$Sequence "explodeIn" {
+	"anim_explodeIn.smd"
+	fps 30
+}
+
