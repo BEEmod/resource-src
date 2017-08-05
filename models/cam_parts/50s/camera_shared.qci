@@ -1,0 +1,9 @@
+$staticprop
+
+$surfaceprop "metal"
+
+$contents "solid"
+
+$cdmaterials "BEE2/models/props_underground/"
+
+$sequence "idle" "idle.smd"
