@@ -14,6 +14,7 @@ $CDMaterials "models/props_map_editor" "BEE2/models/props_map_editor"
 
 $CBox 0 0 0 0 0 0
 
+$origin 128 0 0
 $BBox -64 -64 -63 64 64 65
 
 $Sequence "idle" {
