@@ -54,3 +54,7 @@ $Sequence "up" {
 $Sequence "down" {
 	"../over_panel/arm_8panel_anims\down.smd"
 }
+
+$Sequence "raised" {
+	"anims/up_idle.smd"
+}
