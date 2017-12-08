@@ -37,7 +37,10 @@ $mostlyopaque // Help with transparency - render solid then transparent parts...
 
 $contents "solid"
 
-$bbox -64 -64 -64 64 64 0
+$bbox -64 -64 -64 64 64 32
+
+// Ensure illumination is read from in front - inside the map.
+$illumposition 0 0 8
 
 $sequence "idle" "faith_plate_128bevel_anims\BindPose.smd" {
 	fps 30
