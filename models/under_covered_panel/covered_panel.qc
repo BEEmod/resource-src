@@ -9,82 +9,44 @@ $SurfaceProp "metal"
 
 $Contents "solid"
 
-$CDMaterials "models/props_underground/" "models/anim_wp/framework/"
+$CDMaterials "models/props_underground/" 
+$CDMaterials "models/anim_wp/framework/"
+$CDMaterials "BEE2/models/props_underground/"
+$CDMaterials "BEE2/models/props_p1/"
+
+
+$TextureGroup "skinfamilies" {
+	{ "wood_panel_128x256_01" }
+	{ "underground_plywood_01a_bottom" }
+	{ "metalwall_wire" }
+}
 
 $attachment "panel_attach"  "rot"           0 64 0
-$attachment "piston"        "piston"        0  0 0
-$attachment "piston_end"    "piston_end"    0  0 0
-$attachment "marker"        "marker"        0  0 0
+$illumposition 0 64 -8 "rot"
 
-$sequence "idle" {
-	"anim/idle.smd"
+$sequence "BindPose" "anims/BindPose.smd"
+
+$sequence "parent_pose" {
+	"anims/idle.smd"
 	fps 30
 }
 
-$sequence "close_30" {
-	"anim/close_30.smd"
-	fps 30
-	{ event AE_CL_PLAYSOUND 0 "World.a3EndElevatorArrive" }
+$sequence "ramp_30_deg_open" {
+	"anims/open_30.smd"
+	fps 45
 }
 
-$sequence "close_45" {
-	"anim/close_45.smd"
-	fps 30
-	{ event AE_CL_PLAYSOUND 0 "World.a3EndElevatorArrive" }
+$sequence "ramp_45_deg_open" {
+	"anims/open_45.smd"
+	fps 45
 }
 
-$sequence "close_60" {
-	"anim/close_60.smd"
-	fps 30
-	{ event AE_CL_PLAYSOUND 0 "World.a3EndElevatorArrive" }
+$sequence "ramp_60_deg_open" {
+	"anims/open_60.smd"
+	fps 45
 }
 
-$sequence "close_90" {
-	"anim/close_90.smd"
-	fps 30
-	{ event AE_CL_PLAYSOUND 0 "World.a3EndElevatorArrive" }
-}
-
-$sequence "idle_30" {
-	"anim/idle_30.smd"
-	fps 30
-}
-
-$sequence "idle_45" {
-	"anim/idle_45.smd"
-	fps 30
-}
-
-$sequence "idle_60" {
-	"anim/idle_60.smd"
-	fps 30
-}
-
-$sequence "idle_90" {
-	"anim/idle_90.smd"
-	fps 30
-}
-
-$sequence "open_30" {
-	"anim/open_30.smd"
-	fps 30
-	{ event AE_CL_PLAYSOUND 0 "World.a3EndElevatorArrive" }
-}
-
-$sequence "open_45" {
-	"anim/open_45.smd"
-	fps 30
-	{ event AE_CL_PLAYSOUND 0 "World.a3EndElevatorArrive" }
-}
-
-$sequence "open_60" {
-	"anim/open_60.smd"
-	fps 30
-	{ event AE_CL_PLAYSOUND 0 "World.a3EndElevatorArrive" }
-}
-
-$sequence "open_90" {
-	"anim/open_90.smd"
-	fps 30
-	{ event AE_CL_PLAYSOUND 0 "World.a3EndElevatorArrive" }
+$sequence "ramp_90_deg_open" {
+	"anims/open_90.smd"
+	fps 45
 }
