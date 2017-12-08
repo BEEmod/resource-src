@@ -1,0 +1,150 @@
+$Sequence "1" {
+	"anims/timer_01.smd"
+	fps 8
+}
+
+$Sequence "2" {
+	"anims/timer_02.smd"
+	fps 8
+}
+
+$Sequence "3" {
+	"anims/timer_03.smd"
+	fps 8
+}
+
+$Sequence "4" {
+	"anims/timer_04.smd"
+	fps 8
+}
+
+$Sequence "5" {
+	"anims/timer_05.smd"
+	fps 8
+}
+
+$Sequence "6" {
+	"anims/timer_06.smd"
+	fps 8
+}
+
+$Sequence "7" {
+	"anims/timer_07.smd"
+	fps 8
+}
+
+$Sequence "8" {
+	"anims/timer_08.smd"
+	fps 8
+}
+
+$Sequence "9" {
+	"anims/timer_09.smd"
+	fps 8
+}
+
+$Sequence "10" {
+	"anims/timer_10.smd"
+	fps 8
+}
+
+$Sequence "11" {
+	"anims/timer_11.smd"
+	fps 8
+}
+
+$Sequence "12" {
+	"anims/timer_12.smd"
+	fps 8
+}
+
+$Sequence "13" {
+	"anims/timer_13.smd"
+	fps 8
+}
+
+$Sequence "14" {
+	"anims/timer_14.smd"
+	fps 8
+}
+
+$Sequence "15" {
+	"anims/timer_15.smd"
+	fps 8
+}
+
+$Sequence "16" {
+	"anims/timer_16.smd"
+	fps 8
+}
+
+$Sequence "17" {
+	"anims/timer_17.smd"
+	fps 8
+}
+
+$Sequence "18" {
+	"anims/timer_18.smd"
+	fps 8
+}
+
+$Sequence "19" {
+	"anims/timer_19.smd"
+	fps 8
+}
+
+$Sequence "20" {
+	"anims/timer_20.smd"
+	fps 8
+}
+
+$Sequence "21" {
+	"anims/timer_21.smd"
+	fps 8
+}
+
+$Sequence "22" {
+	"anims/timer_22.smd"
+	fps 8
+}
+
+$Sequence "23" {
+	"anims/timer_23.smd"
+	fps 8
+}
+
+$Sequence "24" {
+	"anims/timer_24.smd"
+	fps 8
+}
+
+$Sequence "25" {
+	"anims/timer_25.smd"
+	fps 8
+}
+
+$Sequence "26" {
+	"anims/timer_26.smd"
+	fps 8
+}
+
+$Sequence "27" {
+	"anims/timer_27.smd"
+	fps 8
+}
+
+$Sequence "28" {
+	"anims/timer_28.smd"
+	fps 8
+}
+
+$Sequence "29" {
+	"anims/timer_29.smd"
+	fps 8
+}
+
+$Sequence "30" {
+	"anims/timer_30.smd"
+	fps 8
+}
+
