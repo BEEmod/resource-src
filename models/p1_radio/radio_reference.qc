@@ -28,6 +28,7 @@ $collisionmodel "phys.smd"
 	$damping 0
 	$rotdamping 0
 	$concave
+	$masscenter 0 0 5
 }
 
 $keyvalues
