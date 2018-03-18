@@ -5,7 +5,7 @@ $bodygroup "Body"
 {
 	studio "p1_dropper.smd"
 }
-$cdmaterials "BEE2/models/props_map_editor/p1_dropper/"
+$cdmaterials "models/props_map_editor/" "BEE2/models/props_map_editor/"
 
 $surfaceprop "metalpanel"
 
@@ -17,12 +17,10 @@ $sequence "BindPose" "anims\idle.smd" {
 
 $sequence "ExplodeOut" "anims\open.smd" {
 	fps 30
-	{ event AE_CL_PLAYSOUND 2 "machines\doormove2.wav" }
 }
 
 $sequence "ExplodeIn" "anims\close.smd" {
 	fps 30
-	{ event AE_CL_PLAYSOUND 2 "machines\doormove2.wav" }
 }
 
 $sequence "disappear" "anims\disappear.smd" {
