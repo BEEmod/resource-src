@@ -57,9 +57,6 @@ $surfaceprop "Metal_Box"
 
 $contents "solid"
 
-// Only set this if you know what it does, and need it for special circumstances, such as with gibs.
-// $illumposition 0 0 0
-
 // $bbox -18.065 -18.051 -18.033 18.07 18.056 18.046
 
 // $cbox is probably not used anymore
@@ -92,6 +89,7 @@ $keyvalues
 	}
 	physgun_interactions
 	{
-	 	preferred_carryangles "0 0 0"
+		// CCube hearts!
+	 	preferred_carryangles "0 180 0"
 	}
 }
