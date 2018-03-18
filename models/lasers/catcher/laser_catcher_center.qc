@@ -23,8 +23,11 @@ $cdmaterials "BEE2/models/props_p1/" "models/props/"
 $texturegroup "skinfamilies" {
 	{ "Laser_catcher.vmt" }
 	{ "laser_catcher_on.vmt" }
-	{ "Laser_catcher_rusted.vmt" }
-	{ "laser_catcher_rusted_on.vmt" }
+	// Don't load the rusted ones, we don't need those.
+	{ "Laser_catcher.vmt" }
+	{ "laser_catcher_on.vmt" }
+	// { "Laser_catcher_rusted.vmt" }
+	// { "laser_catcher_rusted_on.vmt" }
 }
 
 // Model uses material "Laser_catcher.vmt"
@@ -56,12 +59,13 @@ $sequence "spin" "laser_catcher_center_anims\spin.smd" {
 	loop
 }
 
-$collisionmodel "laser_catcher_physbox.smd"
-{
-	$mass 120
-	$inertia 1
-	$damping 0
-	$rotdamping 0
-	$concave
-}
+// $collisionmodel "laser_catcher_physbox.smd"
+// {
+	// $mass 120
+	// $inertia 1
+	// $damping 0
+	// $rotdamping 0
+	// $concave
+	// $concaveperjoint
+// }
 
