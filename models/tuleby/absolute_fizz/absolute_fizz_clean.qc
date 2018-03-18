@@ -31,7 +31,7 @@ $texturegroup "skinfamilies"
 	}
 	{
 	"fizzler_skin002"
-	"abs_fizz_front"//_dirty"
+	"abs_fizz_front_dirty"
 	}
 }
 
