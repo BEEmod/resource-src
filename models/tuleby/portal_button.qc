@@ -26,24 +26,28 @@ $TextureGroup "skinfamilies" {
 	// First two are swapped by prop_floor_button
 	// Second two via prop_dynamic
 	{
-	"portal_button_blue"
-	"pgun_btn_sign_cube_off"
-	"pgun_btn_top_oran"
+	"portal_button_blue" // Base lights
+	"pgun_btn_sign_cube_off" // Sign
+	"pgun_btn_top_oran" // Orange/blue moving bit (red)
+	"screen_oran" // Base lighting
 	}
 	{
 	"portal_button_orange"
 	"pgun_btn_sign_cube_on"
 	"pgun_btn_top_oran"
+	"screen_oran"
 	}
 	{
 	"portal_button_blue"
 	"pgun_btn_sign_player_off"
 	"pgun_btn_top_blue"
+	"screen_blue"
 	}
 	{
 	"portal_button_orange"
 	"pgun_btn_sign_player_on"
 	"pgun_btn_top_blue"
+	"screen_blue"
 	}
 }
 
