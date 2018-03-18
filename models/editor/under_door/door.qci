@@ -1,0 +1,8 @@
+
+$cdmaterials "BEE2/models/props_map_editor/under/"
+$cdmaterials "BEE2/models/props_map_editor/"
+$cdmaterials "models/props_map_editor/"
+
+$sequence "idle" "idle.smd" {
+	fps 30
+}
