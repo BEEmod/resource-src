@@ -1,9 +1,4 @@
-$ModelName "BEE2/props_underground/covered_panel.mdl"
 
-$BodyGroup "Body"
-{
-	studio "under_covered_panel.smd"
-}
 
 $SurfaceProp "metal"
 
@@ -11,17 +6,9 @@ $Contents "solid"
 
 $CDMaterials "models/props_underground/" 
 $CDMaterials "models/anim_wp/framework/"
-$CDMaterials "BEE2/models/props_underground/"
-$CDMaterials "BEE2/models/props_p1/"
-
-
-$TextureGroup "skinfamilies" {
-	{ "wood_panel_128x256_01" }
-	{ "underground_plywood_01a_bottom" }
-	{ "metalwall_wire" }
-}
 
 $attachment "panel_attach"  "rot"           0 64 0
+
 $illumposition 0 64 -8 "rot"
 
 $sequence "BindPose" "anims/BindPose.smd"
