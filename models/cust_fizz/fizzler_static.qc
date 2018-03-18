@@ -22,7 +22,6 @@ $lod 25
 	replacemodel "fizzler_dynamic_reference.smd" "fizzler_dynamic_fizzler_reference_lod2.smd"
 }
 
-
 $texturegroup "skinfamilies"
 {
 	{
