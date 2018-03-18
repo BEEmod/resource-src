@@ -2,6 +2,8 @@ $SurfaceProp "glass"
 
 $Contents "solid"
 
+$mostlyopaque
+
 $CDMaterials "models/anim_wp" "models/props_ingame"
 
 $texturegroup "skinfamilies" {
