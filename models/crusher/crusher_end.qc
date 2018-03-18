@@ -1,6 +1,6 @@
 // Created by Crowbar 0.19.0.0
 
-$modelname "BEE2/props_ingame/crusher_head.mdl"
+$modelname "BEE2/props_clean/crusher_head.mdl"
 
 $staticprop
 
@@ -19,14 +19,9 @@ $lod 80
 }
 
 // Add dirty skin, for overgrown etc.
-$texturegroup "skinfamilies"
-{
-	{
-		"crusher"
-	}
-	{
-		"crusher_rusty"
-	}
+$texturegroup "skinfamilies" {
+	{ "crusher" }
+	{ "crusher_rusty" }
 }
 
 $cdmaterials "models/anim_wp/crusher" "BEE2/models/props_ingame/"
@@ -37,12 +32,18 @@ $surfaceprop "default"
 
 $contents "solid"
 
-$bbox -32 -96 -96 32 96 96
+$bbox -96 -96 -37   96 96 28
 
-// Set the origin to the actual center of the plate...
-$origin 0 -100 -141
+$surfaceprop "default"
 
-$sequence "BindPose" "crusher_end_idle.smd" {
+
+$hboxset "default"
+
+$hbox 0 "static_prop" -96 -96 -37   96 96 28
+
+$illumposition 0 0 0
+
+$sequence "BindPose" "crusher_end_reference.smd" {
 	fps 30
 }
 
