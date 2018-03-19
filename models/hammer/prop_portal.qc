@@ -2,7 +2,7 @@ $staticprop
 $modelname "editor/prop_portal"
 $scale "1.000000"
 $body "Body" "prop_portal_ref"
-$cdmaterials "models/editor/"
+$cdmaterials "models/editor/ts/"
 $sequence idle "prop_portal_ref"
 $surfaceprop "no_decal"
 $texturegroup skinfamilies {
