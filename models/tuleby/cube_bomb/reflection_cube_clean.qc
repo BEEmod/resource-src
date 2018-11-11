@@ -1,3 +1,4 @@
+$definevariable lights_mat "reflecto_bomb_lights"
 $include "reflection_cube_shared.qci"
 
 $ModelName "BEE2/props_clean/tuleby/reflecto_bomb_cube.mdl"

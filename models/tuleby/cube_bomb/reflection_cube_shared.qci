@@ -39,16 +39,18 @@ $BodyGroup "lights"
 	studio "light/bomb_cube_lights_30.smd"
 }
 
+$renamematerial reflecto_bomb_lights $lights_mat$
+
 $LOD 40
 {
 	replacemodel "bomb_cube_ref.smd" "bomb_cube_lod1.smd"
 	// Swap to a solid colour, the split isn't visible.
-	replacematerial "reflecto_bomb_lights" "reflecto_bomb_lights_cheap"
+	replacematerial $lights_mat$ $lights_mat$_cheap
 }
 $LOD 60
 {
 	replacemodel "bomb_cube_ref.smd" "bomb_cube_lod2.smd"
-	replacematerial "reflecto_bomb_lights" "reflecto_bomb_lights_cheap"
+	replacematerial $lights_mat$ $lights_mat$_cheap
 }
 
 $SurfaceProp "reflective"
