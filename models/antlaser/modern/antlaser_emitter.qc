@@ -1,4 +1,4 @@
-$modelname "props/konclan/antlaser_emitter.mdl"
+$modelname "BEE2/props_clean/antlaser_emitter.mdl"
 
 $bodygroup "Body"
 {
@@ -13,7 +13,7 @@ $illumposition 0 -8 0
 
 $mostlyopaque
 
-$cdmaterials "models\props\"
+$cdmaterials "BEE2/models/props_clean/antlaser/" "models/props/"
 
 $texturegroup "skinfamilies"
 {
@@ -34,8 +34,5 @@ $sequence "idle" {
 $collisionmodel "antlaser_emitter_physics.smd"
 {
 	$mass 120
-	$inertia 1
-	$damping 0
-	$rotdamping 0
-	$rootbone " "
+	$concave
 }
