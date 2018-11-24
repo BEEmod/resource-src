@@ -1,13 +1,13 @@
 // Created by Crowbar 0.19.0.0
 
-$modelname "props_map_editor/tspen_ret_btn_floor.mdl"
+$modelname "props_map_editor/BEE2_ret_btn_clean_floor.mdl"
 
 $bodygroup "Body"
 {
 	studio "buttonweight_reference.smd"
 }
 
-$cdmaterials "models/props_map_editor/"
+$cdmaterials "models/props_map_editor/" "BEE2/models/props_map_editor/"
 
 
 // Model uses material "models\props_map_editor\buttons.vmt"

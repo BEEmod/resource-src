@@ -1,13 +1,13 @@
 // Created by Crowbar 0.19.0.0
 
-$modelname "props_map_editor/tspen_ret_btn_sphere.mdl"
+$modelname "props_map_editor/BEE2_ret_btn_clean_sphere.mdl"
 
 $bodygroup "Body"
 {
 	studio "buttonball_reference.smd"
 }
 
-$cdmaterials "models/props_map_editor/"
+$cdmaterials "models/props_map_editor/" "BEE2/models/props_map_editor/"
 
 $surfaceprop "metalpanel"
 
