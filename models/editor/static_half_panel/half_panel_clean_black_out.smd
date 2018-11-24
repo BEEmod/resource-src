@@ -2,11 +2,13 @@ version 1
 nodes
 0 "floating_base" -1
 1 "arm4_blk_90deg_model2" -1
+2 "static_prop" -1
 end
 skeleton
 time 0
 0  0.000000 -63.000000 0.000000  0.000000 -0.000000 0.000000
 1  0.000000 1.258565 -0.073177  0.000000 -0.000000 0.000000
+2  0.000000 0.000000 0.000000  0.000000 -0.000000 0.000000
 end
 triangles
 arm_floor_grate
