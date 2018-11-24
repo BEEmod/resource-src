@@ -34,21 +34,17 @@ $texturegroup "skinfamilies"
 	}
 }
 
+$origin 0 -32 0
 
-$attachment "panel_attach" "panel_attach" 0 0 0 rotate 0 0 0
+$attachment "panel_attach" "panel_attach" -32 0 -64 rotate 0 0 0
 
 $surfaceprop "metalpanel"
 
 $contents "solid"
 
-// Only set this if you know what it does, and need it for special circumstances, such as with gibs.
-// $illumposition 0 0 -34.045
+$illumposition -32 -8 -64 "panel_attach"
 
-// $bbox -63.5 -63.5 -68.09 63.5 63.5 0
-
-// $cbox is probably not used anymore
-// $cbox 0 0 0 0 0 0
-
+$bbox -31.5 -63.5 -70 31.5 63.5 63.5
 
 $sequence "idle" "arm_4panel_anims\idle.smd" {
 	fps 30
