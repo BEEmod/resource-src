@@ -23,15 +23,9 @@ $Sequence "idle" "anims/idle.smd" {
 }
 $Sequence "open" "anims/open.smd" {
 	fps 60
-	{
-		event AE_CL_PLAYSOUND 0 "World.a3JumpIntroPlatformTravel"
-		event AE_CL_PLAYSOUND 30 "World.a3JumpIntroPlatformArrive"
-	}
+	{ event AE_CL_PLAYSOUND 30 "World.a3JumpIntroPlatformArrive" }
 }
 $Sequence "close" "anims/close.smd" {
 	fps 60
-	{
-		event AE_CL_PLAYSOUND 0 "World.a3JumpIntroPlatformTravel"
-		event AE_CL_PLAYSOUND 30 "World.a3JumpIntroPlatformArrive"
-	}
+	{ event AE_CL_PLAYSOUND 30 "World.a3JumpIntroPlatformArrive" }
 }
