@@ -1,6 +1,6 @@
-$modelname "BEE2/props_underground/track_plat_horiz"
+$modelname "BEE2/props_underground/track_plat_panel_horiz"
 
-$body "Body" "track_plat_horiz"
+$body "Body" "track_plat_horiz_panel"
 
 $cdmaterials "BEE2/models/props_underground"
 $cdmaterials "models/props_underground" // For motor

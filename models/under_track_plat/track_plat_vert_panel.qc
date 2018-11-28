@@ -1,6 +1,6 @@
-$modelname "BEE2/props_underground/track_plat_vert"
+$modelname "BEE2/props_underground/track_plat_panel_vert"
 
-$body "Body" "track_plat_vert"
+$body "Body" "track_plat_vert_panel"
 
 $cdmaterials "BEE2/models/props_underground"
 $cdmaterials "models/props_underground" // For motor
@@ -20,3 +20,9 @@ $sequence rotate "anim_vert" {
 }
 
 $surfaceprop "metal"
+
+// $collisionmodel "track_plat_vert_phys"  {
+// 	$concave
+// 	$maxconvexpieces 3
+// 	$automass
+// }
