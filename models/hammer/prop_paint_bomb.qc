@@ -12,8 +12,9 @@ $hbox 0 "static_prop" -28 -28 -28 28 28 28
 
 $texturegroup skinfamilies {
 	{ "blob_surface_bounce" }
-	{ "blob_surface_stick" }
+	{ "blob_surface_reflect" }
 	{ "blob_surface_speed" }
 	{ "blob_surface_portal" }
 	{ "blob_surface_erase" }
+	{ "blob_surface_stick" }
 }
