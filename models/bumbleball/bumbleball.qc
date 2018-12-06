@@ -1,6 +1,6 @@
 // Created by Crowbar 0.36.0.0
 
-$ModelName "models/BEE2/props_ingame/bumbleball_clean.mdl"
+$ModelName "BEE2/props_clean/bumbleball_clean.mdl"
 
 $BodyGroup "Body"
 {
@@ -18,24 +18,33 @@ $LOD 50
 
 $SurfaceProp "sphere2"
 
-$Contents "grate"
+$Contents "solid"
 
-$renamematerial "bumbleball01" "clean_off"
-
-$CDMaterials "BEE2/models/props_ingame/bumbleball/"
+$CDMaterials "BEE2/models/props_clean/bumbleball/"
 
 $TextureGroup "skinfamilies"
 {
-	{ "clean_off" }
-	{ "clean_on" }
-	{ "clean_bounce" }
-	{ "clean_speed" }
+	{
+		"body"
+		"light_off"
+	}
+	{
+		"body"
+		"light_on"
+	}
+	{
+		"body_bounce"
+		"light_bounce"
+	}
+	{
+		"body_speed"
+		"light_speed"
+	}
 }
 
 $CBox 0 0 0 0 0 0
 
 $BBox -24 -24 -24 24 24 24
-
 
 $Sequence "idle" {
 	"bumbleball_anims\idle.smd"
@@ -47,12 +56,7 @@ $Sequence "idle" {
 $CollisionModel "bumbleball_physics.smd"
 {
 	$mass 75
-	$inertia 1
-	$damping 0
-	$rotdamping 0
-	$rootbone " "
 	$concave
-
 }
 
 $KeyValues
