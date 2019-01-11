@@ -1,0 +1,23 @@
+
+$ModelName props_map_editor/bee2_angled_hlb_$mdl$deg.mdl
+
+$BodyGroup "Body"
+{
+	studio bee2_angled_hlb_$mdl$deg_ref.smd
+}
+
+$SurfaceProp "metalpanel"
+
+$Contents "solid"
+
+$MostlyOpaque
+
+$CDMaterials "models/props_map_editor"
+$CDMaterials "BEE2/models/props_map_editor"
+
+$Sequence "idle" {
+	"idle.smd"
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+}
