@@ -1,0 +1,14 @@
+// Created by Crowbar 0.55
+
+$ModelName props_map_editor/BEE2_antline_corner_$i$.mdl
+
+$BodyGroup "Body"
+{
+	studio antline_corner_$i$_ref.smd
+}
+
+$CDMaterials "BEE2/models/props_map_editor"
+
+$Sequence "idle" {
+	"idle.smd"
+}
