@@ -1,4 +1,4 @@
-$ModelName "BEE2/props_p1/tuleby/pgun_button.mdl"
+$ModelName "BEE2/props_p1/tuleby/pgun_button_blue.mdl"
 
 $BodyGroup "g"
 {
@@ -22,15 +22,15 @@ $SurfaceProp "default"
 
 $Contents "solid"
 
-$MaxEyeDeflection 90
-
 $CDMaterials "BEE2/models/props_p1/tuleby/"
 $CDMaterials "BEE2/models/props_clean/tuleby/"
 
+$renamematerial "screen_oran" "screen_blue"
+$renamematerial "pgun_btn_oran" "pgun_btn_blue"
+
 $TextureGroup "skinfamilies"
 {
-	{ "pgun_btn_oran" "screen_oran" }
-	{ "pgun_btn_oran" "screen_oran" }
+	{ "pgun_btn_blue" "screen_blue" }
 	{ "pgun_btn_blue" "screen_blue" }
 }
 

@@ -1,6 +1,6 @@
 // Created by Crowbar 0.36.0.0
 
-$ModelName "BEE2/props_clean/tuleby/pgun_button.mdl"
+$ModelName "BEE2/props_clean/tuleby/pgun_button_oran.mdl"
 
 $BodyGroup "btn"
 {
@@ -28,29 +28,12 @@ $TextureGroup "skinfamilies" {
 	{
 	"portal_button_blue" // Base lights
 	"pgun_btn_sign_cube_off" // Sign
-	"pgun_btn_top_oran" // Orange/blue moving bit (red)
-	"screen_oran" // Base lighting
 	}
 	{
 	"portal_button_orange"
 	"pgun_btn_sign_cube_on"
-	"pgun_btn_top_oran"
-	"screen_oran"
-	}
-	{
-	"portal_button_blue"
-	"pgun_btn_sign_player_off"
-	"pgun_btn_top_blue"
-	"screen_blue"
-	}
-	{
-	"portal_button_orange"
-	"pgun_btn_sign_player_on"
-	"pgun_btn_top_blue"
-	"screen_blue"
 	}
 }
-
 
 $Sequence "BindPose" {
 	"portal_button_anims\BindPose.smd"
