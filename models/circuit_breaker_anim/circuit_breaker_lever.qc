@@ -37,6 +37,10 @@ $sequence "idle_down"	"anim/idle_down.smd" {
 	fps 24
 }
 
+$sequence "idle_console"	"anim/idle_console.smd" {
+	fps 24
+}
+
 $sequence "flick"	"anim/open_anim.smd" {
 	fps 24
 	{
@@ -49,9 +53,7 @@ $sequence "flick"	"anim/open_anim.smd" {
 
 $sequence "reset"	"anim/close_anim.smd" {
 	fps 24
-	{
-	event AE_CL_PLAYSOUND 0 "World.LightPowerOnSwitch"
-	}
+	{ event AE_CL_PLAYSOUND 0 "World.LightPowerOnSwitch" }
 }
 
 $sequence "flick_reset"	"anim/press_anim.smd" {
@@ -66,6 +68,20 @@ $sequence "flick_reset"	"anim/press_anim.smd" {
 	// Reset
 	event AE_CL_PLAYSOUND 25 "World.LightPowerOnSwitch" 
 	}
+}
+
+// Half-long animations, for consoles.
+
+$Sequence "flick_console" "anim/open_half_anim.smd" {
+	{ event AE_CL_PLAYSOUND 0 "World.PaintSwitchOpen" }
+	{ event AE_CL_CREATE_PARTICLE_EFFECT 6 "env_sparks_omni start_at_attachment spark_1" }
+	{ event AE_CL_CREATE_PARTICLE_EFFECT 6 "env_sparks_omni start_at_attachment spark_2" }
+	fps 18
+}
+
+$sequence "reset_console" "anim/close_half_anim.smd" {
+	{ event AE_CL_PLAYSOUND 0 "World.LightPowerOnSwitch" }
+	fps 18
 }
 
 $collisionjoints "circuit_breaker_lever_physics.smd"
