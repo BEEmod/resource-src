@@ -8,6 +8,11 @@ $sequence idle "screen_ref"
 
 $surfaceprop "glass"
 
+$texturegroup "skinfamiles" {
+	{ "tv_screen_off" }
+	{ "tv_screen_on" }
+}
+
 $collisionmodel "screen_phy"  {
 	$automass
 }
