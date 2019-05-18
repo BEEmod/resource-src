@@ -43,10 +43,19 @@ $Sequence "idle" {
 	"../over_panel/arm_8panel_anims\idle.smd"
 }
 
+$Sequence "parent_pose" {
+	// Special position for the animations
+	"anims/parent_pose.smd"
+}
+
 $Sequence "up" {
 	"../over_panel/arm_8panel_anims\up.smd"
 }
 
 $Sequence "down" {
 	"../over_panel/arm_8panel_anims\down.smd"
+}
+
+$Sequence "raised" {
+	"anims/up_idle.smd"
 }
