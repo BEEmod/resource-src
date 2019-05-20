@@ -1,20 +1,11 @@
-// Created by Crowbar 0.55
-
-$ModelName "BEE2/props_underground/angled_panel.mdl"
-
-$BodyGroup "default"
-{
-	studio "rot_panel_ref.smd"
-}
-
 $SurfaceProp "default"
 
 $Contents "solid"
 
 // $IllumPosition 0 130.75 16
 
-$CDMaterials "models/props_underground"
-$CDMaterials "models/anim_wp/framework"
+$CDMaterials "models/props_underground/"
+$CDMaterials "models/anim_wp/framework/"
 
 $CBox 0 0 0 0 0 0
 
@@ -41,15 +32,31 @@ $attachment "pist_btm" "pist_bottom" 0 0 0 rotate 0 0 0
 
 $Sequence "idle" {
 	"anims\idle.smd"
-	fadein 0.2
-	fadeout 0.2
 	fps 30
+}
+
+$Sequence "open_30" {
+	"anims\open_30.smd"
+	fps 60
+}
+
+$Sequence "open_45" {
+	"anims\open_45.smd"
+	fps 60
+}
+
+$Sequence "open_60" {
+	"anims\open_60.smd"
+	fps 60
 }
 
 $Sequence "open_90" {
 	"anims\open_90.smd"
-	fadein 0.2
-	fadeout 0.2
 	fps 60
 }
 
+// For the half stair item.
+$Sequence "open_stair" {
+	"anims\open_stair.smd"
+	fps 60
+}
