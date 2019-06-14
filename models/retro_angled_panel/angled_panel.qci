@@ -35,28 +35,28 @@ $Sequence "idle" {
 	fps 30
 }
 
-$Sequence "open_30" {
+$Sequence "ramp_30_deg_open" {
 	"anims\open_30.smd"
 	fps 60
 }
 
-$Sequence "open_45" {
+$Sequence "ramp_45_deg_open" {
 	"anims\open_45.smd"
 	fps 60
 }
 
-$Sequence "open_60" {
+$Sequence "ramp_60_deg_open" {
 	"anims\open_60.smd"
 	fps 60
 }
 
-$Sequence "open_90" {
+$Sequence "ramp_90_deg_open" {
 	"anims\open_90.smd"
 	fps 60
 }
 
 // For the half stair item.
-$Sequence "open_stair" {
+$Sequence "stair_open" {
 	"anims\open_stair.smd"
 	fps 60
 }
