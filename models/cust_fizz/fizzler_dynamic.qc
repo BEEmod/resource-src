@@ -42,6 +42,7 @@ $surfaceprop "metal"
 $contents "solid"
 
 $bbox -16.25 -24.25 -64.25 16.25 13.25 64.25
+$illumposition 6 0 0
 
 $sequence "idle" "fizzler_dynamic_anims\idle.smd" {
 	fps 30
