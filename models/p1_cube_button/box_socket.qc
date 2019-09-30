@@ -26,11 +26,13 @@ $Contents "solid"
 
 $CDMaterials "models/props/" //"BEE2/models/props_p1/"
 
+$hbox 0 "box_socket_root"	   -41.43    4.00  -41.45    41.42   13.00   41.40
+$hbox 0 "box_socket_top"	   -24.58   -1.75  -24.64    24.67    4.75   24.62
+
 $TextureGroup "skinfamilies"
 {
-	{ "box_socket" }
-	{ "box_socket" } 
-	//_orange" }
+	{ "box_socket_active" }
+	{ "box_socket_active" }
 }
 
 $Sequence "idle" {
@@ -43,17 +45,13 @@ $Sequence "idle" {
 $Sequence "down" {
 	"anim_down.smd"
 	fps 30
-	{ 
-	event AE_CL_PLAYSOUND 1 "BEE2.P1.button_down"
-	}
+	{ event AE_CL_PLAYSOUND 1 "BEE2.P1.button_down" }
 }
 
 $Sequence "up" {
 	"anim_up.smd"
 	fps 30
-	{ 
-	event AE_CL_PLAYSOUND 1 "BEE2.P1.button_up" 
-	}
+	{ event AE_CL_PLAYSOUND 1 "BEE2.P1.button_up" }
 }
 
 $Sequence "idledown" {
@@ -64,10 +62,5 @@ $Sequence "idledown" {
 $CollisionModel "box_socket_physics.smd"
 {
 	$mass 50
-	$inertia 1
-	$damping 0
-	$rotdamping 0
-	$rootbone " "
 	$concave
-
 }
