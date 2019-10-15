@@ -2,4 +2,5 @@ $include "fizzler.qci"
 
 $modelname "props_map_editor/fr_matter_inquisition_field.mdl"
 
-$renamematerial "field" "fr_mif"
+$renamematerial "effect" "fr_mif"
+$renamematerial "field"  "fr_mif_field"
