@@ -1,0 +1,4 @@
+anisotropic 1
+nonice 1
+startframe 1
+endframe 3
