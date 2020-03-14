@@ -30,8 +30,6 @@ $CDMaterials "models\props\" "BEE2/models/props_ingame/"
 
 $CBox 0 0 0 0 0 0
 
-$BBox -18.846 -58.795 -79.583 18.846 0.027 85.192
-
 $Sequence "idle" { "futbol_dispenser_reference"
 	fps 30
 }
