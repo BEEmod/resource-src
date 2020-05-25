@@ -46,14 +46,20 @@ $sequence "flick"	"anim/open_anim.smd" {
 	{
 	event AE_CL_PLAYSOUND 0 "World.PaintSwitchOpen"
 	// Sparks when the lever contacts.
-	event AE_CL_CREATE_PARTICLE_EFFECT 13 "env_sparks_omni start_at_attachment spark_1"
-	event AE_CL_CREATE_PARTICLE_EFFECT 13 "env_sparks_omni start_at_attachment spark_2"
+	event AE_CL_CREATE_PARTICLE_EFFECT 13 "weld_spark_01 start_at_attachment spark_1"
+	event AE_CL_CREATE_PARTICLE_EFFECT 13 "weld_spark_01 start_at_attachment spark_2"
 	}	
 }
 
 $sequence "reset"	"anim/close_anim.smd" {
 	fps 24
-	{ event AE_CL_PLAYSOUND 0 "World.LightPowerOnSwitch" }
+	{
+	// The soundscript fires off useless extra sounds.
+	event AE_CL_PLAYSOUND 0 "@world\light_power_on_switch_01.wav"
+	// Sparks when the lever pops out.
+	event AE_CL_CREATE_PARTICLE_EFFECT 0 "weld_spark_01 start_at_attachment spark_1"
+	event AE_CL_CREATE_PARTICLE_EFFECT 0 "weld_spark_01 start_at_attachment spark_2"
+	}
 }
 
 $sequence "flick_reset"	"anim/press_anim.smd" {
@@ -62,25 +68,34 @@ $sequence "flick_reset"	"anim/press_anim.smd" {
 	event AE_CL_PLAYSOUND 0 "World.PaintSwitchOpen" 
 	
 	// Sparks when the lever contacts.
-	event AE_CL_CREATE_PARTICLE_EFFECT 13 "env_sparks_omni start_at_attachment spark_1"
-	event AE_CL_CREATE_PARTICLE_EFFECT 13 "env_sparks_omni start_at_attachment spark_2"
+	event AE_CL_CREATE_PARTICLE_EFFECT 13 "weld_spark_01 start_at_attachment spark_1"
+	event AE_CL_CREATE_PARTICLE_EFFECT 13 "weld_spark_01 start_at_attachment spark_2"
 	
 	// Reset
-	event AE_CL_PLAYSOUND 25 "World.LightPowerOnSwitch" 
+	event AE_CL_PLAYSOUND 25 "@world\light_power_on_switch_01.wav" 
+	// Sparks when the lever pops out.
+	event AE_CL_CREATE_PARTICLE_EFFECT 25 "weld_spark_01 start_at_attachment spark_1"
+	event AE_CL_CREATE_PARTICLE_EFFECT 25 "weld_spark_01 start_at_attachment spark_2"
 	}
 }
 
 // Half-long animations, for consoles.
 
 $Sequence "flick_console" "anim/open_half_anim.smd" {
-	{ event AE_CL_PLAYSOUND 0 "World.PaintSwitchOpen" }
-	{ event AE_CL_CREATE_PARTICLE_EFFECT 6 "env_sparks_omni start_at_attachment spark_1" }
-	{ event AE_CL_CREATE_PARTICLE_EFFECT 6 "env_sparks_omni start_at_attachment spark_2" }
+	{ 
+	event AE_CL_PLAYSOUND 0 "World.PaintSwitchOpen" 
+	event AE_CL_CREATE_PARTICLE_EFFECT 6 "weld_spark_01 start_at_attachment spark_1"
+	event AE_CL_CREATE_PARTICLE_EFFECT 6 "weld_spark_01 start_at_attachment spark_2"
+	}
 	fps 18
 }
 
 $sequence "reset_console" "anim/close_half_anim.smd" {
-	{ event AE_CL_PLAYSOUND 0 "World.LightPowerOnSwitch" }
+	{ 
+	event AE_CL_PLAYSOUND 0 "@world\light_power_on_switch_01.wav" 
+	event AE_CL_CREATE_PARTICLE_EFFECT 0 "weld_spark_01 start_at_attachment spark_1"
+	event AE_CL_CREATE_PARTICLE_EFFECT 0 "weld_spark_01 start_at_attachment spark_2"
+	}
 	fps 18
 }
 
