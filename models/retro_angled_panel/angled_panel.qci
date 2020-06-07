@@ -2,7 +2,6 @@ $SurfaceProp "default"
 
 $Contents "solid"
 
-// $IllumPosition 0 130.75 16
 
 $CDMaterials "models/props_underground/"
 $CDMaterials "models/anim_wp/framework/"
@@ -12,6 +11,7 @@ $CBox 0 0 0 0 0 0
 $attachment "panel_attach" "rot" 0 64 0 rotate 0 0 0
 $attachment "pist_top" "pist_top" 0 0 0 rotate 0 0 0
 $attachment "pist_btm" "pist_bottom" 0 0 0 rotate 0 0 0
+$IllumPosition 0 64 -2 rot
 
 //$BBox -321.25 -28 -12 58.5 28 44
 

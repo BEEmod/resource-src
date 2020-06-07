@@ -7,5 +7,4 @@ $BodyGroup "default"
 	studio "angled_panel_50s_ref.smd"
 }
 
-// $CDMaterials "models/props_underground"
 $include "angled_panel.qci"

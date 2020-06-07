@@ -4,7 +4,7 @@ $ModelName "BEE2/props_underground/angled_panel_70s.mdl"
 
 $BodyGroup "default"
 {
-	studio "rot_panel_70s_ref.smd"
+	studio "angled_panel_70s_ref.smd"
 }
 
 $CDMaterials "BEE2/models/props_underground/"
