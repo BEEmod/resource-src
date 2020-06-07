@@ -45,6 +45,11 @@ $origin 0 0 8
 
 $attachment "light" "faith_pate_paddle_alter_direction" 22 1 1 rotate 270 180 0
 
+$hbox 0 "faith_pate_paddle_alter_direction_geom"	    -5.98  -14.88  -49.28    20.19   17.55   33.59
+$hbox 0 "pendulum_lock_rotate_geom"	   -19.11  -10.94   -9.89    27.11   29.87   12.56
+$hbox 0 "box_geom"	   -60.00  -53.37  -64.00    60.00    0.00   64.00
+
+
 $Sequence "idle" {
 	"faith_plate_mapeditor_anims\idle.smd"
 	fadein 0.2
