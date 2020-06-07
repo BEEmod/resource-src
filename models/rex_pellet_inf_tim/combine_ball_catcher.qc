@@ -52,7 +52,6 @@ $Sequence "closed" {
 $Sequence "close" {
 	"combine_ball_catcher_anims\close.smd"
 	fps 30
-	
 	{
 		event AE_CL_PLAYSOUND 0 "BEE2.pellet_catcher"
 	}
@@ -61,8 +60,9 @@ $Sequence "close" {
 $Sequence "open" {
 	"combine_ball_catcher_anims\open.smd"
 	fps 30
-	
 	{
+		// The pellet being destroyed.
+		event AE_CL_PLAYSOUND 0 "NPC_CombineBall.Explosion"
 		// Just as the center part starts moving..
 		event AE_CL_PLAYSOUND 25 "prop_laser_catcher.poweroff"
 	}
