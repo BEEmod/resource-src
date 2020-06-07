@@ -4,7 +4,7 @@ $ModelName "BEE2/cube_color/dropper_cowl_clean.mdl"
 
 $BodyGroup "Body"
 {
-	studio "dropper_color_ref.smd"
+	studio "dropper_color_clean_ref.smd"
 }
 
 $SurfaceProp "metalpanel"
