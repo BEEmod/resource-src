@@ -11,7 +11,7 @@ ROOT_NAME = 'root'
 CACHE = {}
 
 STYLES = [
-    'clean',
+    ('clean', 'fizzler/fizz_effect_portal'),
     # 'retro',
 ]
 
@@ -113,7 +113,7 @@ def make_anim(
         mesh.export(f)
 
 
-def generate(style: str, shape: Shape) -> None:
+def generate(style: str, field_tex: str, shape: Shape) -> None:
     """Generate a specific model."""
     # Load the models we use.
     emitter = load_model(style + '_fizz_ref.smd')
@@ -125,6 +125,11 @@ def generate(style: str, shape: Shape) -> None:
 
     # First, copy in the static block geo.
     ref.append_model(load_model(shape.block_fname))
+
+    # Rename the fizzler field material.
+    for tri in ref.triangles:
+        if tri.mat == 'field':
+            tri.mat = field_tex
 
     new_bones: Dict[Tuple[float, float, float], Dict[Bone, Bone]] = {}
     ind = 1
@@ -202,4 +207,4 @@ if __name__ == '__main__':
     with ProcessPoolExecutor() as exc:
         for cur_style in STYLES:
             for cur_shape in SHAPES:
-                futures.append(exc.submit(generate, cur_style, cur_shape))
+                futures.append(exc.submit(generate, *cur_style, cur_shape))
