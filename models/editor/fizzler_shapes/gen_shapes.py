@@ -30,8 +30,9 @@ class Shape:
 SHAPES = [
     Shape(
         f'lautaro/standing_fizzler_x{i}',
+        f'blocks/standing_{i}_ref',
         [
-            (Vec(0, 0, 128*off), Vec(0, yaw, 90))
+            (Vec(0, 128*off, 0), Vec(0, yaw, 90))
             for off in range(5)[:i]
             for yaw in [0, 180]
         ]
@@ -39,16 +40,17 @@ SHAPES = [
 ] + [
     Shape(
         f'lautaro/reclined_fizzler_x{i}',
+        f'blocks/reclined_{i}_ref',
         [
-            (Vec(0, 128*l, -48), Vec(270, 270, 0)),
-            (Vec(0, 128*r, -48), Vec(90, 270, 0)),
+            (Vec(-48, 0, -128*r), Vec(270, 270, 0)),
+            (Vec(+48, 0, -128*l), Vec(90, 270, 0)),
         ]
     ) for i, l, r in [
         (1, 0, 0),
-        (2, 0, -1),
-        (3, 1, -1),
-        (4, 1, -2),
-        (5, 2, -2),
+        (2, 0, 1),
+        (3, 1, 1),
+        (4, 1, 2),
+        (5, 2, 2),
     ]
 ]
 
@@ -62,11 +64,12 @@ def test_vmf() -> None:
             ent = vmf.create_ent(
                 'prop_static',
                 model='models/props_map_editor/fizzler.mdl',
-                origin=pos,
+                origin=pos.rotate(*angle),
                 angles=angle,
             )
             ent.visgroup_ids.add(group.id)
             ent.vis_shown = False
+    print('Dumping shape.vmf')
     with open('shape.vmf', 'w') as f:
         vmf.export(f)
 
