@@ -4,25 +4,15 @@ from srctools.smd import Mesh, Bone, BoneFrame, Triangle, Vertex
 from srctools import VMF, Vec
 import os
 from math import radians
+from concurrent.futures import ProcessPoolExecutor
 
 # Name to use for the root bone.
 ROOT_NAME = 'root'
-
-
-class Style:
-    """A style, plus the specific emitter models for it."""
-    def __init__(self, name: str) -> None:
-        self.name = name
-        with open(f'{name}_fizz_ref.smd', 'rb') as f:
-            self.emitter = Mesh.parse_smd(f)
-        with open(f'{name}_explode_out.smd', 'rb') as f:
-            self.open = Mesh.parse_smd(f)
-        with open(f'{name}_explode_in.smd', 'rb') as f:
-            self.close = Mesh.parse_smd(f)
+CACHE = {}
 
 STYLES = [
-    Style('clean'),
-    # Style('retro'),
+    'clean',
+    # 'retro',
 ]
 
 
@@ -31,16 +21,7 @@ class Shape:
     def __init__(self, name: str, block: str, points: List[Tuple[Vec, Vec]]) -> None:
         self.name = name
         self.points = points
-        try:
-            with open(f'{block}.smd', 'rb') as f:
-                self.block = Mesh.parse_smd(f)
-        except FileNotFoundError:
-            print(f'No {block}.smd!')
-            self.block = Mesh.build_bbox(
-                ROOT_NAME, 'error',
-                Vec(-16, -16, -16),
-                Vec(16, 16, 16),
-            )
+        self.block_fname = block + '.smd'
 
 SHAPES = [
     Shape(
@@ -51,13 +32,13 @@ SHAPES = [
             for off in range(5)[:i]
             for yaw in [0, 180]
         ]
-    ) for i in [2]
+    ) for i in [1, 2, 3, 4, 5]
 ] + [
     Shape(
         f'reclined_fizzler_x{i}',
         f'blocks/reclined_{i}_ref',
         [
-            (Vec(-48, 0, -128*r), Vec(270, 270, 0)),
+            (Vec(-48, 0, -128*r), Vec(90, 90, 0)),
             (Vec(+48, 0, -128*l), Vec(90, 270, 0)),
         ]
     ) for i, l, r in [
@@ -68,6 +49,16 @@ SHAPES = [
         (5, 2, 2),
     ]
 ]
+
+
+def load_model(filename: str) -> Mesh:
+    """Load the given model, caching it."""
+    try:
+        return CACHE[filename]
+    except KeyError:
+        with open(filename, 'rb') as f:
+            ret = CACHE[filename] = Mesh.parse_smd(f)
+        return ret
 
 
 def test_vmf() -> None:
@@ -122,13 +113,18 @@ def make_anim(
         mesh.export(f)
 
 
-def generate(style: Style, shape: Shape) -> None:
+def generate(style: str, shape: Shape) -> None:
     """Generate a specific model."""
+    # Load the models we use.
+    emitter = load_model(style + '_fizz_ref.smd')
+    anim_open = load_model(style + '_explode_out.smd')
+    anim_close = load_model(style + '_explode_in.smd')
+
     ref = Mesh.blank(ROOT_NAME)
     [root] = ref.bones.values()
 
     # First, copy in the static block geo.
-    ref.append_model(shape.block)
+    ref.append_model(load_model(shape.block_fname))
 
     new_bones: Dict[Tuple[float, float, float], Dict[Bone, Bone]] = {}
     ind = 1
@@ -140,13 +136,13 @@ def generate(style: Style, shape: Shape) -> None:
         bones: Dict[Bone, Bone]
         bones = new_bones[angles.as_tuple()] = {
             bone: Bone(f'{bone.name}_{ind}', None)
-            for bone in style.emitter.bones.values()
+            for bone in emitter.bones.values()
         }
         local_root = bones[root] = Bone(f'{ROOT_NAME}_{ind}', root)
         ind += 1
 
         # Now they're all created, fix up the parents.
-        for bone in style.emitter.bones.values():
+        for bone in emitter.bones.values():
             if bone.parent is not None:
                 bones[bone].parent = bones[bone.parent]
             else:
@@ -157,13 +153,13 @@ def generate(style: Style, shape: Shape) -> None:
 
         # And copy over their start pose.
         ref.animation[0].append(BoneFrame(local_root, Vec(), Vec()))
-        for frame in style.emitter.animation[0]:
+        for frame in emitter.animation[0]:
             ref.animation[0].append(BoneFrame(bones[frame.bone], frame.position, frame.rotation))
 
     # Now, place each emitter.
     for pos, angles in shape.points:
         bones = new_bones[angles.as_tuple()]
-        for tri in style.emitter.triangles:
+        for tri in emitter.triangles:
             ref.triangles.append(Triangle(tri.mat, *[
                 Vertex(
                     vert.pos + pos,
@@ -177,18 +173,18 @@ def generate(style: Style, shape: Shape) -> None:
                 ) for vert in tri
             ]))
 
-    folder = f'generated/{style.name}/'
+    folder = f'generated/{style}/'
 
-    make_anim(root, new_bones, f'{folder}{shape.name}_open', style.open.animation)
-    make_anim(root, new_bones, f'{folder}{shape.name}_close', style.close.animation)
-    make_anim(root, new_bones, f'{folder}{shape.name}_idle', {0: style.open.animation[0]})
+    make_anim(root, new_bones, f'{folder}{shape.name}_open', anim_open.animation)
+    make_anim(root, new_bones, f'{folder}{shape.name}_close', anim_close.animation)
+    make_anim(root, new_bones, f'{folder}{shape.name}_idle', {0: anim_open.animation[0]})
 
     print(f' - {folder}{shape.name}_ref...', flush=True)
     with open(f'{folder}{shape.name}_ref.smd', 'wb') as f:
         ref.export(f)
 
     with open(f'{folder}{shape.name}.qc', 'w') as f:
-        f.write(f'$modelname "props_map_editor/BEE2/{style.name}/{shape.name}.mdl"\n')
+        f.write(f'$modelname "props_map_editor/BEE2/{style}/{shape.name}.mdl"\n')
         f.write('$BodyGroup "Body" {\n\tstudio "%_ref.smd"\n}\n'.replace('%', shape.name))
         f.write('$cdmaterials "models/props_map_editor/" "BEE2/models/props_map_editor/"\n')
         f.write('''
@@ -200,8 +196,10 @@ $sequence "explodeIn" "%_close.smd"
 
 if __name__ == '__main__':
     # test_vmf()
-    for cur_style in STYLES:
-        for cur_shape in SHAPES:
-            print(f'Generating {cur_style.name.upper()} {cur_shape.name}...')
-            generate(cur_style, cur_shape)
-
+    import logging
+    logging.basicConfig()
+    futures = []
+    with ProcessPoolExecutor() as exc:
+        for cur_style in STYLES:
+            for cur_shape in SHAPES:
+                futures.append(exc.submit(generate, cur_style, cur_shape))
