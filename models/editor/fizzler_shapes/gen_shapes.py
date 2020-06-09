@@ -12,7 +12,7 @@ CACHE = {}
 
 STYLES = [
     ('clean', 'fizzler/fizz_effect_portal'),
-    # 'retro',
+    ('retro', 'fizzler/fizz_effect_retro_portal'),
 ]
 
 
@@ -23,6 +23,7 @@ class Shape:
         self.points = points
         self.block_fname = block + '.smd'
 
+
 SHAPES = [
     Shape(
         f'standing_fizzler_x{i}',
@@ -30,7 +31,7 @@ SHAPES = [
         [
             (Vec(128*off, 0, 0), Vec(90, 0, yaw))
             for off in range(5)[:i]
-            for yaw in [0, 180]
+            for yaw in [90, 270]
         ]
     ) for i in [1, 2, 3, 4, 5]
 ] + [
@@ -38,8 +39,8 @@ SHAPES = [
         f'reclined_fizzler_x{i}',
         f'blocks/reclined_{i}_ref',
         [
-            (Vec(-48, 0, -128*r), Vec(90, 90, 0)),
-            (Vec(+48, 0, -128*l), Vec(90, 270, 0)),
+            (Vec(0, -128*r, +48), Vec(180, 90, 0)),
+            (Vec(0, -128*l, -48), Vec(180, 270, 0)),
         ]
     ) for i, l, r in [
         (1, 0, 0),
@@ -124,7 +125,10 @@ def generate(style: str, field_tex: str, shape: Shape) -> None:
     [root] = ref.bones.values()
 
     # First, copy in the static block geo.
-    ref.append_model(load_model(shape.block_fname))
+    try:
+        ref.append_model(load_model(shape.block_fname))
+    except FileNotFoundError:
+        print('No blocks for: ', shape.block_fname)
 
     # Rename the fizzler field material.
     for tri in ref.triangles:
@@ -208,3 +212,4 @@ if __name__ == '__main__':
         for cur_style in STYLES:
             for cur_shape in SHAPES:
                 futures.append(exc.submit(generate, *cur_style, cur_shape))
+                # generate(*cur_style, cur_shape)
