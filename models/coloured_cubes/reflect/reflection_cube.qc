@@ -72,7 +72,7 @@ $collisionmodel "reflection_cube_physics.smd"
 	$inertia 1
 	$damping 0.1
 	$rotdamping 0
-
+	$masscenter 0 0 0 // Don't take the emitter part into account.
 }
 
 
