@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<spacescapelayers>
+    <layer>
+        <destBlendFactor>one</destBlendFactor>
+        <ditherAmount>0.18</ditherAmount>
+        <gain>0.54</gain>
+        <hdrMultiplier>1</hdrMultiplier>
+        <hdrPower>1</hdrPower>
+        <innerColor>1 1 1 1</innerColor>
+        <lacunarity>2.29</lacunarity>
+        <name>Noise</name>
+        <noiseType>fbm</noiseType>
+        <octaves>6</octaves>
+        <offset>1</offset>
+        <outerColor>0.419608 0.419608 0.419608 1</outerColor>
+        <powerAmount>1</powerAmount>
+        <previewTextureSize>256</previewTextureSize>
+        <scale>1.68</scale>
+        <seed>0</seed>
+        <shelfAmount>0.38</shelfAmount>
+        <sourceBlendFactor>one</sourceBlendFactor>
+        <type>noise</type>
+    </layer>
+    <layer>
+        <destBlendFactor>src_alpha</destBlendFactor>
+        <ditherAmount>0.18</ditherAmount>
+        <gain>0.54</gain>
+        <hdrMultiplier>1</hdrMultiplier>
+        <hdrPower>1</hdrPower>
+        <innerColor>0.627451 0.627451 0.627451 1</innerColor>
+        <lacunarity>2.29</lacunarity>
+        <name>Noise copy</name>
+        <noiseType>fbm</noiseType>
+        <octaves>6</octaves>
+        <offset>1</offset>
+        <outerColor>0.576471 0.576471 0.576471 0.501961</outerColor>
+        <powerAmount>1</powerAmount>
+        <previewTextureSize>256</previewTextureSize>
+        <scale>1.34</scale>
+        <seed>0</seed>
+        <shelfAmount>0.38</shelfAmount>
+        <sourceBlendFactor>one</sourceBlendFactor>
+        <type>noise</type>
+    </layer>
+</spacescapelayers>
