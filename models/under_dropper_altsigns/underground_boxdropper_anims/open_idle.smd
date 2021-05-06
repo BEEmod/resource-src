@@ -1,0 +1,12 @@
+version 1
+nodes
+  0 "underground_trapdoor_root" -1
+  1 "underground_trapdoor_door" 0
+  2 "underground_trapdoor_end" 1
+end
+skeleton
+time 0
+    0 0.000000 0.000000 0.000000 1.570792 0.000005 -0.000005
+    1 0.000000 -8.494574 47.125000 -1.595254 0.000000 0.000000
+    2 0.000000 7.494574 -88.125000 0.000000 0.000000 0.000000
+end
