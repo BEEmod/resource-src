@@ -7,4 +7,7 @@ $BodyGroup "Body"
 
 $CDMaterials "models/props_map_editor/" "BEE2/models/props_map_editor/"
 
-$Sequence "idle" "scaffold_pist_ref"
+$Sequence "idle" "anims/idle.smd"
+$Sequence "explodeOut" "anims/expand.smd"
+$Sequence "explodeIn" "anims/contract.smd"
+$Sequence "expand_idle" "anims/expanded.smd"
