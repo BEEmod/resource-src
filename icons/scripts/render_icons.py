@@ -50,6 +50,12 @@ def getNodesByType(node_tree, type):
 def deselectAll():
     for obj in bpy.data.objects:
         obj.select_set(False)
+    bpy.context.view_layer.objects.active = None
+
+def selectObject(object):
+    deselectAll()
+    bpy.context.view_layer.objects.active = object
+    object.select_set(True)
 
 def importObjects(file):
     
@@ -106,8 +112,7 @@ def importObjects(file):
     bpy.data.meshes.remove(bpy.data.meshes["smd_bone_vis"])
 
 def createOutlineObject(object):
-    deselectAll()
-    bpy.context.view_layer.objects.active = object
+    selectObject(object)
     
     outlineObject = object.copy()
     outlineObject.data = object.data.copy()
@@ -129,9 +134,7 @@ def createOutlineObject(object):
     outlineMat.diffuse_color = (0, 0, 0, 1)
     outlineMat.shadow_method = 'NONE'
     
-    deselectAll()
-
-    bpy.context.view_layer.objects.active = outlineObject
+    selectObject(outlineObject)
 
     outlineObject.data.materials.append(outlineMat)
 
@@ -146,8 +149,7 @@ def createOutlineObject(object):
     return outlineObject
 
 def createShadowObject(object):
-    deselectAll()
-    bpy.context.view_layer.objects.active = object
+    selectObject(object)
     # Place plane for shadows
     bpy.ops.mesh.primitive_plane_add(size=1000, enter_editmode=False, align='WORLD', location=(0, 0, -64.5), scale=(1, 1, 1))
     shadowPlane = bpy.context.active_object
@@ -213,9 +215,7 @@ def renderIcons(file, type):
     outlineObject = createOutlineObject(object)
     shadowPlane, shadowObject = createShadowObject(object)
     
-    deselectAll()
-    # WHY IS THIS NOT SELECTING
-    bpy.context.view_layer.objects.active = object
+    selectObject(object)
     
     camera_data = bpy.data.cameras.new("Camera")
     camera = bpy.data.objects.new("Camera", camera_data)
