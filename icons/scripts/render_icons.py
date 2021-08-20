@@ -8,8 +8,8 @@ modelPath = blendPath + "models/"
 materialPath = blendPath + "materials/"
 renderPath = blendPath + "renders/"
 
-floorObjectsList = ["pellets/pellet_catcher_reference", "pellets/pellet_launcher_reference"]
-wallObjectsList = ["pellets/pellet_catcher_reference", "pellets/pellet_launcher_reference"]
+floorObjectsList = ["pellets/pellet_launcher_reference"]
+wallObjectsList = []
 
 # Cleanup our file of garbage
 def cleanUpBlend():
@@ -46,6 +46,10 @@ def getNodesByType(node_tree, type):
             foundNodes.append(node)
             
     return foundNodes
+
+def deselectAll():
+    for obj in bpy.data.objects:
+        obj.select_set(False)
 
 def importObjects(file):
     
@@ -100,7 +104,87 @@ def importObjects(file):
     objs = bpy.data.objects
     objs.remove(objs[vObject.parent.name], do_unlink=True)
     bpy.data.meshes.remove(bpy.data.meshes["smd_bone_vis"])
-        
+
+def createOutlineObject(object):
+    deselectAll()
+    bpy.context.view_layer.objects.active = object
+    
+    outlineObject = object.copy()
+    outlineObject.data = object.data.copy()
+    outlineObject.name = object.name + "_outline"
+    outlineObject.data.materials.clear()
+    
+    bpy.context.scene.collection.objects.link(outlineObject)
+    
+    #Outline Material
+    outlineMat = bpy.data.materials.new(name="Outline")
+    outlineMat.use_nodes = True
+    outlineMat.use_backface_culling = True
+    outlineMat.node_tree.nodes.remove(outlineMat.node_tree.nodes["Principled BSDF"])
+    outputNode = outlineMat.node_tree.nodes["Material Output"]
+    colorNode = outlineMat.node_tree.nodes.new("ShaderNodeRGB")
+    colorNode.outputs[0].default_value = (0.212231, 0.205079, 0.205079, 1)
+    outlineMat.node_tree.links.new(colorNode.outputs[0], outputNode.inputs[0])
+
+    outlineMat.diffuse_color = (0, 0, 0, 1)
+    outlineMat.shadow_method = 'NONE'
+    
+    deselectAll()
+
+    bpy.context.view_layer.objects.active = outlineObject
+
+    outlineObject.data.materials.append(outlineMat)
+
+    bpy.ops.object.editmode_toggle()
+    bpy.ops.mesh.select_all(action='SELECT')
+    
+    bpy.ops.mesh.flip_normals()
+    bpy.ops.transform.shrink_fatten(value=-1)
+    
+    bpy.ops.object.mode_set()
+    
+    return outlineObject
+
+def createShadowObject(object):
+    deselectAll()
+    bpy.context.view_layer.objects.active = object
+    # Place plane for shadows
+    bpy.ops.mesh.primitive_plane_add(size=1000, enter_editmode=False, align='WORLD', location=(0, 0, -64.5), scale=(1, 1, 1))
+    shadowPlane = bpy.context.active_object
+
+    # Give plane Shadow Catcher material
+    shadowMat = bpy.data.materials.new(name="ShadowCatcher")
+    shadowMat.use_nodes = True
+    shadowMat.blend_method = 'BLEND'
+    
+    shadowMat.node_tree.nodes.remove(shadowMat.node_tree.nodes["Principled BSDF"])
+    nodeShadowOutput = shadowMat.node_tree.nodes["Material Output"]
+    nodeShadowCatcher = shadowMat.node_tree.nodes.new("ShaderNodeGroup")
+    nodeShadowCatcher.node_tree = bpy.data.node_groups['ShadowCatcher']
+    shadowMat.node_tree.links.new(nodeShadowCatcher.outputs[0], nodeShadowOutput.inputs[0])
+    
+    shadowPlane.data.materials.append(shadowMat)
+    
+    shadowObject = object.copy()
+    shadowObject.data = object.data.copy()
+    shadowObject.name = object.name + "_shadow"
+    shadowObject.data.materials.clear()
+    
+    clearMat = bpy.data.materials.new(name="Clear")
+    clearMat.use_nodes = True
+    clearMat.blend_method = 'CLIP'
+    
+    clearMat.node_tree.nodes.remove(clearMat.node_tree.nodes["Principled BSDF"])
+    nodeClearOutput = shadowMat.node_tree.nodes["Material Output"]
+    nodeClearTrans = shadowMat.node_tree.nodes.new("ShaderNodeBsdfTransparent")
+    nodeClearTrans.inputs[0].default_value = (1, 1, 1, 0)
+    clearMat.node_tree.links.new(nodeClearTrans.outputs[0], nodeClearOutput.inputs[0])
+
+    
+    shadowObject.data.materials.append(clearMat)
+    
+    return shadowPlane, shadowObject
+
 def renderFrames(file):
     
     # Settings
@@ -123,11 +207,17 @@ def renderIcons(file, type):
     importObjects(file)
     
     object = bpy.data.objects[os.path.basename(file)]
-    
     scene = bpy.context.scene
     
+    # Create extra objects for rendering
+    outlineObject = createOutlineObject(object)
+    shadowPlane, shadowObject = createShadowObject(object)
+    
+    deselectAll()
+    # WHY IS THIS NOT SELECTING
+    bpy.context.view_layer.objects.active = object
+    
     camera_data = bpy.data.cameras.new("Camera")
-
     camera = bpy.data.objects.new("Camera", camera_data)
 
     # Place cameras
@@ -151,37 +241,79 @@ def renderIcons(file, type):
     vec_rot = vec @ inv
     camera.location = camera.location + vec_rot
     
-    # Place plane for shadows
-    bpy.ops.mesh.primitive_plane_add(size=1000, enter_editmode=False, align='WORLD', location=(0, 0, -64.5), scale=(1, 1, 1))
-    shadowPlane = bpy.context.active_object
-    bpy.context.collection.objects.unlink(shadowPlane)
-
-    # Give plane Shadow Catcher material
-    shadowMat = bpy.data.materials.new(name="ShadowCatcher")
-    shadowMat.use_nodes = True
-    shadowMat.node_tree.nodes.remove(shadowMat.node_tree.nodes["Principled BSDF"])
-    nodeShadowOutput = shadowMat.node_tree.nodes["Material Output"]
-    nodeShadowCatcher = shadowMat.node_tree.nodes.new("ShaderNodeGroup")
-    nodeShadowCatcher.node_tree = bpy.data.node_groups['ShadowCatcher']
-    shadowMat.node_tree.links.new(nodeShadowCatcher.outputs[0], nodeShadowOutput.inputs[0])
-    shadowPlane.data.materials.append(shadowMat)
-    shadowPlane.active_material.blend_method = 'BLEND'
-        
     # Collections
-    
+        
     # Move object to new collection and remove old
     collection = object.users_collection[0]
+    
     tempCol = bpy.data.collections.new("Temp Collection")
+    tempColOut = bpy.data.collections.new("Temp Collection Outline")
+    tempColSdw = bpy.data.collections.new("Temp Collection Shadow")
+    
     bpy.context.scene.collection.children.link(tempCol)
+    bpy.context.scene.collection.children.link(tempColOut)
+    bpy.context.scene.collection.children.link(tempColSdw)
+    
+    bpy.context.collection.objects.unlink(shadowPlane)
+    bpy.context.scene.collection.objects.unlink(outlineObject)
+    
     tempCol.objects.link(object)
     tempCol.objects.link(camera)
-    tempCol.objects.link(shadowPlane)
+    tempColOut.objects.link(outlineObject)
+    tempColSdw.objects.link(shadowPlane)
+    tempColSdw.objects.link(shadowObject)
+    
     bpy.data.collections.remove(collection)
     
     # RENDER!
+    objectLayer = bpy.context.view_layer
+    outlineLayer = bpy.context.scene.view_layers.new(name='Outline Layer')
+    shadowLayer = bpy.context.scene.view_layers.new(name='Shadow Layer')
     
+    bpy.context.layer_collection.children[tempColOut.name].exclude = True
+    bpy.context.layer_collection.children[tempColSdw.name].exclude = True
     
+    bpy.context.window.view_layer = outlineLayer
+    
+    bpy.context.layer_collection.children[tempCol.name].exclude = True
+    bpy.context.layer_collection.children[tempColSdw.name].exclude = True
+
+    bpy.context.window.view_layer = shadowLayer
+    
+    bpy.context.layer_collection.children[tempCol.name].exclude = True
+    bpy.context.layer_collection.children[tempColOut.name].exclude = True
+    
+    bpy.context.window.view_layer = objectLayer
+
+    # Compositing
+    bpy.context.scene.use_nodes = True
+    compTree = bpy.context.scene.node_tree
+    
+    for node in compTree.nodes:
+        compTree.nodes.remove(node)
+    
+    comp_node = compTree.nodes.new('CompositorNodeComposite')
+    
+    layer_node_object = compTree.nodes.new("CompositorNodeRLayers")
+    layer_node_object.layer = objectLayer.name
+    layer_node_outline = compTree.nodes.new("CompositorNodeRLayers")
+    layer_node_outline.layer = outlineLayer.name
+    layer_node_shadow = compTree.nodes.new("CompositorNodeRLayers")
+    layer_node_shadow.layer = shadowLayer.name
+    
+    comp_node_alphaOver1 = compTree.nodes.new("CompositorNodeAlphaOver")
+    comp_node_alphaOver2 = compTree.nodes.new("CompositorNodeAlphaOver")
+    
+    compTree.links.new(layer_node_object.outputs[0], comp_node_alphaOver1.inputs[2])
+    compTree.links.new(layer_node_outline.outputs[0], comp_node_alphaOver1.inputs[1])
+    compTree.links.new(comp_node_alphaOver1.outputs[0], comp_node_alphaOver2.inputs[2])
+    compTree.links.new(layer_node_shadow.outputs[0], comp_node_alphaOver2.inputs[1])
+    compTree.links.new(comp_node_alphaOver2.outputs[0], comp_node.inputs[0])
+
     renderFrames(file)
+    
+    #bpy.context.scene.view_layers.remove(outlineLayer)
+    #bpy.context.scene.view_layers.remove(shadowLayer)
     
     #cleanUpBlend()
 
