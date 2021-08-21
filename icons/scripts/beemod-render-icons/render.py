@@ -4,95 +4,31 @@ from math import radians
 import mathutils
 
 from .nodes import *
-
-# Cleanup our file of garbage
-def cleanUpBlend():
-    # only worry about data in the startup scene
-    for bpy_data_iter in (
-            bpy.data.materials,
-            bpy.data.meshes,
-            bpy.data.cameras,
-            bpy.data.collections,
-            bpy.data.images,
-            bpy.data.textures,
-    ):
-        for id_data in bpy_data_iter:
-            try:
-                if not id_data.use_fake_user == True:
-                    bpy_data_iter.remove(id_data)
-            except:
-                bpy_data_iter.remove(id_data)
-
-def importObjects(file):
-    
-    mdlpth = os.path.join(modelPath, file + ".smd")
-
-    bpy.ops.import_scene.smd(filepath=mdlpth, append="NEW_ARMATURE")
-    
-    vObject = bpy.context.active_object.children[0]
-    
-    bpy.context.view_layer.objects.active = vObject
-    
-    # Apply Armature Modifier
-    for modifier in vObject.modifiers:
-        bpy.ops.object.modifier_apply(modifier=modifier.name)
-    
-    # Move our object
-    #bpy.ops.object.origin_set(type='ORIGIN_CENTER_OF_VOLUME', center='MEDIAN')
-    #vObject.location = (0.0, 0.0, 0.0)
-    
-    # Material
-    for material_slot in vObject.material_slots:
-        
-        material = material_slot.material
-        
-        # Get image for material
-        imgpth = os.path.dirname(os.path.join(materialPath, file))
-        img = os.path.join(imgpth, material.name + ".tga")
-        bpy.ops.image.open(filepath=img)
-        
-        material.use_nodes = True
-    
-    # Cleanup
-
-    # Remove Armature
-    objs = bpy.data.objects
-    objs.remove(objs[vObject.parent.name], do_unlink=True)
-    bpy.data.meshes.remove(bpy.data.meshes["smd_bone_vis"])
+from .utils import *
 
 def createOutlineObject(object):
-    selectObject(object)
     
+    # Copy model
+    selectObject(object)
     outlineObject = object.copy()
     outlineObject.data = object.data.copy()
     outlineObject.name = object.name + "_outline"
     outlineObject.data.materials.clear()
-    
     bpy.context.scene.collection.objects.link(outlineObject)
     
     #Outline Material
     outlineMat = bpy.data.materials.new(name="Outline")
-    outlineMat.use_nodes = True
     outlineMat.use_backface_culling = True
-    outlineMat.node_tree.nodes.remove(outlineMat.node_tree.nodes["Principled BSDF"])
-    outputNode = outlineMat.node_tree.nodes["Material Output"]
-    colorNode = outlineMat.node_tree.nodes.new("ShaderNodeRGB")
-    colorNode.outputs[0].default_value = (0.212231, 0.205079, 0.205079, 1)
-    outlineMat.node_tree.links.new(colorNode.outputs[0], outputNode.inputs[0])
-
     outlineMat.diffuse_color = (0, 0, 0, 1)
     outlineMat.shadow_method = 'NONE'
+    nodesMatOutline(outlineMat)
+    outlineObject.data.materials.append(outlineMat)
     
     selectObject(outlineObject)
-
-    outlineObject.data.materials.append(outlineMat)
-
     bpy.ops.object.editmode_toggle()
     bpy.ops.mesh.select_all(action='SELECT')
-    
     bpy.ops.mesh.flip_normals()
     bpy.ops.transform.shrink_fatten(value=-1)
-    
     bpy.ops.object.mode_set()
     
     return outlineObject
@@ -108,11 +44,7 @@ def createShadowObject(object):
     shadowMat.use_nodes = True
     shadowMat.blend_method = 'BLEND'
     
-    shadowMat.node_tree.nodes.remove(shadowMat.node_tree.nodes["Principled BSDF"])
-    nodeShadowOutput = shadowMat.node_tree.nodes["Material Output"]
-    nodeShadowCatcher = shadowMat.node_tree.nodes.new("ShaderNodeGroup")
-    nodeShadowCatcher.node_tree = bpy.data.node_groups['ShadowCatcher']
-    shadowMat.node_tree.links.new(nodeShadowCatcher.outputs[0], nodeShadowOutput.inputs[0])
+    nodesMatShadow(shadowMat)
     
     shadowPlane.data.materials.append(shadowMat)
     
@@ -125,12 +57,7 @@ def createShadowObject(object):
     clearMat.use_nodes = True
     clearMat.blend_method = 'CLIP'
     
-    clearMat.node_tree.nodes.remove(clearMat.node_tree.nodes["Principled BSDF"])
-    nodeClearOutput = shadowMat.node_tree.nodes["Material Output"]
-    nodeClearTrans = shadowMat.node_tree.nodes.new("ShaderNodeBsdfTransparent")
-    nodeClearTrans.inputs[0].default_value = (1, 1, 1, 0)
-    clearMat.node_tree.links.new(nodeClearTrans.outputs[0], nodeClearOutput.inputs[0])
-
+    nodesMatClear(clearMat)
     
     shadowObject.data.materials.append(clearMat)
     
@@ -151,11 +78,7 @@ def renderFrames(file):
 # Call Functions
 
 def renderIcons(file, type):
-    renderFolder = os.path.dirname(os.path.join(renderPath, file))
-    
-    cleanUpBlend()
-    
-    importObjects(file)
+    importSourceModel(file)
     
     object = bpy.data.objects[os.path.basename(file)]
     scene = bpy.context.scene
@@ -260,17 +183,3 @@ def renderIcons(file, type):
     compTree.links.new(comp_node_alphaOver2.outputs[0], comp_node.inputs[0])
 
     renderFrames(file)
-    
-    #bpy.context.scene.view_layers.remove(outlineLayer)
-    #bpy.context.scene.view_layers.remove(shadowLayer)
-    
-    #cleanUpBlend()
-
-
-cleanUpBlend()
-
-for file in floorObjectsList:
-    renderIcons(file, "FLOOR")
-    
-for file in wallObjectsList:
-    renderIcons(file, "WALL")
