@@ -3,13 +3,7 @@ import os.path
 from math import radians
 import mathutils
 
-blendPath = bpy.path.abspath("//")
-modelPath = blendPath + "models/"
-materialPath = blendPath + "materials/"
-renderPath = blendPath + "renders/"
-
-floorObjectsList = ["pellets/pellet_launcher_reference"]
-wallObjectsList = []
+from .nodes import *
 
 # Cleanup our file of garbage
 def cleanUpBlend():
@@ -28,34 +22,6 @@ def cleanUpBlend():
                     bpy_data_iter.remove(id_data)
             except:
                 bpy_data_iter.remove(id_data)
-
-def appendObject(object, type, blendFile):
-    
-    directory = blendFile + type
-
-    bpy.ops.wm.append(
-        filepath=directory + object, 
-        filename=object,
-        directory=directory)
-
-def getNodesByType(node_tree, type):
-    foundNodes = []
-    for node in node_tree.nodes:
-        #print(node.type)
-        if node.type == type:
-            foundNodes.append(node)
-            
-    return foundNodes
-
-def deselectAll():
-    for obj in bpy.data.objects:
-        obj.select_set(False)
-    bpy.context.view_layer.objects.active = None
-
-def selectObject(object):
-    deselectAll()
-    bpy.context.view_layer.objects.active = object
-    object.select_set(True)
 
 def importObjects(file):
     
@@ -86,23 +52,6 @@ def importObjects(file):
         bpy.ops.image.open(filepath=img)
         
         material.use_nodes = True
-        material.node_tree.nodes.remove(material.node_tree.nodes["Principled BSDF"])
-        
-        texture = bpy.ops.texture.new()
-        
-        nodeMatOutput = material.node_tree.nodes["Material Output"]
-        
-        nodeTexImage = material.node_tree.nodes.new("ShaderNodeTexImage")
-        nodeTexImage.image = bpy.data.images[material.name + ".tga"]
-        
-        nodePmShader = material.node_tree.nodes.new("ShaderNodeGroup")
-        nodePmShader.node_tree = bpy.data.node_groups['PM Shader']
-                
-        # Connect our nodes
-        material.node_tree.links.new(nodeTexImage.outputs[0], nodePmShader.inputs[0])
-        material.node_tree.links.new(nodeTexImage.outputs[1], nodePmShader.inputs[1])
-        
-        material.node_tree.links.new(nodePmShader.outputs[0], nodeMatOutput.inputs[0])
     
     # Cleanup
 
@@ -319,15 +268,6 @@ def renderIcons(file, type):
 
 
 cleanUpBlend()
-
-if not bpy.data.node_groups.get("PM Shader"):
-    appendObject("PM Shader", "\\NodeTree\\", blendPath +"pmshader.blend")
-    nodeGroupPmShader = bpy.data.node_groups["PM Shader"]
-    nodeGroupPmShaderImg = getNodesByType(nodeGroupPmShader, "TEX_IMAGE")[0].image
-    nodeGroupPmShaderImg.use_fake_user = True
-    
-if not bpy.data.node_groups.get("ShadowCatcher"):
-    appendObject("ShadowCatcher", "\\NodeTree\\", blendPath +"pmshader.blend")
 
 for file in floorObjectsList:
     renderIcons(file, "FLOOR")
