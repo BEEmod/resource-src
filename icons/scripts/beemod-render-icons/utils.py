@@ -3,6 +3,8 @@ import os.path
 from math import radians
 import mathutils
 
+from . import nodes
+
 # Cleanup our file of garbage
 def cleanUpBlend():
     # only worry about data in the startup scene
@@ -21,9 +23,9 @@ def cleanUpBlend():
             except:
                 bpy_data_iter.remove(id_data)
 
-def appendObject(object, type, blendFile):
+def appendObject(object, type, file):
     
-    directory = blendFile + type
+    directory = file + type
 
     bpy.ops.wm.append(
         filepath=directory + object, 
@@ -69,12 +71,14 @@ def importSourceModel(path):
     bpy.data.meshes.remove(bpy.data.meshes["smd_bone_vis"])
     
     # Materials
-    for material_slot in vObject.material_slots:
+    for material_slot in object.material_slots:
         
         material = material_slot.material
         
         # Get image for material
-        image = os.path.join(folder, material.name + ".tga")
-        bpy.ops.image.open(filepath=img)
+        image = material.name + ".tga"
+        bpy.ops.image.open(filepath=os.path.join(folder, image))
         
-        nodesMatModel(material, image)
+        nodes.nodesMatModel(material, image)
+    
+    return object

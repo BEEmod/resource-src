@@ -63,10 +63,10 @@ def createShadowObject(object):
     
     return shadowPlane, shadowObject
 
-def renderFrames(file):
+def renderFrames(name):
     
     # Settings
-    bpy.context.scene.render.filepath = renderPath + file + ".tga"
+    bpy.context.scene.render.filepath = bpy.context.scene.bri.output_dir + name + ".tga"
     bpy.context.scene.render.resolution_x = 512
     bpy.context.scene.render.resolution_y = 512
     bpy.context.scene.render.image_settings.file_format='TARGA'
@@ -77,10 +77,10 @@ def renderFrames(file):
 
 # Call Functions
 
-def renderIcons(file, type):
-    importSourceModel(file)
+def renderIcon(pgroup):
+    model = os.path.join(bpy.path.abspath("//") + pgroup.path, pgroup.name)
     
-    object = bpy.data.objects[os.path.basename(file)]
+    object = importSourceModel(model)
     scene = bpy.context.scene
     
     # Create extra objects for rendering
@@ -93,9 +93,9 @@ def renderIcons(file, type):
     camera = bpy.data.objects.new("Camera", camera_data)
 
     # Place cameras
-    if type == "FLOOR":
+    if pgroup.position == "FLOOR":
         camera.rotation_euler = ([radians(a) for a in (60.0, 0.0, 330.0)])
-    elif type == "WALL":
+    elif pgroup.position == "WALL":
         camera.rotation_euler = ([radians(a) for a in (330.0, 330.0, 180.0)])
         
     camera.data.type = "ORTHO"
@@ -158,28 +158,27 @@ def renderIcons(file, type):
     bpy.context.window.view_layer = objectLayer
 
     # Compositing
-    bpy.context.scene.use_nodes = True
-    compTree = bpy.context.scene.node_tree
     
-    for node in compTree.nodes:
-        compTree.nodes.remove(node)
-    
-    comp_node = compTree.nodes.new('CompositorNodeComposite')
-    
-    layer_node_object = compTree.nodes.new("CompositorNodeRLayers")
-    layer_node_object.layer = objectLayer.name
-    layer_node_outline = compTree.nodes.new("CompositorNodeRLayers")
-    layer_node_outline.layer = outlineLayer.name
-    layer_node_shadow = compTree.nodes.new("CompositorNodeRLayers")
-    layer_node_shadow.layer = shadowLayer.name
-    
-    comp_node_alphaOver1 = compTree.nodes.new("CompositorNodeAlphaOver")
-    comp_node_alphaOver2 = compTree.nodes.new("CompositorNodeAlphaOver")
-    
-    compTree.links.new(layer_node_object.outputs[0], comp_node_alphaOver1.inputs[2])
-    compTree.links.new(layer_node_outline.outputs[0], comp_node_alphaOver1.inputs[1])
-    compTree.links.new(comp_node_alphaOver1.outputs[0], comp_node_alphaOver2.inputs[2])
-    compTree.links.new(layer_node_shadow.outputs[0], comp_node_alphaOver2.inputs[1])
-    compTree.links.new(comp_node_alphaOver2.outputs[0], comp_node.inputs[0])
+    nodesCompositing(objectLayer, outlineLayer, shadowLayer)
 
-    renderFrames(file)
+    renderFrames(pgroup.name)
+    
+class BEERenderIcons(bpy.types.Operator):
+    """Render models and export icons"""
+    bl_idname = "bee_ri.render"
+    bl_label = "BEE Render Icons"
+    #bl_options = {''}
+    
+    @classmethod
+    def poll(cls, context):
+        return len(context.scene.bri_imports) > 0 and context.scene.bri.output_dir != ""
+    
+    def execute(self, context):
+        scene = context.scene
+        
+        for pgroup in scene.bri_imports:
+            cleanUpBlend()
+            renderIcon(pgroup)
+            
+        
+        return {'FINISHED'}

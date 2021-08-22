@@ -3,22 +3,24 @@ import os
 from bpy.props import StringProperty, EnumProperty, IntProperty, CollectionProperty
 from bpy.types import PropertyGroup, UIList, Operator, Panel
 
-class BRI_GUI_FL_UL_List(UIList):
-    """BRI_GUI File List."""
+class BRI_GUI_FL_UL_ImportList(UIList):
+    """BRI_GUI Import List."""
 
     def draw_item(self, context, layout, data, item, icon, active_data,
                   active_propname, index):
 
         # We could write some code to decide which icon to use here...
-        custom_icon = 'OBJECT_DATAMODE'
+        import_icon = 'FILE'
+        position_icon = 'OUTLINER_OB_EMPTY'
 
         # Make sure your code supports all 3 layout types
         if self.layout_type in {'DEFAULT', 'COMPACT'}:
-            layout.label(text=os.path.basename(item.name), icon = custom_icon)
+            layout.label(text=os.path.basename(item.name), icon = import_icon)
+            layout.label(text=item.position, icon = position_icon)
 
         elif self.layout_type in {'GRID'}:
             layout.alignment = 'CENTER'
-            layout.label(text="", icon = custom_icon)
+            layout.label(text="", icon = import_icon)
 
 
 class BRI_GUI_FL_OT_NewItem(Operator):
@@ -35,7 +37,7 @@ class BRI_GUI_FL_OT_NewItem(Operator):
     def execute(self, context):
         directory = self.directory
         for file_elem in self.files:
-            file = context.scene.rigui_filelist.add()
+            file = context.scene.bri_imports.add()
             file.name = file_elem.name
             file.path = os.path.relpath(directory, bpy.path.abspath("//"))
         return {'FINISHED'}
@@ -58,14 +60,14 @@ class BRI_GUI_FL_OT_DeleteItem(Operator):
 
     @classmethod
     def poll(cls, context):
-        return context.scene.rigui_filelist
+        return context.scene.bri_imports
 
     def execute(self, context):
-        filelist = context.scene.rigui_filelist
-        index = context.scene.rigui_filelist_index
+        filelist = context.scene.bri_imports
+        index = context.scene.bri_imports_index
 
         filelist.remove(index)
-        context.scene.rigui_filelist_index = min(max(0, index - 1), len(filelist) - 1)
+        context.scene.bri_imports_index = min(max(0, index - 1), len(filelist) - 1)
 
         return{'FINISHED'}
 
@@ -81,20 +83,20 @@ class BRI_GUI_FL_OT_MoveItem(Operator):
 
     @classmethod
     def poll(cls, context):
-        return context.scene.rigui_filelist
+        return context.scene.bri_imports
 
     def move_index(self):
         """ Move index of an item render queue while clamping it. """
 
-        index = bpy.context.scene.rigui_filelist_index
-        list_length = len(bpy.context.scene.rigui_filelist) - 1  # (index starts at 0)
+        index = bpy.context.scene.bri_imports_index
+        list_length = len(bpy.context.scene.bri_imports) - 1  # (index starts at 0)
         new_index = index + (-1 if self.direction == 'UP' else 1)
 
-        bpy.context.scene.rigui_filelist_index = max(0, min(new_index, list_length))
+        bpy.context.scene.bri_imports_index = max(0, min(new_index, list_length))
 
     def execute(self, context):
-        filelist = context.scene.rigui_filelist
-        index = context.scene.rigui_filelist_index
+        filelist = context.scene.bri_imports
+        index = context.scene.bri_imports_index
 
         neighbor = index + (-1 if self.direction == 'UP' else 1)
         filelist.move(neighbor, index)
@@ -117,8 +119,8 @@ class BRI_GUI_PT(Panel):
         scene = context.scene
 
         row = layout.row()
-        row.template_list("BRI_GUI_FL_UL_List", "BRI_GUI_FL", scene,
-                          "rigui_filelist", scene, "rigui_filelist_index")
+        row.template_list("BRI_GUI_FL_UL_ImportList", "BRI_GUI_FL", scene,
+                          "bri_imports", scene, "bri_imports_index")
 
         row = layout.row()
         row.operator('rigui_fl.new_item', text='ADD')
@@ -126,10 +128,13 @@ class BRI_GUI_PT(Panel):
         row.operator('rigui_fl.move_item', text='MOVE UP').direction = 'UP'
         row.operator('rigui_fl.move_item', text='MOVE DOWN').direction = 'DOWN'
 
-        if scene.rigui_filelist_index >= 0 and scene.rigui_filelist:
-            item = scene.rigui_filelist[scene.rigui_filelist_index]
+        if scene.bri_imports_index >= 0 and scene.bri_imports:
+            item = scene.bri_imports[scene.bri_imports_index]
 
             row = layout.row()
             row.prop(item, "name")
             row.prop(item, "path")
             row.prop(item, "position")
+        
+        row = layout.row()
+        row.prop(scene.bri, "output_dir")
