@@ -2,14 +2,14 @@ $modelname "props_map_editor/bee2/clean/pellets/pellet_launcher.mdl"
 
 $bodygroup "Body"
 {
-	studio "pellet_launcher_reference.smd"
+	studio "pellet_launcher_tim_reference.smd"
 }
 
 $surfaceprop "metalpanel"
 
 $contents "solid"
 
-$cdmaterials "models/props_map_editor/bee2/clean/pellets/"
+$cdmaterials "BEE2/models/props_map_editor/"
 
 $sequence "idle" {
 	"pellet_launcher_anims\idle.smd"

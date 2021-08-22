@@ -2,14 +2,14 @@ $modelname "props_map_editor/bee2/clean/pellets/pellet_catcher.mdl"
 
 $bodygroup "Body"
 {
-	studio "pellet_catcher_reference.smd"
+	studio "pellet_catcher_inf_reference.smd"
 }
 
 $surfaceprop "metalpanel"
 
 $contents "solid"
 
-$cdmaterials "models/props_map_editor/bee2/clean/pellets/"
+$cdmaterials "BEE2/models/props_map_editor/"
 
 $sequence "idle" {
 	"pellet_catcher_anims\idle.smd"
