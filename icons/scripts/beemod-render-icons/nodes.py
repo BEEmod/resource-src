@@ -79,7 +79,7 @@ def nodesMatClear(material):
     # Link nodes
     material.node_tree.links.new(nodeShader.outputs[0], nodeOutput.inputs[0])
     
-def nodesCompositing(objectLayer, outlineLayer, shadowLayer):
+def nodesCompositing(objectLayer, outlineLayer, shadowLayer, shadows = True):
     bpy.context.scene.use_nodes = True
     compTree = bpy.context.scene.node_tree
     

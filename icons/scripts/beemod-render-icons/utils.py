@@ -51,6 +51,17 @@ def selectObject(object):
     deselectAll()
     bpy.context.view_layer.objects.active = object
     object.select_set(True)
+
+def importObj(path):
+    name = os.path.basename(path)
+    folder = os.path.dirname(path)
+    
+    bpy.ops.import_scene.obj(filepath=path, use_edges=True, use_smooth_groups=True, use_split_objects=True, use_split_groups=False, use_groups_as_vgroups=False, use_image_search=True, split_mode='ON', global_clamp_size=0.0, axis_forward='-X', axis_up='Z')
+    object = bpy.context.selected_objects[0]
+    
+    selectObject(object)
+    
+    return object
     
 def importSourceModel(path):
     name = os.path.basename(path)

@@ -44,6 +44,7 @@ class BRI_Imports(bpy.types.PropertyGroup):
     position_options = [
         ("FLOOR", "Floor", "Item is on the floor"),
         ("WALL", "Wall", "Item is on the wall"),
+        ("CEIL", "Ceiling", "Item is on the ceiling"),
     ]
     
     position: bpy.props.EnumProperty(

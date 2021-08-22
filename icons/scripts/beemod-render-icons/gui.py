@@ -32,7 +32,7 @@ class BRI_GUI_FL_OT_NewItem(Operator):
     files: bpy.props.CollectionProperty(name="File Path",type=bpy.types.OperatorFileListElement,)
     directory: bpy.props.StringProperty(subtype='DIR_PATH',)
     
-    filter_glob: StringProperty( default='*.smd', options={'HIDDEN'} )
+    filter_glob: StringProperty( default='*.smd;*.obj', options={'HIDDEN'} )
 
     filename_ext = ""
 

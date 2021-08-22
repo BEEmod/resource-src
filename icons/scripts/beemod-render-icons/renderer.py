@@ -80,30 +80,55 @@ def renderFrames(name):
 def renderIcon(pgroup):
     model = os.path.join(bpy.path.abspath("//") + pgroup.path, pgroup.name)
     
-    object = importSourceModel(model)
+    if "smd" in os.path.splitext(model)[1]:
+        object = importSourceModel(model)
+    elif "obj" in os.path.splitext(model)[1]:
+        object = importObj(model)
     scene = bpy.context.scene
+    type = pgroup.position
     
-    # Create extra objects for rendering
-    outlineObject = createOutlineObject(object, pgroup.outline)
-    shadowPlane, shadowObject = createShadowObject(object)
-    
-    selectObject(object)
-    
+    # camera and object placement
     camera_data = bpy.data.cameras.new("Camera")
     camera = bpy.data.objects.new("Camera", camera_data)
     
     # Place cameras
-    if pgroup.position == "FLOOR":
+    if type == "FLOOR":
         camera.rotation_euler = ([radians(a) for a in (60.0, 0.0, 330.0)])
-    elif pgroup.position == "WALL":
+    elif type == "WALL":
         camera.rotation_euler = ([radians(a) for a in (330.0, 330.0, 180.0)])
-        
+    elif type == "CEIL":
+        camera.rotation_euler = ([radians(a) for a in (60.0, 0.0, 330.0)])
+        object.rotation_euler = ([radians(a) for a in (180.0, 0.0, 0.0)])
+    
     camera.data.type = "ORTHO"
     bpy.context.scene.camera = camera
+    selectObject(object)
     bpy.ops.view3d.camera_to_view_selected()
-    
     camera.data.ortho_scale += 30
     
+    collection = object.users_collection[0]
+    
+    tempCol = bpy.data.collections.new("Temp Collection")
+    bpy.context.scene.collection.children.link(tempCol)
+    tempColOut = bpy.data.collections.new("Temp Collection Outline")
+    bpy.context.scene.collection.children.link(tempColOut)
+    tempColSdw = bpy.data.collections.new("Temp Collection Shadow")
+    bpy.context.scene.collection.children.link(tempColSdw)
+    
+    tempCol.objects.link(object)
+    tempCol.objects.link(camera)
+    
+    # Create extra objects for rendering
+    outlineObject = createOutlineObject(object, pgroup.outline)
+    bpy.context.scene.collection.objects.unlink(outlineObject)
+    tempColOut.objects.link(outlineObject)
+    
+    if not type == "CEIL":
+        shadowPlane, shadowObject = createShadowObject(object)
+        bpy.context.collection.objects.unlink(shadowPlane)
+        tempColSdw.objects.link(shadowPlane)
+        tempColSdw.objects.link(shadowObject)
+        
     # one blender unit in x-direction
     vec = mathutils.Vector((0.0, 0.0, max(object.dimensions) + 100.0))
     inv = camera.matrix_world.copy()
@@ -113,47 +138,26 @@ def renderIcon(pgroup):
     vec_rot = vec @ inv
     camera.location = camera.location + vec_rot
     
-    # Collections
-        
-    # Move object to new collection and remove old
-    collection = object.users_collection[0]
-    
-    tempCol = bpy.data.collections.new("Temp Collection")
-    tempColOut = bpy.data.collections.new("Temp Collection Outline")
-    tempColSdw = bpy.data.collections.new("Temp Collection Shadow")
-    
-    bpy.context.scene.collection.children.link(tempCol)
-    bpy.context.scene.collection.children.link(tempColOut)
-    bpy.context.scene.collection.children.link(tempColSdw)
-    
-    bpy.context.collection.objects.unlink(shadowPlane)
-    bpy.context.scene.collection.objects.unlink(outlineObject)
-    
-    tempCol.objects.link(object)
-    tempCol.objects.link(camera)
-    tempColOut.objects.link(outlineObject)
-    tempColSdw.objects.link(shadowPlane)
-    tempColSdw.objects.link(shadowObject)
-    
     bpy.data.collections.remove(collection)
     
     # RENDER!
     objectLayer = bpy.context.view_layer
+    bpy.context.window.view_layer = bpy.context.view_layer
+    for collection in bpy.context.layer_collection.children:
+        if not collection.name == tempCol.name:
+            collection.exclude = True
+    
     outlineLayer = bpy.context.scene.view_layers.new(name='Outline Layer')
-    shadowLayer = bpy.context.scene.view_layers.new(name='Shadow Layer')
-    
-    bpy.context.layer_collection.children[tempColOut.name].exclude = True
-    bpy.context.layer_collection.children[tempColSdw.name].exclude = True
-    
     bpy.context.window.view_layer = outlineLayer
+    for collection in bpy.context.layer_collection.children:
+        if not collection.name == tempColOut.name:
+            collection.exclude = True
     
-    bpy.context.layer_collection.children[tempCol.name].exclude = True
-    bpy.context.layer_collection.children[tempColSdw.name].exclude = True
-
+    shadowLayer = bpy.context.scene.view_layers.new(name='Shadow Layer')
     bpy.context.window.view_layer = shadowLayer
-    
-    bpy.context.layer_collection.children[tempCol.name].exclude = True
-    bpy.context.layer_collection.children[tempColOut.name].exclude = True
+    for collection in bpy.context.layer_collection.children:
+        if not collection.name == tempColSdw.name:
+            collection.exclude = True
     
     bpy.context.window.view_layer = objectLayer
 
@@ -179,7 +183,7 @@ class BEERenderIcons(bpy.types.Operator):
             cleanUpBlend()
             renderIcon(pgroup)
             
-        cleanUpBlend()
+        #cleanUpBlend()
             
         
         return {'FINISHED'}
