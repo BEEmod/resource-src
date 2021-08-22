@@ -13,10 +13,7 @@ def nodesPMShader():
     
     # ToDo: Convert this to scripted node group
     utils.appendObject("PM Shader", "\\NodeTree\\", bpy.path.abspath("//noderef.blend"))
-    shader = bpy.data.node_groups["PM Shader"]
-    image = utils.getNodesByType(nodeGroupPmShader, "TEX_IMAGE")[0].image
-    image.use_fake_user = True
-
+    
 def nodesShadowCatcher():
     #if not bpy.data.node_groups.get("ShadowCatcher"):
 

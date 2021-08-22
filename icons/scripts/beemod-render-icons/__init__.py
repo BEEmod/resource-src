@@ -51,9 +51,32 @@ class BRI_Imports(bpy.types.PropertyGroup):
         items=position_options,
         description="Position of the model in PeTI",
         default="FLOOR",)
+    
+    outline: bpy.props.IntProperty(
+        name="Ouline Thickness",
+        description="Thickness of the object outline",
+        default=1,)
 
+class BRITestOp(bpy.types.Operator):
+    """Render models and export icons"""
+    bl_idname = "bri.test"
+    bl_label = "BRI Test Operator"
+    #bl_options = {''}
+    
+    #@classmethod
+    #def poll(cls, context):
+    #    return len(context.scene.bri_imports) > 0 and context.scene.bri.output_dir != ""
+    
+    def execute(self, context):
+        scene = context.scene
+        
+        utils.cleanUpBlend()
+        
+        return {'FINISHED'}
+    
 def menu_func(self, context):
     self.layout.operator(renderer.BEERenderIcons.bl_idname)
+    self.layout.operator(BRITestOp.bl_idname)
 
 _classes = (
     BRI_SceneProps,
@@ -62,23 +85,27 @@ _classes = (
     gui.BRI_GUI_FL_UL_ImportList,
     gui.BRI_GUI_FL_OT_NewItem,
     gui.BRI_GUI_FL_OT_DeleteItem,
+    gui.BRI_GUI_FL_OT_Clear,
     gui.BRI_GUI_FL_OT_MoveItem,
     gui.BRI_GUI_PT,
+    BRITestOp,
 )
 
 def register():
+    
+    def make_pointer(prop_type, prop_name):
+        return bpy.props.PointerProperty(name=prop_name,type=prop_type)
+    
     for cls in _classes:
         bpy.utils.register_class(cls)
     
+    bpy.types.Scene.bri = make_pointer(BRI_SceneProps, "BEE Render Icon Settings")
+
     bpy.types.Scene.bri_imports = bpy.props.CollectionProperty(type = BRI_Imports)
     bpy.types.Scene.bri_imports_index = bpy.props.IntProperty(name = "BRI Import Index",default = 0)
     
     bpy.types.VIEW3D_MT_object.append(menu_func)  # Adds the new operator to an existing menu.
-    
-    def make_pointer(prop_type):
-        return bpy.props.PointerProperty(name="BEE Render Icon Settings",type=prop_type)
-    
-    bpy.types.Scene.bri = make_pointer(BRI_SceneProps)
+        
 
 def unregister():
     for cls in _classes:
@@ -86,11 +113,9 @@ def unregister():
         
     bpy.types.VIEW3D_MT_object.remove(menu_func)
     
-    #del bpy.types.Scene.bri_options
+    del bpy.types.Scene.bri
     del bpy.types.Scene.bri_imports
     del bpy.types.Scene.bri_imports_index
-    
-    del bpy.types.Scene.bri
 
 if __name__ == "__main__":
     register()

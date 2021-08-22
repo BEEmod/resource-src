@@ -3,12 +3,13 @@ import os.path
 from math import radians
 import mathutils
 
-from . import nodes
-
+from . import nodes        
+    
 # Cleanup our file of garbage
 def cleanUpBlend():
     # only worry about data in the startup scene
     for bpy_data_iter in (
+            bpy.data.armatures,
             bpy.data.materials,
             bpy.data.meshes,
             bpy.data.cameras,
@@ -18,7 +19,7 @@ def cleanUpBlend():
     ):
         for id_data in bpy_data_iter:
             try:
-                if not id_data.use_fake_user == True:
+                if not id_data.use_fake_user:
                     bpy_data_iter.remove(id_data)
             except:
                 bpy_data_iter.remove(id_data)

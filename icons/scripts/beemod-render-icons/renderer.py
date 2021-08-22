@@ -6,7 +6,7 @@ import mathutils
 from .nodes import *
 from .utils import *
 
-def createOutlineObject(object):
+def createOutlineObject(object, thickness):
     
     # Copy model
     selectObject(object)
@@ -28,7 +28,7 @@ def createOutlineObject(object):
     bpy.ops.object.editmode_toggle()
     bpy.ops.mesh.select_all(action='SELECT')
     bpy.ops.mesh.flip_normals()
-    bpy.ops.transform.shrink_fatten(value=-1)
+    bpy.ops.transform.shrink_fatten(value=-thickness)
     bpy.ops.object.mode_set()
     
     return outlineObject
@@ -84,14 +84,14 @@ def renderIcon(pgroup):
     scene = bpy.context.scene
     
     # Create extra objects for rendering
-    outlineObject = createOutlineObject(object)
+    outlineObject = createOutlineObject(object, pgroup.outline)
     shadowPlane, shadowObject = createShadowObject(object)
     
     selectObject(object)
     
     camera_data = bpy.data.cameras.new("Camera")
     camera = bpy.data.objects.new("Camera", camera_data)
-
+    
     # Place cameras
     if pgroup.position == "FLOOR":
         camera.rotation_euler = ([radians(a) for a in (60.0, 0.0, 330.0)])
@@ -158,14 +158,13 @@ def renderIcon(pgroup):
     bpy.context.window.view_layer = objectLayer
 
     # Compositing
-    
     nodesCompositing(objectLayer, outlineLayer, shadowLayer)
 
-    renderFrames(pgroup.name)
-    
+    renderFrames(os.path.splitext(pgroup.name)[0])
+
 class BEERenderIcons(bpy.types.Operator):
     """Render models and export icons"""
-    bl_idname = "bee_ri.render"
+    bl_idname = "bri.render"
     bl_label = "BEE Render Icons"
     #bl_options = {''}
     
@@ -175,10 +174,12 @@ class BEERenderIcons(bpy.types.Operator):
     
     def execute(self, context):
         scene = context.scene
-        
+
         for pgroup in scene.bri_imports:
             cleanUpBlend()
             renderIcon(pgroup)
+            
+        cleanUpBlend()
             
         
         return {'FINISHED'}

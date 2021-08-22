@@ -26,16 +26,19 @@ class BRI_GUI_FL_UL_ImportList(UIList):
 class BRI_GUI_FL_OT_NewItem(Operator):
     """Add a new file(s) to the list."""
 
-    bl_idname = "rigui_fl.new_item"
+    bl_idname = "bri_gui_fl.new_item"
     bl_label = "Add a new file"
 
     files: bpy.props.CollectionProperty(name="File Path",type=bpy.types.OperatorFileListElement,)
     directory: bpy.props.StringProperty(subtype='DIR_PATH',)
+    
+    filter_glob: StringProperty( default='*.smd', options={'HIDDEN'} )
 
     filename_ext = ""
 
     def execute(self, context):
         directory = self.directory
+        
         for file_elem in self.files:
             file = context.scene.bri_imports.add()
             file.name = file_elem.name
@@ -55,7 +58,7 @@ class BRI_GUI_FL_OT_NewItem(Operator):
 class BRI_GUI_FL_OT_DeleteItem(Operator):
     """Remove the selected files from the list."""
 
-    bl_idname = "rigui_fl.delete_item"
+    bl_idname = "bri_gui_fl.delete_item"
     bl_label = "Deletes an item"
 
     @classmethod
@@ -71,11 +74,27 @@ class BRI_GUI_FL_OT_DeleteItem(Operator):
 
         return{'FINISHED'}
 
+class BRI_GUI_FL_OT_Clear(Operator):
+    """Remove the selected files from the list."""
+
+    bl_idname = "bri_gui_fl.clear"
+    bl_label = "Removes all item"
+
+    @classmethod
+    def poll(cls, context):
+        return context.scene.bri_imports
+
+    def execute(self, context):        
+        context.scene.bri_imports.clear()
+        context.scene.bri_imports_index = 0
+
+        return{'FINISHED'}
+
 
 class BRI_GUI_FL_OT_MoveItem(Operator):
     """Move an item in the list."""
 
-    bl_idname = "rigui_fl.move_item"
+    bl_idname = "bri_gui_fl.move_item"
     bl_label = "Move an item in the list"
 
     direction: bpy.props.EnumProperty(items=(('UP', 'Up', ""),
@@ -123,10 +142,11 @@ class BRI_GUI_PT(Panel):
                           "bri_imports", scene, "bri_imports_index")
 
         row = layout.row()
-        row.operator('rigui_fl.new_item', text='ADD')
-        row.operator('rigui_fl.delete_item', text='REMOVE')
-        row.operator('rigui_fl.move_item', text='MOVE UP').direction = 'UP'
-        row.operator('rigui_fl.move_item', text='MOVE DOWN').direction = 'DOWN'
+        row.operator('bri_gui_fl.new_item', text='ADD')
+        row.operator('bri_gui_fl.delete_item', text='REMOVE')
+        row.operator('bri_gui_fl.move_item', text='MOVE UP').direction = 'UP'
+        row.operator('bri_gui_fl.move_item', text='MOVE DOWN').direction = 'DOWN'
+        row.operator('bri_gui_fl.clear', text='CLEAR')
 
         if scene.bri_imports_index >= 0 and scene.bri_imports:
             item = scene.bri_imports[scene.bri_imports_index]
@@ -134,7 +154,16 @@ class BRI_GUI_PT(Panel):
             row = layout.row()
             row.prop(item, "name")
             row.prop(item, "path")
+            
+            row = layout.row()
             row.prop(item, "position")
+            row.prop(item, "outline")
         
         row = layout.row()
         row.prop(scene.bri, "output_dir")
+        
+        # Big render button
+        layout.label(text="Big Button:")
+        row = layout.row()
+        row.scale_y = 3.0
+        row.operator("bri.render")
