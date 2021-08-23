@@ -1,0 +1,19 @@
+{
+	"folders": [
+		{
+			"path": "."
+		}
+	],
+	"settings": {
+		"python.autoComplete.extraPaths": [
+			"./blender-2.93-autocomplete"
+		],
+		"python.linting.pylintArgs": [
+			"--init-hook",
+			"import sys; sys.path.append('./blender-2.93-autocomplete')"
+		],
+		"python.analysis.extraPaths": [
+			"./blender-2.93-autocomplete"
+		],
+	}
+}

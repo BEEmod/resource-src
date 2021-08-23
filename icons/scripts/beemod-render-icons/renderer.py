@@ -84,6 +84,8 @@ def renderIcon(pgroup):
         object = importSourceModel(model)
     elif "obj" in os.path.splitext(model)[1]:
         object = importObj(model)
+        object.rotation_euler = ([radians(a) for a in (0.0, 0.0, 90.0)])
+    
     scene = bpy.context.scene
     type = pgroup.position
     
@@ -98,7 +100,7 @@ def renderIcon(pgroup):
         camera.rotation_euler = ([radians(a) for a in (330.0, 330.0, 180.0)])
     elif type == "CEIL":
         camera.rotation_euler = ([radians(a) for a in (60.0, 0.0, 330.0)])
-        object.rotation_euler = ([radians(a) for a in (180.0, 0.0, 0.0)])
+        object.rotation_euler[0] = radians(180)
     
     camera.data.type = "ORTHO"
     bpy.context.scene.camera = camera

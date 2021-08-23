@@ -58,6 +58,9 @@ class BRI_Imports(bpy.types.PropertyGroup):
         description="Thickness of the object outline",
         default=1,)
 
+class BRI_SceneData(bpy.types.PropertyGroup):
+    pass
+
 class BRITestOp(bpy.types.Operator):
     """Render models and export icons"""
     bl_idname = "bri.test"
@@ -82,6 +85,7 @@ def menu_func(self, context):
 _classes = (
     BRI_SceneProps,
     BRI_Imports,
+    BRI_SceneData,
     renderer.BEERenderIcons,
     gui.BRI_GUI_FL_UL_ImportList,
     gui.BRI_GUI_FL_OT_NewItem,

@@ -61,6 +61,16 @@ def importObj(path):
     
     selectObject(object)
     
+    for material_slot in object.material_slots:
+        
+        material = material_slot.material
+        
+        # Get image for material
+        image = material.name + ".tga"
+        bpy.ops.image.open(filepath=os.path.join(folder, image))
+        
+        nodes.nodesMatModel(material, image)
+    
     return object
     
 def importSourceModel(path):

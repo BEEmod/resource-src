@@ -57,3 +57,6 @@ decompiled*/
 
 // Don't commit Blender's backups.
 *.blend1
+
+// Don't commit VSCode Blender Python Autocomplete
+blender-2.93-autocomplete/
