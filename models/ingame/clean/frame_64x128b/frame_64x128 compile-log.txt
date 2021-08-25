@@ -1,0 +1,60 @@
+// Created by Crowbar 0.71
+
+  Compiling "frame_64x128.qc" ...
+    Output from compiler "F:\Steam\steamapps\common\Portal 2\bin\studiomdl.exe": 
+      Using shader api: shaderapiempty.dll
+      qdir:    "c:\users\class\documents\.modeling\valve\portal 2\beemod\frame 64 128 b\"
+      gamedir: "F:\Steam\steamapps\common\Portal 2\portal2\"
+      g_path:  "frame_64x128.qc"
+      Building binary model files...
+      Working on "frame_64x128.qc"
+      SMD MODEL frame_64x128.smd
+      SMD MODEL frame_64x128_anims\idle.smd
+      SMD MODEL frame_64x128_physics.smd
+      Processing LOD for material: window_frame_tc
+      Model has 2 convex sub-parts
+      Collision model completed.
+      ---------------------
+      writing F:\Steam\steamapps\common\Portal 2\portal2\models/bee2/props_test_chamber/frame_64x128b.mdl:
+      bones          964 bytes (1)
+         animation       x       y       ips    angle
+      animations     112 bytes (1 anims) (1 frames) [0:00]
+      sequences      220 bytes (1 seq) 
+      ik/pose        164 bytes
+      eyeballs         0 bytes (0 eyeballs)
+      flexes           0 bytes (0 flexes)
+      textures        72 bytes
+      keyvalues        0 bytes
+      bone transforms        0 bytes
+      bone flex driver       0 bytes
+      Collision model volume 69376.01 in^3
+      collision        0 bytes
+      total         1768
+      ---------------------
+      writing F:\Steam\steamapps\common\Portal 2\portal2\models/bee2/props_test_chamber/frame_64x128b.vvd:
+      vertices     13824 bytes (288 vertices)
+      tangents      4608 bytes (288 vertices)
+      total        18496 bytes
+      ---------------------
+      Generating optimized mesh "F:\Steam\steamapps\common\Portal 2\portal2\models/bee2/props_test_chamber/frame_64x128b.dx90.vtx":
+      body parts:         8 bytes
+      models:            20 bytes
+      model LODs:        12 bytes
+      meshes:             9 bytes
+      strip groups:      33 bytes
+      strips:            35 bytes
+      verts:           2592 bytes
+      indices:          960 bytes
+      bone changes:      16 bytes
+      everything:      3709 bytes
+      
+      Completed "frame_64x128.qc"
+      CDynamicFunction: Loading library 'Kernel32.dll' (75CE0000)
+      CDynamicFunction: Lookup of 'TryEnterCriticalSection' in 'Kernel32.dll': 77E90990
+      CDynamicFunction: Closing library 'Kernel32.dll' (75CE0000)
+    CROWBAR: Moved compiled model file "F:\Steam\steamapps\common\Portal 2\portal2\models\bee2\props_test_chamber\frame_64x128b.dx90.vtx" to "C:\Users\class\Documents\.Modeling\.Output\models\bee2\props_test_chamber"
+    CROWBAR: Moved compiled model file "F:\Steam\steamapps\common\Portal 2\portal2\models\bee2\props_test_chamber\frame_64x128b.mdl" to "C:\Users\class\Documents\.Modeling\.Output\models\bee2\props_test_chamber"
+    CROWBAR: Moved compiled model file "F:\Steam\steamapps\common\Portal 2\portal2\models\bee2\props_test_chamber\frame_64x128b.phy" to "C:\Users\class\Documents\.Modeling\.Output\models\bee2\props_test_chamber"
+    CROWBAR: Moved compiled model file "F:\Steam\steamapps\common\Portal 2\portal2\models\bee2\props_test_chamber\frame_64x128b.vvd" to "C:\Users\class\Documents\.Modeling\.Output\models\bee2\props_test_chamber"
+    CROWBAR: Deleted empty temporary compile folder "F:\Steam\steamapps\common\Portal 2\portal2\models\bee2".
+  ... Compiling "frame_64x128.qc" finished. Check above for any errors.
