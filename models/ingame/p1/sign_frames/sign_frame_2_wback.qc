@@ -1,12 +1,10 @@
-// Created by Crowbar 0.19.0.0
-
 $modelname "BEE2\props_ingame\sign_frame_2_wback.mdl"
 
 $staticprop
 
-$bodygroup "sign_frame02"
+$bodygroup "Body"
 {
-	studio "sign_frame02_reference.smd"
+	studio "sign_frame_2_wback_reference.smd"
 }
 
 $cdmaterials "models\props\sign_frame02\"
@@ -15,13 +13,12 @@ $surfaceprop "metal"
 
 $contents "solid"
 
-
-$sequence "idle" "sign_frame02_anims\idle.smd" {
-	fps 30
+$sequence "idle" {
+	"anims\idle.smd"
 	"ACT_IDLE" 1
 }
 
-$collisionmodel "sign_frame02_physics.smd"
+$collisionmodel "sign_frame_2_wback_physics.smd"
 {
 	$mass 1
 	$inertia 1
