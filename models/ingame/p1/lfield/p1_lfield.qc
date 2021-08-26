@@ -1,32 +1,22 @@
 // Created by Crowbar 0.19.0.0
 
-$modelname "BEE2/props_p1/cust_fizzler.mdl"
+$modelname "BEE2/props_ingame/p1_lfield.mdl"
 
 $staticprop
 
 $bodygroup "Body"
 {
-	studio "cust_fizz.smd"
+	studio "p1_lfield_reference.smd"
 }
 
 $lod 40
 {
-	replacemodel "cust_fizz.smd" "cust_fizz_lod1.smd"
+	replacemodel "p1_lfield_reference.smd" "p1_lfield_reference_lod1.smd"
 }
 
-$cdmaterials "BEE2/models/props_p1/"
+$cdmaterials "BEE2/models/props_ingame/p1_lfield"
 
-$texturegroup "skinfamilies" 
-{
-	{
-		"cust_fizz"
-		"cust_fizz_light"
-	}
-	{
-		"cust_lfield"
-		"cust_fizz_light"
-	}
-}
+// Model uses material "portal_cleanser.vmt"
 
 $surfaceprop "metal"
 
@@ -36,7 +26,6 @@ $contents "solid"
 // $illumposition 0.287 0 0.006
 
 // $bbox -11.923 -10.098 -64.818 11.923 10.578 64.83
-$bbox -12 -12 -68 12 12 68
 
 // $cbox is probably not used anymore
 // $cbox 0 0 0 0 0 0
@@ -47,11 +36,12 @@ $bbox -12 -12 -68 12 12 68
 
 
 
-$sequence "idle" "portal_cleanser_idle.smd" {
+
+$sequence "idle" "p1_lfield_anims\idle.smd" {
 	fps 30
 }
 
-$collisionmodel "portal_cleanser_physics.smd"
+$collisionmodel "p1_lfield_physics.smd"
 {
 	$mass 120
 	$inertia 1
