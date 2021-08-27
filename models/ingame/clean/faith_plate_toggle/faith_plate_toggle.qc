@@ -36,21 +36,21 @@ $origin 0 0 8
 $attachment "light" "faith_pate_paddle_alter_direction" 22 1 1 rotate 270 180 0
 
 $Sequence "idle" {
-	"faith_plate_mapeditor_anims\idle.smd"
+	"anims\idle.smd"
 	fadein 0.2
 	fadeout 0.2
 	fps 30
 }
 
 $Sequence "angled" {
-	"faith_plate_mapeditor_anims\angled.smd"
+	"anims\angled.smd"
 	{
 		event AE_CL_PLAYSOUND 0 "World.CatapultLaunch"
 	}
 }
 
 $Sequence "straightup" {
-	"faith_plate_mapeditor_anims\straightup.smd"
+	"anims\straightup.smd"
 	{
 		event AE_CL_PLAYSOUND 0 "World.CatapultLaunch"
 	}
