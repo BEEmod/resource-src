@@ -14,8 +14,9 @@ $contents "solid"
 $illumposition 0 0 -32
 
 $cdmaterials "BEE2\models\props_map_editor\"
+$cdmaterials "BEE2\models\props_map_editor\p1\lights\"
 
-$renamematerial white001 light_orange002
+$renamematerial white001 light_warm
 
 $sequence "idle" {
 	"anims\idle.smd"
