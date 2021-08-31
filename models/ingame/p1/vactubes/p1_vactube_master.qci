@@ -2,6 +2,8 @@ $modelname bee2/props_p1/vactubes/$baseFile$.mdl
 
 $staticprop
 
+$mostlyopaque
+
 $bodygroup "default"
 {
 	studio $baseFile$_reference.smd
