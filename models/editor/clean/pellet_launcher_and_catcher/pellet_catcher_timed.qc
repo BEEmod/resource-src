@@ -12,21 +12,21 @@ $contents "solid"
 $cdmaterials "BEE2/models/props_map_editor/"
 
 $sequence "idle" {
-	"pellet_catcher_anims\idle.smd"
+	"anims\catcher_idle.smd"
 	fadein 0.2
 	fadeout 0.2
 	fps 30
 }
 
 $sequence "explodeOut" {
-	"pellet_catcher_anims\explodeOut.smd"
+	"anims\catcher_explodeOut.smd"
 	fadein 0.2
 	fadeout 0.2
 	fps 30
 }
 
 $sequence "explodeIn" {
-	"pellet_catcher_anims\explodeIn.smd"
+	"anims\catcher_explodeIn.smd"
 	fadein 0.2
 	fadeout 0.2
 	fps 30
