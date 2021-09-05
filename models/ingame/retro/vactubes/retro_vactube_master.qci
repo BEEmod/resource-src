@@ -8,6 +8,14 @@ $bodygroup "default"
 {
 	studio $baseFile$_reference.smd
 }
+$LOD 100
+{
+	replacemodel $baseFile$_reference.smd $baseFile$_lod1.smd
+}
+$LOD 200
+{
+	replacemodel $baseFile$_reference.smd $baseFile$_lod2.smd
+}
 
 $surfaceprop "glass"
 
