@@ -1,0 +1,30 @@
+$modelname bee2/props_underground/vactubes/$baseFile$.mdl
+
+$staticprop
+
+$mostlyopaque
+
+$bodygroup "default"
+{
+	studio $baseFile$_reference.smd
+}
+
+$surfaceprop "glass"
+
+$contents "solid"
+
+$cdmaterials "bee2/models/props_underground/vactubes/"
+$cdmaterials "models/props_underground/"
+
+$sequence "BindPose" "anims\BindPose.smd"
+
+$collisionmodel $baseFile$_physics.smd
+{
+	$mass 10000
+	$inertia 1
+	$damping 0
+	$rotdamping 0
+	$rootbone " "
+	$concave
+	$maxconvexpieces 33
+}
