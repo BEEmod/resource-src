@@ -6,15 +6,25 @@ $mostlyopaque
 
 $bodygroup "default"
 {
-	studio $baseFile$_reference.smd
+	studio $baseFile$_frame_reference.smd
+}
+$bodygroup "tube"
+{
+	studio $baseFile$_tube_reference.smd
+}
+$bodygroup "tube_inside"
+{
+	studio $baseFile$_tube_in_reference.smd
 }
 $LOD 100
 {
-	replacemodel $baseFile$_reference.smd $baseFile$_lod1.smd
+	replacemodel $baseFile$_tube_reference.smd $baseFile$_tube_lod1.smd
+	replacemodel $baseFile$_tube_in_reference.smd $baseFile$_tube_in_lod1.smd
 }
 $LOD 200
 {
-	replacemodel $baseFile$_reference.smd $baseFile$_lod2.smd
+	replacemodel $baseFile$_tube_reference.smd $baseFile$_tube_lod2.smd
+	replacemodel $baseFile$_tube_in_reference.smd $baseFile$_tube_in_lod1.smd
 }
 
 $surfaceprop "glass"
@@ -34,5 +44,5 @@ $collisionmodel $baseFile$_physics.smd
 	$rotdamping 0
 	$rootbone " "
 	$concave
-	$maxconvexpieces 33
+	$maxconvexpieces 60
 }
