@@ -28,5 +28,5 @@ $collisionmodel $baseFile$_physics.smd
 	$rotdamping 0
 	$rootbone " "
 	$concave
-	$maxconvexpieces 33
+	$maxconvexpieces 60
 }
