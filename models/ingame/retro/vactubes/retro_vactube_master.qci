@@ -27,7 +27,7 @@ $LOD 200
 	replacemodel $baseFile$_tube_in_reference.smd $baseFile$_tube_in_lod1.smd
 }
 
-$surfaceprop "glass"
+$surfaceprop "cardboard"
 
 $contents "solid"
 
