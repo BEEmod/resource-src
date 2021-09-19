@@ -73,14 +73,14 @@ $sequence "retract" {
 }
 
 $sequence "extend_128" {
-	"crusher_anims\extend.smd"
+	"crusher_anims\extend_128.smd"
 	fps 24
 	{ event AE_CL_PLAYSOUND 0 "World.SlowCrusherCloseStart" }
 	{ event AE_CL_PLAYSOUND 10 "World.MpCoopTbeamMazeCrusherImpact" }
 }
 
 $sequence "extend_128_idle" {
-	"crusher_anims\extend_idle.smd"
+	"crusher_anims\extend_128_idle.smd"
 	fps 24
 	loop
 }
@@ -122,13 +122,13 @@ $sequence "extend_320" {
 }
 
 $sequence "extend_320_idle" {
-	"crusher_anims\extend_idle.smd"
+	"crusher_anims\extend_320_idle.smd"
 	fps 24
 	loop
 }
 
 $sequence "retract_320" {
-	"crusher_anims\retract.smd"
+	"crusher_anims\retract_320.smd"
 	fps 24
 	{ event AE_CL_PLAYSOUND 16 "World.CrusherSeparate" }
 	{ event AE_CL_PLAYSOUND 4 "World.CrusherOpen" }
@@ -136,14 +136,14 @@ $sequence "retract_320" {
 }
 
 $sequence "extend_384" {
-	"crusher_anims\extend.smd"
+	"crusher_anims\extend_384.smd"
 	fps 24
 	{ event AE_CL_PLAYSOUND 0 "World.SlowCrusherCloseStart" }
 	{ event AE_CL_PLAYSOUND 10 "World.MpCoopTbeamMazeCrusherImpact" }
 }
 
 $sequence "extend_384_idle" {
-	"crusher_anims\extend_idle.smd"
+	"crusher_anims\extend_384_idle.smd"
 	fps 24
 	loop
 }
