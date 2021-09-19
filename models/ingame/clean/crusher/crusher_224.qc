@@ -149,7 +149,7 @@ $sequence "extend_384_idle" {
 }
 
 $sequence "retract_384" {
-	"crusher_anims\retract.smd"
+	"crusher_anims\retract_384.smd"
 	fps 24
 	{ event AE_CL_PLAYSOUND 16 "World.CrusherSeparate" }
 	{ event AE_CL_PLAYSOUND 4 "World.CrusherOpen" }
