@@ -1,19 +1,19 @@
-$modelname "BEE2/props_ingame/crusher_head.mdl"
+$modelname "BEE2/props_ingame/crusher_head_224.mdl"
 
 $staticprop
 
 $bodygroup "default"
 {
-	studio "crusher_head_reference.smd"
+	studio "crusher_head_224_reference.smd"
 }
 
 $lod 40
 {
-	replacemodel "crusher_head_reference.smd" "crusher_head_lod1.smd"
+	replacemodel "crusher_head_224_reference.smd" "crusher_head_224_lod1.smd"
 }
 $lod 80
 {
-	replacemodel "crusher_head_reference.smd" "crusher_head_lod2.smd"
+	replacemodel "crusher_head_224_reference.smd" "crusher_head_224_lod2.smd"
 }
 
 // Add dirty skin, for overgrown etc.
@@ -31,6 +31,6 @@ $surfaceprop "default"
 $contents "solid"
 
 $sequence "BindPose" {
-	"anims/idle.smd" 
+	"crusher_head_anims/idle.smd" 
 }
 
