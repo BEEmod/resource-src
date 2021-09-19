@@ -50,6 +50,7 @@ $sequence "idle" {
 	"crusher_anims\idle.smd"
 	fps 30
 }
+
 $sequence "extend" {
 	"crusher_anims\extend.smd"
 	fps 24
@@ -64,6 +65,90 @@ $sequence "extend_idle" {
 }
 
 $sequence "retract" {
+	"crusher_anims\retract.smd"
+	fps 24
+	{ event AE_CL_PLAYSOUND 16 "World.CrusherSeparate" }
+	{ event AE_CL_PLAYSOUND 4 "World.CrusherOpen" }
+	{ event AE_CL_PLAYSOUND 50 "World.RobotImpactLgCrusher" }
+}
+
+$sequence "extend_128" {
+	"crusher_anims\extend.smd"
+	fps 24
+	{ event AE_CL_PLAYSOUND 0 "World.SlowCrusherCloseStart" }
+	{ event AE_CL_PLAYSOUND 10 "World.MpCoopTbeamMazeCrusherImpact" }
+}
+
+$sequence "extend_128_idle" {
+	"crusher_anims\extend_idle.smd"
+	fps 24
+	loop
+}
+
+$sequence "retract_128" {
+	"crusher_anims\retract_128.smd"
+	fps 24
+	{ event AE_CL_PLAYSOUND 16 "World.CrusherSeparate" }
+	{ event AE_CL_PLAYSOUND 4 "World.CrusherOpen" }
+	{ event AE_CL_PLAYSOUND 50 "World.RobotImpactLgCrusher" }
+}
+
+$sequence "extend_192" {
+	"crusher_anims\extend_192.smd"
+	fps 24
+	{ event AE_CL_PLAYSOUND 0 "World.SlowCrusherCloseStart" }
+	{ event AE_CL_PLAYSOUND 10 "World.MpCoopTbeamMazeCrusherImpact" }
+}
+
+$sequence "extend_192_idle" {
+	"crusher_anims\extend_192_idle.smd"
+	fps 24
+	loop
+}
+
+$sequence "retract_192" {
+	"crusher_anims\retract_192.smd"
+	fps 24
+	{ event AE_CL_PLAYSOUND 16 "World.CrusherSeparate" }
+	{ event AE_CL_PLAYSOUND 4 "World.CrusherOpen" }
+	{ event AE_CL_PLAYSOUND 50 "World.RobotImpactLgCrusher" }
+}
+
+$sequence "extend_320" {
+	"crusher_anims\extend_320.smd"
+	fps 24
+	{ event AE_CL_PLAYSOUND 0 "World.SlowCrusherCloseStart" }
+	{ event AE_CL_PLAYSOUND 10 "World.MpCoopTbeamMazeCrusherImpact" }
+}
+
+$sequence "extend_320_idle" {
+	"crusher_anims\extend_idle.smd"
+	fps 24
+	loop
+}
+
+$sequence "retract_320" {
+	"crusher_anims\retract.smd"
+	fps 24
+	{ event AE_CL_PLAYSOUND 16 "World.CrusherSeparate" }
+	{ event AE_CL_PLAYSOUND 4 "World.CrusherOpen" }
+	{ event AE_CL_PLAYSOUND 50 "World.RobotImpactLgCrusher" }
+}
+
+$sequence "extend_384" {
+	"crusher_anims\extend.smd"
+	fps 24
+	{ event AE_CL_PLAYSOUND 0 "World.SlowCrusherCloseStart" }
+	{ event AE_CL_PLAYSOUND 10 "World.MpCoopTbeamMazeCrusherImpact" }
+}
+
+$sequence "extend_384_idle" {
+	"crusher_anims\extend_idle.smd"
+	fps 24
+	loop
+}
+
+$sequence "retract_384" {
 	"crusher_anims\retract.smd"
 	fps 24
 	{ event AE_CL_PLAYSOUND 16 "World.CrusherSeparate" }
