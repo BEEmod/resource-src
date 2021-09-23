@@ -51,20 +51,20 @@ $sequence "idle" {
 	fps 30
 }
 
-$sequence "extend" {
+$sequence "extend_256" {
 	"crusher_anims\extend.smd"
 	fps 24
 	{ event AE_CL_PLAYSOUND 0 "World.SlowCrusherCloseStart" }
 	{ event AE_CL_PLAYSOUND 10 "World.MpCoopTbeamMazeCrusherImpact" }
 }
 
-$sequence "extend_idle" {
+$sequence "extend_256_idle" {
 	"crusher_anims\extend_idle.smd"
 	fps 24
 	loop
 }
 
-$sequence "retract" {
+$sequence "retract_256" {
 	"crusher_anims\retract.smd"
 	fps 24
 	{ event AE_CL_PLAYSOUND 16 "World.CrusherSeparate" }
