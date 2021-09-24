@@ -1,7 +1,7 @@
 
-$modelname "props_map_editor/BEE2/retro/button_floor_70s.mdl"
+$modelname "props_map_editor/BEE2/70s/btn_floor.mdl"
 
-$cdmaterials "BEE2/models/props_map_editor/under/" "models/props_map_editor/"
+$cdmaterials "BEE2/models/props_map_editor/" "models/props_map_editor/"
 
 $bodygroup "default"
 {

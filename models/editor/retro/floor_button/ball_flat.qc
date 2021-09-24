@@ -1,14 +1,14 @@
 
-$modelname "props_map_editor/BEE2/50s/btn_floor.mdl"
+$modelname "props_map_editor/BEE2/70s/btn_sphere.mdl"
 
 $cdmaterials "BEE2/models/props_map_editor/" "models/props_map_editor/"
 
 $bodygroup "default"
 {
-	studio "floor_recessed.smd"
+	studio "ball_flat.smd"
 }
 
-$origin 0 0 72 // Recess.
+$origin 0 0 64
 
 $sequence "idle" "anims/expand.smd" {
 	frame 1 1
