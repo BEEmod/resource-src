@@ -6,7 +6,7 @@ $BodyGroup "Body"
 {
 	studio "pgun_ped_long_ref.smd"
 }
-
+$MostlyOpaque  // So the body can have shadows.
 $SurfaceProp "metalgrate"
 
 $Contents "solid"
@@ -20,6 +20,7 @@ $Sequence "inactive" "anims/inactive.smd"
 
 $attachment "gls_back" "bone_glass_tube_01" 0 0 0 rotate 0 135 180
 $attachment "gls_front" "bone_glass_tube_02" 0 0 0 rotate 0 135 180
+$attachment "pedestal" "head" 0 24 0 rotate 270 0 270
 
 $Sequence "open" {
 	"anims/open.smd"
