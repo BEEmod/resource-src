@@ -1,24 +1,23 @@
 
 $modelname "props_map_editor/BEE2/70s/btn_cube.mdl"
 
-$cdmaterials "BEE2/models/props_map_editor/" "models/props_map_editor/"
+$cdmaterials "BEE2/models/props_map_editor/under/"
 
 $bodygroup "default"
 {
-	studio "cube_flat.smd"
+	studio "cube_button_ref.smd"
 }
 
-$origin 0 0 64
-
-$sequence "idle" "anims/expand.smd" {
+$sequence "idle" "anims/cube_expand.smd" {
 	frame 1 1
 	fps 30
 }
 
-$sequence "explodeOut" "anims/expand.smd" {
+$sequence "explodeOut" "anims/cube_expand.smd" {
 	fps 30
 }
 
-$sequence "explodeIn" "anims/contract.smd" {
-	fps 30
+$sequence "explodeIn" "anims/cube_expand.smd" {
+	reverse
+	fps 45
 }
