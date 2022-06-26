@@ -17,7 +17,6 @@ $sequence "explodeOut" "anims/cube_expand.smd" {
 	fps 30
 }
 
-$sequence "explodeIn" "anims/cube_expand.smd" {
-	reverse
-	fps 45
+$sequence "explodeIn" "anims/cube_contract.smd" {
+	fps 30
 }
