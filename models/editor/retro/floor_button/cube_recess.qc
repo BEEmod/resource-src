@@ -5,20 +5,19 @@ $cdmaterials "BEE2/models/props_map_editor/" "models/props_map_editor/"
 
 $bodygroup "default"
 {
-	studio "cube_recessed.smd"
+	studio "cube_button_recessed_ref.smd"
 }
 
-$origin 0 0 72 // Recess.
+$origin 0 0 8 // Recess.
 
-$sequence "idle" "anims/expand.smd" {
-	frame 1 1
+$sequence "idle" "anims/cube_idle.smd" {
 	fps 30
 }
 
-$sequence "explodeOut" "anims/expand.smd" {
+$sequence "explodeOut" "anims/cube_expand.smd" {
 	fps 30
 }
 
-$sequence "explodeIn" "anims/contract.smd" {
+$sequence "explodeIn" "anims/cube_contract.smd" {
 	fps 30
 }

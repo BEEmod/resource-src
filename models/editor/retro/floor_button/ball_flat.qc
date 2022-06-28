@@ -5,20 +5,19 @@ $cdmaterials "BEE2/models/props_map_editor/" "models/props_map_editor/"
 
 $bodygroup "default"
 {
-	studio "ball_flat.smd"
+	studio "ball_button_flat_ref.smd"
 }
 
-$origin 0 0 64
 
-$sequence "idle" "anims/expand.smd" {
-	frame 1 1
+
+$sequence "idle" "anims/ball_idle.smd" {
 	fps 30
 }
 
-$sequence "explodeOut" "anims/expand.smd" {
+$sequence "explodeOut" "anims/ball_expand.smd" {
 	fps 30
 }
 
-$sequence "explodeIn" "anims/contract.smd" {
+$sequence "explodeIn" "anims/ball_contract.smd" {
 	fps 30
 }
