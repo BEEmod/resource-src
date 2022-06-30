@@ -27,6 +27,7 @@ $SurfaceProp "default"
 $Contents "solid"
 
 $IllumPosition 0 0 0 "arm64x64_export_03X"
+$MostlyOpaque
 
 $CDMaterials "models\anim_wp"
 $CDMaterials "models\anim_wp\circle_shield"
