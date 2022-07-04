@@ -1,4 +1,4 @@
-$ModelName "BEE2/props_underground/stair_support.mdl"
+$ModelName "BEE2/props_underground/ramp.mdl"
 
 $StaticProp
 
@@ -8,6 +8,9 @@ $BodyGroup "Body"
 }
 
 $SurfaceProp "metalgrate"
+
+$Contents "grate"
+
 
 $CDMaterials "models\props_underground\"
 
