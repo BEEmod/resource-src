@@ -1,6 +1,6 @@
 // Created by Crowbar 0.36.0.0
 
-$ModelName "props_map_editor/under_fizz.mdl"
+$ModelName "props_map_editor/BEE2/retro/fizz.mdl"
 
 $BodyGroup "Body"
 {
