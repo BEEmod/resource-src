@@ -30,9 +30,6 @@ _logs/
 .AppleDouble
 .LSOverride
 
-# Icon must ends with two \r.
-Icon
-
 # Thumbnails
 ._*
 
@@ -54,6 +51,8 @@ textures/
 
 # Don't commit decompiled model files, we can get those easily.
 decompiled*/
+# Substance autosaves.
+.autosave/
 
-// Don't commit Blender's backups.
+# Don't commit Blender's backups.
 *.blend1
