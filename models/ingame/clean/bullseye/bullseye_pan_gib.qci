@@ -1,0 +1,17 @@
+$SurfaceProp "plastic_box"
+$staticprop
+$autocenter
+$Contents "solid"
+
+$CDMaterials "BEE2/models/props_clean/"
+
+$Sequence "idle" { "bullseye_pan_ref.smd" }
+
+$keyvalues
+{
+	prop_data
+	{
+		base        "Cardboard.Small"
+		health 0
+	}
+}

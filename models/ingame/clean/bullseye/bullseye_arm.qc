@@ -28,8 +28,12 @@ $Contents "solid"
 $CDMaterials "models\anim_wp"
 
 $Attachment "panel_attach" "panel_mover" 0 4.68 0 rotate -90 90 0
+// Move the two panels, attaching/detatching.
 $Attachment "attach_1" "attach_1" 0 0 0 rotate 0 90 0
 $Attachment "attach_2" "attach_2" 0 0 0 rotate 0 90 0
+// Fixed position, at the target location. These are used to position at spawn.
+// $Attachment "init_1" "arm_exterior_root" 16 16 60 rotate 270 90 0
+// $Attachment "init_2" "arm_exterior_root" 16 -16 60 rotate 270 270 0
 
 $Sequence "idle" {
 	"anims\install.smd"
@@ -44,11 +48,18 @@ $Sequence "install" {
 	{ event AE_CL_PLAYSOUND 8 "World.RobotPlaintiveMotorMd" } // Move 1
 	{ event AE_CL_PLAYSOUND 15 "World.RobotArmMotorDrill" }  // Attach 1
 	{ event AE_CL_PLAYSOUND 25 "World.RobotImpactLg" } // Detach 1
-	
+
 	{ event AE_CL_PLAYSOUND 30 "World.RobotPlaintiveMotorMd" } // Move 2
 	{ event AE_CL_PLAYSOUND 35 "World.RobotArmMotorDrill" }  // Attach 2
 	{ event AE_CL_PLAYSOUND 50 "World.RobotImpactLg" } // Detach 2
 	fadein 0.2
 	fadeout 0.2
 	fps 24
+}
+
+// Used to teleport the panels to the right position at map spawn.
+$Sequence "endpose" {
+	"anims\snapto.smd"
+	snap
+	fps 5
 }
