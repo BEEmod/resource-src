@@ -41,12 +41,13 @@ $Sequence "idle" {
 
 $Sequence "install" {
 	"anims\install.smd"
-	// { event AE_CL_PLAYSOUND 1 "World.RobotRatchetMd" }
-	// { event AE_CL_PLAYSOUND 0 "World.RobotSynthPillShortBlanks" }
-	// { event AE_CL_PLAYSOUND 3 "World.RobotHighSpeedMotorSm" }
-	// { event AE_CL_PLAYSOUND 12 "World.RobotIBeamImpact" }
-	// { event AE_CL_PLAYSOUND 27 "World.RobotAirReleaseBlanks" }
-	// { event AE_CL_PLAYSOUND 19 "World.RobotSynthPillShortBlanks" }
+	{ event AE_CL_PLAYSOUND 8 "World.RobotPlaintiveMotorMd" } // Move 1
+	{ event AE_CL_PLAYSOUND 15 "World.RobotArmMotorDrill" }  // Attach 1
+	{ event AE_CL_PLAYSOUND 25 "World.RobotImpactLg" } // Detach 1
+	
+	{ event AE_CL_PLAYSOUND 30 "World.RobotPlaintiveMotorMd" } // Move 2
+	{ event AE_CL_PLAYSOUND 35 "World.RobotArmMotorDrill" }  // Attach 2
+	{ event AE_CL_PLAYSOUND 50 "World.RobotImpactLg" } // Detach 2
 	fadein 0.2
 	fadeout 0.2
 	fps 24
