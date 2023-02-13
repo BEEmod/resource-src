@@ -15,6 +15,7 @@ $BodyGroup "Body"
 $CDMaterials "models/anim_wp"
 
 $opaque
+$origin 16 0 -16
 
 $Sequence "idle" "panel_clip_ref.smd"
 
