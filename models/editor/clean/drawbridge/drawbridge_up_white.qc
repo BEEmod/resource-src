@@ -1,7 +1,12 @@
 $modelname "props_map_editor/bee2/clean/drawbridge_white_up.mdl"
 $staticprop
 
-$bodygroup "Body"
+// Hit the limit, need to split up.
+$bodygroup "a"
+{
+	studio "drawbridge_up_common_ref.smd"
+}
+$bodygroup "b"
 {
 	studio "drawbridge_up_white_ref.smd"
 }
