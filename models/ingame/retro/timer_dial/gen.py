@@ -18,9 +18,16 @@ time {time}
 """
 FPS = 8
 
-anim_temp = """\
+anim_fwd_temp = """\
 $Sequence "{tim}" {{
-	"anims/timer_{tim:02}.smd"
+	"anims/timer_fwd_{tim:02}.smd"
+	fps {fps}
+}}
+
+"""
+anim_rev_temp = """\
+$Sequence "rev_{tim}" {{
+	"anims/timer_rev_{tim:02}.smd"
 	fps {fps}
 }}
 
@@ -29,12 +36,20 @@ $Sequence "{tim}" {{
 with open('anims.qci', 'w') as anim:
 	for delay in range(1, 31):
 	    print('Making t =', delay)
-	    with open('anims/timer_{:02}.smd'.format(delay), 'w') as f:
-	        f.write(header)
+	    with open('anims/timer_fwd_{:02}.smd'.format(delay), 'w') as fwd, open('anims/timer_rev_{:02}.smd'.format(delay), 'w') as rev:
+	        fwd.write(header)
+	        rev.write(header)
 	        for time, dist in enumerate(range(delay * FPS + 1)):
-	            f.write(frame_temp.format(
+	            fwd.write(frame_temp.format(
 	                time=time,
-	                rot=round(-2 * dist * math.pi / delay / FPS, 6),
+	                rot=round(-2.0 * dist * math.pi / delay / FPS, 6),
 	            ))
-	        f.write("end")
-	    anim.write(anim_temp.format(tim=delay, fps=FPS))
+	            rev.write(frame_temp.format(
+	                time=time,
+	                rot=round(+2.0 * dist * math.pi / delay / FPS, 6),
+	            ))
+	        fwd.write("end")
+	        rev.write("end")
+	    anim.write(anim_fwd_temp.format(tim=delay, fps=FPS))
+	for delay in range(1, 31):
+	    anim.write(anim_rev_temp.format(tim=delay, fps=FPS))
