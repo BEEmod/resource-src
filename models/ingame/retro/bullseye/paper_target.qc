@@ -2,8 +2,10 @@ $modelname "BEE2/props_underground/paper_target.mdl"
 
 $bodygroup "target"
 {
-	studio "paper_ref.smd"
+	studio "target_ref.smd"
 }
+
+$origin 0 0 4
 
 $texturegroup "skinfamilies" {
 	{ "bullseye_full" }
@@ -14,4 +16,9 @@ $texturegroup "skinfamilies" {
 
 $cdmaterials "BEE2/models/props_underground/bullseye/"
 
-$sequence "idle" "paper_ref.smd"
+$sequence "idle" "target_ref.smd"
+
+$collisionmodel "target_phy.smd" {
+	$mass 100
+	$concave
+}
