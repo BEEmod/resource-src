@@ -8,10 +8,11 @@ $bodygroup "target"
 $origin 0 0 4
 
 $texturegroup "skinfamilies" {
-	{ "bullseye_full" }
-	{ "bullseye_holes" }
-	{ "bullseye_ripped" }
 	{ "bullseye_transition" }
+	{ "bullseye_ripped" }
+	{ "bullseye_holes" }
+	{ "bullseye_full" }
+	{ "bullseye_dest" }
 }
 
 $cdmaterials "BEE2/models/props_underground/bullseye/"
