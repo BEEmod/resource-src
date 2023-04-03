@@ -4,6 +4,12 @@ $autocenter
 $Contents "solid"
 
 $CDMaterials "BEE2/models/props_clean/"
+$CDMaterials "BEE2/models/props_overgrown/"
+
+$texturegroup "skinfamilies" {
+	{ "bullseye" }
+	{ "bullseye_dirty" }
+}
 
 $Sequence "idle" { "bullseye_pan_ref.smd" }
 

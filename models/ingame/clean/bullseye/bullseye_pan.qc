@@ -12,6 +12,12 @@ $SurfaceProp "plastic_box"
 $Contents "solid"
 
 $CDMaterials "BEE2/models/props_clean/"
+$CDMaterials "BEE2/models/props_overgrown/"
+
+$texturegroup "skinfamilies" {
+	{ "bullseye" }
+	{ "bullseye_dirty" }
+}
 
 $Sequence "idle" {
 	"bullseye_pan_ref.smd"
@@ -41,49 +47,49 @@ $collisiontext
 	break 
 		{ 
 		model "BEE2/props_clean/bullseye_pan_gib1.mdl"
-		fadetime 0.5
+		fadetime 3.5
 		debris 1
 		burst -1.0
 		}
 	break 
 		{ 
 		model "BEE2/props_clean/bullseye_pan_gib2.mdl"
-		fadetime 0.6
+		fadetime 3.6
 		debris 1
 		burst -1.0
 		}
 	break
 		{
 		model "BEE2/props_clean/bullseye_pan_gib3.mdl"
-		fadetime 0.7
+		fadetime 3.7
 		debris 1
 		burst -1.0
 		}
 	break
 		{
 		model "BEE2/props_clean/bullseye_pan_gib4.mdl"
-		fadetime 0.4
+		fadetime 3.4
 		debris 1
 		burst -1.0
 		}
 	break 
 		{
 		model "BEE2/props_clean/bullseye_pan_gib5.mdl"
-		fadetime 0.8
+		fadetime 3.8
 		debris 1
 		burst -1.0
 		}
 	break 
 		{ 
 		model "BEE2/props_clean/bullseye_pan_gib6.mdl"
-		fadetime 0.7
+		fadetime 3.7
 		debris 1
 		burst -1.0
 		}
 	break 
 		{ 
 		model "BEE2/props_clean/bullseye_pan_gib7.mdl"
-		fadetime 0.6
+		fadetime 3.6
 		debris 1
 		burst -1.0
 		}
