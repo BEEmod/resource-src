@@ -31,7 +31,16 @@ $CDMaterials "models/anim_wp/framework/"
 $hboxset "default"
 $hbox 0 "root"  -16 -16 0   16 16 6
 
-
 $Sequence "idle" "timer_sign_ref.smd"
+
+$Sequence "forward" {
+	"anims/timer_fwd_30.smd"
+	fps 8
+}
+
+$Sequence "reverse" {
+	"anims/timer_rev_30.smd"
+	fps 8
+}
 
 $include "anims.qci"
