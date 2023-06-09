@@ -18,6 +18,7 @@ $surfaceprop "plastic_box"
 
 $attachment "panel_attach" "panel" 0 64 0 rotate 0 90 0
 $attachment "piston" "piston" 0 16 0 rotate 0 0 270
+$illumposition 0 64 -8 "panel"
 
 $sequence "idle" {
 	"anims/BindPose.smd"

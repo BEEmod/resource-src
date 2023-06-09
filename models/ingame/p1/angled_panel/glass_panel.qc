@@ -9,8 +9,8 @@ $BodyGroup "panel"
 
 $BodyGroup "piston" 
 {
-	studio "angled_panel_left_ref.smd"
-	studio "angled_panel_right_ref.smd"
+	studio "glass_panel_left_ref.smd"
+	studio "glass_panel_right_ref.smd"
 }
 
 $cdmaterials "BEE2/models/props_p1/"
@@ -18,6 +18,7 @@ $surfaceprop "plastic_box"
 
 $attachment "panel_attach" "panel" 0 64 0 rotate 0 90 0
 $attachment "piston" "piston" 0 16 0 rotate 0 0 270
+$illumposition 0 64 -2 "panel"
 
 $sequence "idle" {
 	"anims/BindPose.smd"
