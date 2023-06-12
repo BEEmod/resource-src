@@ -16,8 +16,6 @@ $lod 100
 	replacemodel "laser_catcher_center_reference.smd" "laser_catcher_center_reference_lod2.smd"
 }
 
-$opaque
-
 $cdmaterials "BEE2/models/props_p1/" "models/props/"
 
 $texturegroup "skinfamilies" {
@@ -59,7 +57,7 @@ $sequence "spin" "laser_catcher_center_anims\spin.smd" {
 	loop
 }
 
-// $collisionmodel "laser_catcher_physbox.smd"
+// $collisionmodel "laser_catcher_center_physbox.smd"
 // {
 	// $mass 120
 	// $inertia 1
