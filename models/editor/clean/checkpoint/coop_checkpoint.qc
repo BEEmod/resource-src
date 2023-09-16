@@ -8,6 +8,10 @@ $BodyGroup "part2"
 {
 	studio "coop_checkpoint_2_ref.smd"
 }
+$BodyGroup "part3"
+{
+	studio "coop_checkpoint_3_ref.smd"
+}
 
 $CDMaterials "models/props_map_editor/" "BEE2/models/props_map_editor/"
 
