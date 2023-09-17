@@ -1,8 +1,9 @@
 $ModelName "props_map_editor/bee2/clean/coop_checkpoint.mdl"
 
+$staticprop
 $BodyGroup "part1"
 {
-	studio "coop_checkpoint_ref.smd"
+	studio "coop_checkpoint_1_ref.smd"
 }
 $BodyGroup "part2"
 {
@@ -15,4 +16,4 @@ $BodyGroup "part3"
 
 $CDMaterials "models/props_map_editor/" "BEE2/models/props_map_editor/"
 
-$Sequence "idle" "coop_checkpoint_ref"
+$Sequence "idle" "anim_idle"
