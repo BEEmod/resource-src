@@ -25,6 +25,5 @@ $collisionmodel "frame_64x128_physics.smd"
 	$rotdamping 0
 	$rootbone " "
 	$concave
-	$maxconvexpieces 5
-
+	$maxconvexpieces 10
 }
