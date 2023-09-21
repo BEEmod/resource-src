@@ -22,6 +22,11 @@ $attachment "pist2" "tip_2" 0 0 0 rotate 0 0 0
 $attachment "pist3" "tip_3" 0 0 0 rotate 0 0 0
 $attachment "pist4" "tip_4" 0 0 0 rotate 0 0 0
 
+$hbox 0 "tip_1" -16 -8 -16  16 0 16
+$hbox 0 "tip_2" -16 -8 -16  16 0 16
+$hbox 0 "tip_3" -16 -8 -16  16 0 16
+$hbox 0 "tip_4" -16 -8 -16  16 0 16
+
 $Sequence "extend" {
 	"anims/extend.smd"
 	{ event AE_CL_PLAYSOUND 9 "BEE2.P1.stair_clack" }
