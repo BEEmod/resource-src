@@ -3,9 +3,6 @@
 $modelname "BEE2/props_ingame/cust_fizz_static.mdl"
 $cdmaterials "BEE2\models\props_ingame\cust_fizz"
 
-// $modelname "backstock/fizzler_color_static.mdl"
-// $cdmaterials "models/backstock/fizzler_color/"
-
 $staticprop
 
 $bodygroup "Body"
@@ -49,6 +46,7 @@ $sequence "BindPose" "fizzler_dynamic_anims\idle.smd" {
 	fps 30
 }
 
-$collisionmodel "fizzler_static_physics.smd"
-{
+$collisionmodel "fizzler_static_physics.smd" {
+	$concave
+	$mass 100
 }
