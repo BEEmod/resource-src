@@ -1,4 +1,4 @@
-$modelname "props_map_editor/logic_strip_and.mdl"
+$modelname "props_map_editor/BEE2/logic/strip_and.mdl"
 
 $bodygroup "Body"
 {
@@ -9,9 +9,9 @@ $surfaceprop "default"
 
 $contents "solid"
 
-$renamematerial "logic_strip_tex" "logic_and"
+$renamematerial "logic_strip_tex" "and"
 
-$cdmaterials "models\props_map_editor"
+$cdmaterials "BEE2/models/props_map_editor/logic/"
 
 $sequence "idle" {
 	"anims\idle.smd"
