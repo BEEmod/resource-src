@@ -1,11 +1,10 @@
-// Made by Ben Bryant / Mevious
+// Originally made by Ben Bryant / Mevious
 
-$scale 1.00
-$sequence idle "rexaura_destroyer" fps 30.00
-$modelname "props_map_editor\rexaura_destroyer.mdl"
+$modelname "props_map_editor/BEE2/clean/rex_pellet_destroyer.mdl"
 $staticprop
-$cdmaterials "BEE2/models/props_p1/rex/"
 
-$renamematerial "claw_sphere" "pos_orb_editor"
-$renamematerial "pincher" "pincher_editor"
 $body "body" "rexaura_destroyer"
+
+$cdmaterials "BEE2/models/props_map_editor/rex/"
+
+$sequence idle "rexaura_destroyer" fps 30.00
