@@ -52,6 +52,7 @@ $hbox 0 "mid"      -12  -96  -12    12    0   12
 $hbox 0 "piston"    -8  -88   -8     8    4    8
 $hbox 0 "rotate"   -42  -16  -16    42   16   20
 $hbox 0 "panel"	   -64   -0  -12    64  128    0
+$hbox 0 "grate"    -56  -56   -2    56   56    2
 
 // $collisionjoints "angled_panel_phy"  {
 // 	$concaveperjoint
