@@ -1,6 +1,6 @@
-// Animates a P1 panel to match the PeTI angles.
+// Variant which retracts further into the wall, and also has a grate to fill the space.
 
-$modelname "BEE2/props_p1/covered_panel.mdl"
+$modelname "BEE2/props_p1/covered_pan_pist.mdl"
 
 $BodyGroup "panel"
 {
