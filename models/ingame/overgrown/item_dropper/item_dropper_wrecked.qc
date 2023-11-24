@@ -26,16 +26,15 @@ $SurfaceProp "default"
 
 $Contents "solid"
 
-$MaxEyeDeflection 90
-
 $MostlyOpaque
 
-$CDMaterials "models/props_backstage/" "models/props_basement/"
+$CDMaterials "models/props_backstage/" "models/props_basement/" "bee2/models/props_overgrown/"
 
 $TextureGroup "skinfamilies"
 {
 	{ "item_dropper_wrecked"        }
 	{ "item_dropper_wrecked_orange" }
+	{ "item_dropper_wrecked_white"  } // Substance graph in ingame/clean/item_dropper_skins/
 }
 
 $CBox 0 0 0 0 0 0
@@ -80,13 +79,14 @@ $Sequence "item_dropper_close" {
 	fps 24
 }
 
-$CollisionJoints "item_dropper_wrecked_phy_iris.smd"
+$CollisionJoints "item_dropper_wrecked_physics.smd"
 {
 	$mass 50
 	$inertia 1
 	$damping 0
 	$rotdamping 0
 	$concave
+	$concaveperjoint
 
 	$jointconstrain "joint1a7" x limit 0 0 0
 	$jointconstrain "joint1a7" y limit 0 0 0
