@@ -1,0 +1,16 @@
+newmtl cubemat5
+Ka 0.300000 0.300000 0.300000
+Kd 0.700000 0.700000 0.700000
+Ks 1.000000 1.000000 1.000000
+Ns 50.000000
+Tr 0.000000
+illum 2
+map_Kd C:\Users\shad0w440\Desktop\mapmaker\crusher.tga
+newmtl Polygon_XSIPOLYCLS.cubemat
+Ka 0.300000 0.300000 0.300000
+Kd 0.700000 0.700000 0.700000
+Ks 1.000000 1.000000 1.000000
+Ns 50.000000
+Tr 0.000000
+illum 2
+map_Kd C:\Users\shad0w440\Desktop\mapmaker\c_grate.png
