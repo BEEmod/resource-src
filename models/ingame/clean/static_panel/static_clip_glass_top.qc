@@ -1,0 +1,24 @@
+// For some reason portals don't clip properly unless we use a model.
+
+$staticprop
+$surfaceprop glass
+$opaque
+
+
+$ModelName "BEE2/panels/static_phys_glass_top.mdl"
+
+$BodyGroup "Body"
+	{
+	studio "panel_clip_ref.smd"
+	}
+
+$CDMaterials "models/anim_wp"
+
+$opaque
+$origin 48 0 12
+
+$Sequence "idle" "panel_clip_ref.smd"
+
+$collisionmodel "panel_clip_top_phy.smd" {
+	$mass 200
+}
