@@ -12,7 +12,8 @@ $BodyGroup "Body"
 	studio "panel_clip_ref.smd"
 	}
 
-$CDMaterials "models/anim_wp"
+// The editor is always loaded, use a material from there.
+$CDMaterials "models/props_map_editor/"
 
 $opaque
 $origin 48 0 12

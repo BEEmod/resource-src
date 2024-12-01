@@ -12,3 +12,7 @@ $include "skins.qci"
 $Sequence "idle" {
 	"idle.smd"
 }
+
+$collisionmodel "static_norm_60_phy" {
+	$mass 500
+}
