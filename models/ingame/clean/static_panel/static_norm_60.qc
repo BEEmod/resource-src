@@ -15,4 +15,5 @@ $Sequence "idle" {
 
 $collisionmodel "static_norm_60_phy" {
 	$mass 500
+	$concave
 }

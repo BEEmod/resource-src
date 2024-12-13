@@ -1,4 +1,4 @@
-$SurfaceProp "glass"
+$SurfaceProp "metalpanel" // Seperate collision for the top.
 
 $Contents "solid"
 

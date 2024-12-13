@@ -12,3 +12,8 @@ $include "skins_glass.qci"
 $Sequence "idle" {
 	"idle.smd"
 }
+
+$collisionmodel "static_glass_45_phy" {
+	$mass 500
+	$concave
+}
