@@ -1,0 +1,507 @@
+
+// --------------------------------------------------------------------------------------------------------------------------------------------------------------
+// -STANDING-----------------------------------------------------------------------------------------------------------------------------------------------------
+// --------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+$animation "nogun_standing_aimmatrix_up_right_corrective_animation" "chell_animations_anims\nogun_standing_aimmatrix_up_right_corrective_animation.smd" { }
+$animation "nogun_standing_aimmatrix_up_center_corrective_animation" "chell_animations_anims\nogun_standing_aimmatrix_up_center_corrective_animation.smd" { }
+$animation "nogun_standing_aimmatrix_up_left_corrective_animation" "chell_animations_anims\nogun_standing_aimmatrix_up_left_corrective_animation.smd" { }
+$animation "nogun_standing_aimmatrix_mid_right_corrective_animation" "chell_animations_anims\nogun_standing_aimmatrix_mid_right_corrective_animation.smd" { }
+$animation "nogun_standing_aimmatrix_mid_center_corrective_animation" "chell_animations_anims\nogun_standing_aimmatrix_mid_center_corrective_animation.smd" { }
+$animation "nogun_standing_aimmatrix_mid_left_corrective_animation" "chell_animations_anims\nogun_standing_aimmatrix_mid_left_corrective_animation.smd" { }
+$animation "nogun_standing_aimmatrix_down_right_corrective_animation" "chell_animations_anims\nogun_standing_aimmatrix_down_right_corrective_animation.smd" { }
+$animation "nogun_standing_aimmatrix_down_center_corrective_animation" "chell_animations_anims\nogun_standing_aimmatrix_down_center_corrective_animation.smd" { }
+$animation "nogun_standing_aimmatrix_down_left_corrective_animation" "chell_animations_anims\nogun_standing_aimmatrix_down_left_corrective_animation.smd" { }
+
+$animation "nogun_standing_aimmatrix_neutral" "chell_animations_anims\nogun_standing_aimmatrix_neutral.smd" {
+	fps 30
+	ikrule "rhand" release contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 0 0 target 0
+	ikrule "lhand" release contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 0 0 target 1
+}
+
+$animation "nogun_standing_aimmatrix_down_right" "chell_animations_anims\nogun_standing_aimmatrix_down_right.smd" {
+	fps 30
+	// Crowbar writes this subtract option to prevent jigglebone and poseparameter problems when delta sequences are recompiled.
+	subtract "nogun_standing_aimmatrix_down_right_corrective_animation" 0
+	weightlist "weights_portal_aimmatrix"
+}
+
+$animation "nogun_standing_aimmatrix_down_center" "chell_animations_anims\nogun_standing_aimmatrix_down_center.smd" {
+	fps 30
+	// Crowbar writes this subtract option to prevent jigglebone and poseparameter problems when delta sequences are recompiled.
+	subtract "nogun_standing_aimmatrix_down_center_corrective_animation" 0
+	weightlist "weights_portal_aimmatrix"
+}
+
+$animation "nogun_standing_aimmatrix_down_left" "chell_animations_anims\nogun_standing_aimmatrix_down_left.smd" {
+	fps 30
+	// Crowbar writes this subtract option to prevent jigglebone and poseparameter problems when delta sequences are recompiled.
+	subtract "nogun_standing_aimmatrix_down_left_corrective_animation" 0
+	weightlist "weights_portal_aimmatrix"
+}
+
+$animation "nogun_standing_aimmatrix_mid_right" "chell_animations_anims\nogun_standing_aimmatrix_mid_right.smd" {
+	fps 30
+	// Crowbar writes this subtract option to prevent jigglebone and poseparameter problems when delta sequences are recompiled.
+	subtract "nogun_standing_aimmatrix_mid_right_corrective_animation" 0
+	weightlist "weights_portal_aimmatrix"
+}
+
+$animation "nogun_standing_aimmatrix_mid_center" "chell_animations_anims\nogun_standing_aimmatrix_mid_center.smd" {
+	fps 30
+	// Crowbar writes this subtract option to prevent jigglebone and poseparameter problems when delta sequences are recompiled.
+	subtract "nogun_standing_aimmatrix_mid_center_corrective_animation" 0
+	weightlist "weights_portal_aimmatrix"
+}
+
+$animation "nogun_standing_aimmatrix_mid_left" "chell_animations_anims\nogun_standing_aimmatrix_mid_left.smd" {
+	fps 30
+	// Crowbar writes this subtract option to prevent jigglebone and poseparameter problems when delta sequences are recompiled.
+	subtract "nogun_standing_aimmatrix_mid_left_corrective_animation" 0
+	weightlist "weights_portal_aimmatrix"
+}
+
+$animation "nogun_standing_aimmatrix_up_right" "chell_animations_anims\nogun_standing_aimmatrix_up_right.smd" {
+	fps 30
+	// Crowbar writes this subtract option to prevent jigglebone and poseparameter problems when delta sequences are recompiled.
+	subtract "nogun_standing_aimmatrix_up_right_corrective_animation" 0
+	weightlist "weights_portal_aimmatrix"
+}
+
+$animation "nogun_standing_aimmatrix_up_center" "chell_animations_anims\nogun_standing_aimmatrix_up_center.smd" {
+	fps 30
+	// Crowbar writes this subtract option to prevent jigglebone and poseparameter problems when delta sequences are recompiled.
+	subtract "nogun_standing_aimmatrix_up_center_corrective_animation" 0
+	weightlist "weights_portal_aimmatrix"
+}
+
+$animation "nogun_standing_aimmatrix_up_left" "chell_animations_anims\nogun_standing_aimmatrix_up_left.smd" {
+	fps 30
+	// Crowbar writes this subtract option to prevent jigglebone and poseparameter problems when delta sequences are recompiled.
+	subtract "nogun_standing_aimmatrix_up_left_corrective_animation" 0
+	weightlist "weights_portal_aimmatrix"
+}
+
+$animation "nogun_standing_aimmatrix_straight_up" "chell_animations_anims\nogun_standing_aimmatrix_straight_up.smd" {
+	fps 30
+}
+
+$sequence "nogun_standing_aim_matrix" {
+	"nogun_standing_aimmatrix_up_right"
+	"nogun_standing_aimmatrix_up_center"
+	"nogun_standing_aimmatrix_up_left"
+	"nogun_standing_aimmatrix_mid_right"
+	"nogun_standing_aimmatrix_mid_center"
+	"nogun_standing_aimmatrix_mid_left"
+	"nogun_standing_aimmatrix_down_right"
+	"nogun_standing_aimmatrix_down_center"
+	"nogun_standing_aimmatrix_down_left"
+	blend "body_yaw" 45 -45
+	blend "body_pitch" 45 -45
+	delta
+	fadein 0.2
+	fadeout 0.2
+	iklock "rfoot" 1 0
+	iklock "lfoot" 1 0
+	hidden
+}
+
+
+$animation "nogun_runCenter" "chell_animations_anims\nogun_runCenter.smd" {
+	fps 30
+	loop
+	ikrule "lfoot" footstep contact 1 fakeorigin 12.86 0.86 0 fakerotate 0 0 0 floor 0 height 18 radius 0 range 16 30 2 16 target 3
+	ikrule "rfoot" footstep contact 0 fakeorigin -7.59 1.19 0 fakerotate 0 0 0 floor 0 height 18 radius 0 range 0 0 0 0 target 2
+	ikrule "rhand" release contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 30 30 target 0
+	ikrule "lhand" release contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 30 30 target 1
+}
+
+$animation "nogun_runS" "chell_animations_anims\nogun_runS.smd" {
+	fps 30
+	loop
+	ikrule "lfoot" footstep contact 1 fakeorigin 13.94 0.89 0 fakerotate 0 0 0 floor 0 height 18 radius 0 range 16 30 2 16 target 3
+	ikrule "rfoot" footstep contact 0 fakeorigin 6.36 -2.87 0 fakerotate 0 0 0 floor 0 height 18 radius 0 range 0 0 0 0 target 2
+	ikrule "rhand" release contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 30 30 target 0
+	ikrule "lhand" release contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 30 30 target 1
+	walkframe 30 LX LY
+}
+
+$animation "nogun_runSE" "chell_animations_anims\nogun_runSE.smd" {
+	fps 30
+	loop
+	ikrule "lfoot" footstep contact 1 fakeorigin 14.19 8.67 0 fakerotate 0 0 0 floor 0 height 18 radius 0 range 16 30 2 16 target 3
+	ikrule "rfoot" footstep contact 0 fakeorigin 5.37 -15.27 0 fakerotate 0 0 0 floor 0 height 18 radius 0 range 0 0 0 0 target 2
+	ikrule "rhand" release contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 30 30 target 0
+	ikrule "lhand" release contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 30 30 target 1
+	walkframe 30 LX LY
+}
+
+$animation "nogun_runE" "chell_animations_anims\nogun_runE.smd" {
+	fps 30
+	loop
+	ikrule "lfoot" footstep contact 1 fakeorigin 8.86 16.45 0 fakerotate 0 0 0 floor 0 height 18 radius 0 range 16 30 2 16 target 3
+	ikrule "rfoot" footstep contact 1 fakeorigin -13.25 -7.79 0 fakerotate 0 0 0 floor 0 height 18 radius 0 range 16 30 2 16 target 2
+	ikrule "rhand" release contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 30 30 target 0
+	ikrule "lhand" release contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 30 30 target 1
+	walkframe 30 LX LY
+}
+
+$animation "nogun_runNE" "chell_animations_anims\nogun_runNE.smd" {
+	fps 30
+	loop
+	ikrule "lfoot" footstep contact 1 fakeorigin -12.54 4.98 0 fakerotate 0 0 0 floor 0 height 18 radius 0 range 16 30 2 16 target 3
+	ikrule "rfoot" footstep contact 1 fakeorigin 3.18 -13.36 0 fakerotate 0 0 0 floor 0 height 18 radius 0 range 16 30 2 16 target 2
+	ikrule "rhand" release contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 30 30 target 0
+	ikrule "lhand" release contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 30 30 target 1
+	walkframe 30 LX LY
+}
+
+$animation "nogun_runN" "chell_animations_anims\nogun_runN.smd" {
+	fps 30
+	loop
+	ikrule "lfoot" footstep contact 1 fakeorigin -5.05 0.77 0 fakerotate 0 0 0 floor 0 height 18 radius 0 range 16 30 2 16 target 3
+	ikrule "rfoot" footstep contact 1 fakeorigin -2.77 -1.74 0 fakerotate 0 0 0 floor 0 height 18 radius 0 range 16 30 2 16 target 2
+	ikrule "rhand" release contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 30 30 target 0
+	ikrule "lhand" release contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 30 30 target 1
+	walkframe 30 LX LY
+}
+
+$animation "nogun_runNW" "chell_animations_anims\nogun_runNW.smd" {
+	fps 30
+	loop
+	ikrule "lfoot" footstep contact 1 fakeorigin -2.78 8.74 0 fakerotate 0 0 0 floor 0 height 18 radius 0 range 16 30 2 16 target 3
+	ikrule "rfoot" footstep contact 1 fakeorigin -3.68 -7.95 0 fakerotate 0 0 0 floor 0 height 18 radius 0 range 16 30 2 16 target 2
+	ikrule "rhand" release contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 30 30 target 0
+	ikrule "lhand" release contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 30 30 target 1
+	walkframe 30 LX LY
+}
+
+$animation "nogun_runW" "chell_animations_anims\nogun_runW.smd" {
+	fps 30
+	loop
+	ikrule "lfoot" footstep contact 1 fakeorigin -5.45 1.51 0 fakerotate 0 0 0 floor 0 height 18 radius 0 range 16 30 2 16 target 3
+	ikrule "rfoot" footstep contact 1 fakeorigin 10.32 -13.05 0 fakerotate 0 0 0 floor 0 height 18 radius 0 range 16 30 2 16 target 2
+	ikrule "rhand" release contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 30 30 target 0
+	ikrule "lhand" release contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 30 30 target 1
+	walkframe 30 LX LY
+}
+
+$animation "nogun_runSW" "chell_animations_anims\nogun_runSW.smd" {
+	fps 30
+	loop
+	ikrule "lfoot" footstep contact 1 fakeorigin -6.27 -1.49 0 fakerotate 0 0 0 floor 0 height 18 radius 0 range 16 30 2 16 target 3
+	ikrule "rfoot" footstep contact 1 fakeorigin -0.25 -7.83 0 fakerotate 0 0 0 floor 0 height 18 radius 0 range 16 30 2 16 target 2
+	ikrule "rhand" release contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 30 30 target 0
+	ikrule "lhand" release contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 30 30 target 1
+	walkframe 30 LX LY
+}
+
+
+// --------------------------------------------------------------------------------------------------------------------------------------------------------------
+// -CROUCHING----------------------------------------------------------------------------------------------------------------------------------------------------
+// --------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+$animation "nogun_crouch_aimmatrix_up_right_corrective_animation" "chell_animations_anims\nogun_crouch_aimmatrix_up_right_corrective_animation.smd" { }
+$animation "nogun_crouch_aimmatrix_up_center_corrective_animation" "chell_animations_anims\nogun_crouch_aimmatrix_up_center_corrective_animation.smd" { }
+$animation "nogun_crouch_aimmatrix_up_left_corrective_animation" "chell_animations_anims\nogun_crouch_aimmatrix_up_left_corrective_animation.smd" { }
+$animation "nogun_crouch_aimmatrix_mid_right_corrective_animation" "chell_animations_anims\nogun_crouch_aimmatrix_mid_right_corrective_animation.smd" { }
+$animation "nogun_crouch_aimmatrix_mid_center_corrective_animation" "chell_animations_anims\nogun_crouch_aimmatrix_mid_center_corrective_animation.smd" { }
+$animation "nogun_crouch_aimmatrix_mid_left_corrective_animation" "chell_animations_anims\nogun_crouch_aimmatrix_mid_left_corrective_animation.smd" { }
+$animation "nogun_crouch_aimmatrix_down_right_corrective_animation" "chell_animations_anims\nogun_crouch_aimmatrix_down_right_corrective_animation.smd" { }
+$animation "nogun_crouch_aimmatrix_down_center_corrective_animation" "chell_animations_anims\nogun_crouch_aimmatrix_down_center_corrective_animation.smd" { }
+$animation "nogun_crouch_aimmatrix_down_left_corrective_animation" "chell_animations_anims\nogun_crouch_aimmatrix_down_left_corrective_animation.smd" { }
+
+$animation "nogun_crouch_aimmatrix_neutral" "chell_animations_anims\nogun_crouch_aimmatrix_neutral.smd" {
+	fps 30
+	ikrule "lhand" touch "root" contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 0 0 target 1
+	ikrule "rhand" release contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 0 0 target 0
+}
+
+$animation "nogun_crouch_aimmatrix_down_right" "chell_animations_anims\nogun_crouch_aimmatrix_down_right.smd" {
+	fps 30
+	// Crowbar writes this subtract option to prevent jigglebone and poseparameter problems when delta sequences are recompiled.
+	subtract "nogun_crouch_aimmatrix_down_right_corrective_animation" 0
+	ikrule "lhand" touch "root" contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 0 0 target 1
+	weightlist "weights_portal_aimmatrix"
+}
+
+$animation "nogun_crouch_aimmatrix_down_center" "chell_animations_anims\nogun_crouch_aimmatrix_down_center.smd" {
+	fps 30
+	// Crowbar writes this subtract option to prevent jigglebone and poseparameter problems when delta sequences are recompiled.
+	subtract "nogun_crouch_aimmatrix_down_center_corrective_animation" 0
+	ikrule "lhand" touch "root" contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 0 0 target 1
+	weightlist "weights_portal_aimmatrix"
+}
+
+$animation "nogun_crouch_aimmatrix_down_left" "chell_animations_anims\nogun_crouch_aimmatrix_down_left.smd" {
+	fps 30
+	// Crowbar writes this subtract option to prevent jigglebone and poseparameter problems when delta sequences are recompiled.
+	subtract "nogun_crouch_aimmatrix_down_left_corrective_animation" 0
+	ikrule "lhand" touch "root" contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 0 0 target 1
+	weightlist "weights_portal_aimmatrix"
+}
+
+$animation "nogun_crouch_aimmatrix_mid_right" "chell_animations_anims\nogun_crouch_aimmatrix_mid_right.smd" {
+	fps 30
+	// Crowbar writes this subtract option to prevent jigglebone and poseparameter problems when delta sequences are recompiled.
+	subtract "nogun_crouch_aimmatrix_mid_right_corrective_animation" 0
+	ikrule "lhand" touch "root" contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 0 0 target 1
+	weightlist "weights_portal_aimmatrix"
+}
+
+$animation "nogun_crouch_aimmatrix_mid_center" "chell_animations_anims\nogun_crouch_aimmatrix_mid_center.smd" {
+	fps 30
+	// Crowbar writes this subtract option to prevent jigglebone and poseparameter problems when delta sequences are recompiled.
+	subtract "nogun_crouch_aimmatrix_mid_center_corrective_animation" 0
+	ikrule "lhand" touch "root" contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 0 0 target 1
+	weightlist "weights_portal_aimmatrix"
+}
+
+$animation "nogun_crouch_aimmatrix_mid_left" "chell_animations_anims\nogun_crouch_aimmatrix_mid_left.smd" {
+	fps 30
+	// Crowbar writes this subtract option to prevent jigglebone and poseparameter problems when delta sequences are recompiled.
+	subtract "nogun_crouch_aimmatrix_mid_left_corrective_animation" 0
+	ikrule "lhand" touch "root" contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 0 0 target 1
+	weightlist "weights_portal_aimmatrix"
+}
+
+$animation "nogun_crouch_aimmatrix_up_right" "chell_animations_anims\nogun_crouch_aimmatrix_up_right.smd" {
+	fps 30
+	// Crowbar writes this subtract option to prevent jigglebone and poseparameter problems when delta sequences are recompiled.
+	subtract "nogun_crouch_aimmatrix_up_right_corrective_animation" 0
+	ikrule "lhand" touch "root" contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 0 0 target 1
+	weightlist "weights_portal_aimmatrix"
+}
+
+$animation "nogun_crouch_aimmatrix_up_center" "chell_animations_anims\nogun_crouch_aimmatrix_up_center.smd" {
+	fps 30
+	// Crowbar writes this subtract option to prevent jigglebone and poseparameter problems when delta sequences are recompiled.
+	subtract "nogun_crouch_aimmatrix_up_center_corrective_animation" 0
+	ikrule "lhand" touch "root" contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 0 0 target 1
+	weightlist "weights_portal_aimmatrix"
+}
+
+$animation "nogun_crouch_aimmatrix_up_left" "chell_animations_anims\nogun_crouch_aimmatrix_up_left.smd" {
+	fps 30
+	// Crowbar writes this subtract option to prevent jigglebone and poseparameter problems when delta sequences are recompiled.
+	subtract "nogun_crouch_aimmatrix_up_left_corrective_animation" 0
+	ikrule "lhand" touch "root" contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 0 0 target 1
+	weightlist "weights_portal_aimmatrix"
+}
+
+$animation "nogun_crouch_aimmatrix_straight_up" "chell_animations_anims\nogun_crouch_aimmatrix_straight_up.smd" {
+	fps 30
+	ikrule "lhand" touch "root" contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 0 0 target 1
+}
+
+$sequence "nogun_crouch_aim_matrix" {
+	"nogun_crouch_aimmatrix_up_right"
+	"nogun_crouch_aimmatrix_up_center"
+	"nogun_crouch_aimmatrix_up_left"
+	"nogun_crouch_aimmatrix_mid_right"
+	"nogun_crouch_aimmatrix_mid_center"
+	"nogun_crouch_aimmatrix_mid_left"
+	"nogun_crouch_aimmatrix_down_right"
+	"nogun_crouch_aimmatrix_down_center"
+	"nogun_crouch_aimmatrix_down_left"
+	blend "body_yaw" 45 -45
+	blend "body_pitch" 45 -45
+	delta
+	fadein 0.2
+	fadeout 0.2
+	iklock "rfoot" 1 0
+	iklock "lfoot" 1 0
+	hidden
+}
+
+$animation "nogun_crouchCenter" "chell_animations_anims\nogun_crouchCenter.smd" {
+	fps 30
+	loop
+	ikrule "lfoot" footstep contact 1 fakeorigin 12.07 -0.38 0 fakerotate 0 0 0 floor 0 height 18 radius 0 range 14 25 2 14 target 3
+	ikrule "rfoot" footstep contact 0 fakeorigin -0.28 -5.51 0 fakerotate 0 0 0 floor 0 height 18 radius 0 range 0 0 0 0 target 2
+	ikrule "rhand" release contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 25 25 target 0
+	ikrule "lhand" release contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 25 25 target 1
+	walkframe 25 LX LY
+}
+
+$animation "nogun_crouchS" "chell_animations_anims\nogun_crouchS.smd" {
+	fps 30
+	loop
+	ikrule "lfoot" footstep contact 1 fakeorigin 7.83 -0.33 0 fakerotate 0 0 0 floor 0 height 18 radius 0 range 14 25 2 14 target 3
+	ikrule "rfoot" footstep contact 1 fakeorigin -0.55 -4.19 0 fakerotate 0 0 0 floor 0 height 18 radius 0 range 14 25 2 14 target 2
+	ikrule "rhand" release contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 25 25 target 0
+	ikrule "lhand" release contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 25 25 target 1
+	walkframe 25 LX LY
+}
+
+$animation "nogun_crouchSE" "chell_animations_anims\nogun_crouchSE.smd" {
+	fps 30
+	loop
+	ikrule "lfoot" footstep contact 1 fakeorigin 8.62 0.63 0 fakerotate 0 0 0 floor 0 height 18 radius 0 range 14 25 2 14 target 3
+	ikrule "rfoot" footstep contact 1 fakeorigin 5.57 -17.96 0 fakerotate 0 0 0 floor 0 height 18 radius 0 range 14 25 2 14 target 2
+	ikrule "rhand" release contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 25 25 target 0
+	ikrule "lhand" release contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 25 25 target 1
+	walkframe 25 LX LY
+}
+
+$animation "nogun_crouchE" "chell_animations_anims\nogun_crouchE.smd" {
+	fps 30
+	loop
+	ikrule "lfoot" footstep contact 1 fakeorigin 15.54 -1.94 0 fakerotate 0 0 0 floor 0 height 18 radius 0 range 14 25 2 14 target 3
+	ikrule "rfoot" footstep contact 1 fakeorigin 4.83 -14.71 0 fakerotate 0 0 0 floor 0 height 18 radius 0 range 14 25 2 14 target 2
+	ikrule "rhand" release contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 25 25 target 0
+	ikrule "lhand" release contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 25 25 target 1
+	walkframe 25 LX LY
+}
+
+$animation "nogun_crouchNE" "chell_animations_anims\nogun_crouchNE.smd" {
+	fps 30
+	loop
+	ikrule "lfoot" footstep contact 1 fakeorigin 9.99 0.11 0 fakerotate 0 0 0 floor 0 height 18 radius 0 range 14 25 2 14 target 3
+	ikrule "rfoot" footstep contact 1 fakeorigin 2.63 -6.22 0 fakerotate 0 0 0 floor 0 height 18 radius 0 range 14 25 2 14 target 2
+	ikrule "rhand" release contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 25 25 target 0
+	ikrule "lhand" release contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 25 25 target 1
+	walkframe 25 LX LY
+}
+
+$animation "nogun_crouchN" "chell_animations_anims\nogun_crouchN.smd" {
+	fps 30
+	loop
+	ikrule "lfoot" footstep contact 1 fakeorigin 5.55 -0.23 0 fakerotate 0 0 0 floor 0 height 18 radius 0 range 14 25 2 14 target 3
+	ikrule "rfoot" footstep contact 1 fakeorigin 10.49 -5.59 0 fakerotate 0 0 0 floor 0 height 18 radius 0 range 14 25 2 14 target 2
+	ikrule "rhand" release contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 25 25 target 0
+	ikrule "lhand" release contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 25 25 target 1
+	walkframe 25 LX LY
+}
+
+$animation "nogun_crouchNW" "chell_animations_anims\nogun_crouchNW.smd" {
+	fps 30
+	loop
+	ikrule "lfoot" footstep contact 1 fakeorigin 0.23 5.09 0 fakerotate 0 0 0 floor 0 height 18 radius 0 range 14 25 2 14 target 3
+	ikrule "rfoot" footstep contact 1 fakeorigin 12.42 -0.78 0 fakerotate 0 0 0 floor 0 height 18 radius 0 range 14 25 2 14 target 2
+	ikrule "rhand" release contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 25 25 target 0
+	ikrule "lhand" release contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 25 25 target 1
+	walkframe 25 LX LY
+}
+
+$animation "nogun_crouchW" "chell_animations_anims\nogun_crouchW.smd" {
+	fps 30
+	loop
+	ikrule "lfoot" footstep contact 1 fakeorigin 9.13 -2.66 0 fakerotate 0 0 0 floor 0 height 18 radius 0 range 14 25 2 14 target 3
+	ikrule "rfoot" footstep contact 1 fakeorigin -9.21 -5.6 0 fakerotate 0 0 0 floor 0 height 18 radius 0 range 14 25 2 14 target 2
+	ikrule "rhand" release contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 25 25 target 0
+	ikrule "lhand" release contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 25 25 target 1
+	walkframe 25 LX LY
+}
+
+$animation "nogun_crouchSW" "chell_animations_anims\nogun_crouchSW.smd" {
+	fps 30
+	loop
+	ikrule "lfoot" footstep contact 1 fakeorigin 3.1 5.49 0 fakerotate 0 0 0 floor 0 height 18 radius 0 range 14 25 2 14 target 3
+	ikrule "rfoot" footstep contact 1 fakeorigin 9.33 -13.26 0 fakerotate 0 0 0 floor 0 height 18 radius 0 range 14 25 2 14 target 2
+	ikrule "rhand" release contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 25 25 target 0
+	ikrule "lhand" release contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 25 25 target 1
+	walkframe 25 LX LY
+}
+
+// --------------------------------------------------------------------------------------------------------------------------------------------------------------
+// -SEQUENCES----------------------------------------------------------------------------------------------------------------------------------------------------
+// --------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+$sequence "nogun_standing_idle" {
+	"chell_animations_anims\nogun_standing_idle.smd"
+	activity "ACT_MP_STAND_IDLE" 1
+	blend "move_y" -1 1
+	blend "move_x" -1 1
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+	loop
+	ikrule "lfoot" footstep contact 1 fakeorigin 14.28 0.49 0 fakerotate 0 0 0 floor 0 height 18 radius 0 range 81 160 2 81 target 3
+	ikrule "rfoot" footstep contact 1 fakeorigin -7.28 1.86 0 fakerotate 0 0 0 floor 0 height 18 radius 0 range 81 160 2 81 target 2
+	ikrule "rhand" release contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 160 160 target 0
+	ikrule "lhand" release contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 160 160 target 1
+	walkframe 160 LX LY
+}
+
+$sequence "nogun_run" {
+	"nogun_runSW"
+	"nogun_runS"
+	"nogun_runSE"
+	"nogun_runW"
+	"nogun_runCenter"
+	"nogun_runE"
+	"nogun_runNW"
+	"nogun_runN"
+	"nogun_runNE"
+	activity "ACT_MP_RUN" 1
+	blend "move_y" -1 1
+	blend "move_x" -1 1
+	fadein 0.2
+	fadeout 0.2
+}
+
+$sequence "nogun_standing_jump" {
+	"chell_animations_anims\nogun_standing_jump.smd"
+	activity "ACT_MP_JUMP_START" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+	ikrule "lfoot" release contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 25 25 target 3 usesequence 
+	ikrule "rfoot" release contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 25 25 target 2 usesequence 
+	ikrule "rhand" release contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 25 25 target 0 usesequence 
+	ikrule "lhand" release contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 25 25 target 1 usesequence 
+	walkframe 16
+}
+
+$sequence "nogun_crouch_idle" {
+	"chell_animations_anims\nogun_crouch_idle.smd"
+	activity "ACT_MP_CROUCH_IDLE" 1
+	blend "move_y" -1 1
+	blend "move_x" -1 1
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+	loop
+	ikrule "lfoot" footstep contact 1 fakeorigin 12.07 -0.38 0 fakerotate 0 0 0 floor 0 height 18 radius 0 range 14 25 2 14 target 3
+	ikrule "rfoot" footstep contact 1 fakeorigin -0.28 -5.51 0 fakerotate 0 0 0 floor 0 height 18 radius 0 range 14 25 2 14 target 2
+	ikrule "rhand" release contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 25 25 target 0
+	ikrule "lhand" release contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 25 25 target 1
+	walkframe 25 LX LY
+}
+
+$sequence "nogun_crouchWalk" {
+	"nogun_crouchSW"
+	"nogun_crouchS"
+	"nogun_crouchSE"
+	"nogun_crouchW"
+	"nogun_crouchCenter"
+	"nogun_crouchE"
+	"nogun_crouchNW"
+	"nogun_crouchN"
+	"nogun_crouchNE"
+	activity "ACT_MP_CROUCHWALK" 1
+	blend "move_y" -1 1
+	blend "move_x" -1 1
+	fadein 0.2
+	fadeout 0.2
+}
+
+// --------------------------------------------------------------------------------------------------------------------------------------------------------------
+// -PORTAL 2 ANIMATION FIXES-------------------------------------------------------------------------------------------------------------------------------------
+// --------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+$sequence "nogun_airwalk" {
+	"chell_animations_anims\nogun_airwalk.smd"
+	activity "ACT_MP_AIRWALK" 1
+	fadein 0.2
+	fadeout 0.2
+	//addlayer "nogun_standing_aimmatrix"
+	fps 30
+	loop
+	ikrule "lfoot" release contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 25 25 target 3 usesequence 
+	ikrule "rfoot" release contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 25 25 target 2 usesequence 
+	ikrule "rhand" release contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 25 25 target 0 usesequence 
+	ikrule "lhand" release contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 25 25 target 1 usesequence 
+	walkframe 29 LX LY
+}

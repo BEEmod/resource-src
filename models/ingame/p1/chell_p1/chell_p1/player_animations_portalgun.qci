@@ -1,0 +1,548 @@
+
+// --------------------------------------------------------------------------------------------------------------------------------------------------------------
+// -STANDING-----------------------------------------------------------------------------------------------------------------------------------------------------
+// --------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+$animation "@portalgun_standing_fire_corrective_animation" "chell_animations_anims\@portalgun_standing_fire_corrective_animation.smd" { }
+
+$animation "portalgun_standing_aimmatrix_up_right_corrective_animation" "chell_animations_anims\portalgun_standing_aimmatrix_up_right_corrective_animation.smd" { }
+$animation "portalgun_standing_aimmatrix_up_center_corrective_animation" "chell_animations_anims\portalgun_standing_aimmatrix_up_center_corrective_animation.smd" { }
+$animation "portalgun_standing_aimmatrix_up_left_corrective_animation" "chell_animations_anims\portalgun_standing_aimmatrix_up_left_corrective_animation.smd" { }
+$animation "portalgun_standing_aimmatrix_mid_right_corrective_animation" "chell_animations_anims\portalgun_standing_aimmatrix_mid_right_corrective_animation.smd" { }
+$animation "portalgun_standing_aimmatrix_mid_center_corrective_animation" "chell_animations_anims\portalgun_standing_aimmatrix_mid_center_corrective_animation.smd" { }
+$animation "portalgun_standing_aimmatrix_mid_left_corrective_animation" "chell_animations_anims\portalgun_standing_aimmatrix_mid_left_corrective_animation.smd" { }
+$animation "portalgun_standing_aimmatrix_down_right_corrective_animation" "chell_animations_anims\portalgun_standing_aimmatrix_down_right_corrective_animation.smd" { }
+$animation "portalgun_standing_aimmatrix_down_center_corrective_animation" "chell_animations_anims\portalgun_standing_aimmatrix_down_center_corrective_animation.smd" { }
+$animation "portalgun_standing_aimmatrix_down_left_corrective_animation" "chell_animations_anims\portalgun_standing_aimmatrix_down_left_corrective_animation.smd" { }
+
+$animation "portalgun_standing_aimmatrix_neutral" "chell_animations_anims\portalgun_standing_aimmatrix_neutral.smd" {
+	fps 30
+	ikrule "rhand" release contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 0 0 target 0
+	ikrule "lhand" release contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 0 0 target 1
+}
+
+$animation "portalgun_standing_aimmatrix_down_right" "chell_animations_anims\portalgun_standing_aimmatrix_down_right.smd" {
+	fps 30
+	// Crowbar writes this subtract option to prevent jigglebone and poseparameter problems when delta sequences are recompiled.
+	subtract "portalgun_standing_aimmatrix_down_right_corrective_animation" 0
+	weightlist "weights_portal_aimmatrix"
+}
+
+$animation "portalgun_standing_aimmatrix_down_center" "chell_animations_anims\portalgun_standing_aimmatrix_down_center.smd" {
+	fps 30
+	// Crowbar writes this subtract option to prevent jigglebone and poseparameter problems when delta sequences are recompiled.
+	subtract "portalgun_standing_aimmatrix_down_center_corrective_animation" 0
+	weightlist "weights_portal_aimmatrix"
+}
+
+$animation "portalgun_standing_aimmatrix_down_left" "chell_animations_anims\portalgun_standing_aimmatrix_down_left.smd" {
+	fps 30
+	// Crowbar writes this subtract option to prevent jigglebone and poseparameter problems when delta sequences are recompiled.
+	subtract "portalgun_standing_aimmatrix_down_left_corrective_animation" 0
+	weightlist "weights_portal_aimmatrix"
+}
+
+$animation "portalgun_standing_aimmatrix_mid_right" "chell_animations_anims\portalgun_standing_aimmatrix_mid_right.smd" {
+	fps 30
+	// Crowbar writes this subtract option to prevent jigglebone and poseparameter problems when delta sequences are recompiled.
+	subtract "portalgun_standing_aimmatrix_mid_right_corrective_animation" 0
+	weightlist "weights_portal_aimmatrix"
+}
+
+$animation "portalgun_standing_aimmatrix_mid_center" "chell_animations_anims\portalgun_standing_aimmatrix_mid_center.smd" {
+	fps 30
+	// Crowbar writes this subtract option to prevent jigglebone and poseparameter problems when delta sequences are recompiled.
+	subtract "portalgun_standing_aimmatrix_mid_center_corrective_animation" 0
+	weightlist "weights_portal_aimmatrix"
+}
+
+$animation "portalgun_standing_aimmatrix_mid_left" "chell_animations_anims\portalgun_standing_aimmatrix_mid_left.smd" {
+	fps 30
+	// Crowbar writes this subtract option to prevent jigglebone and poseparameter problems when delta sequences are recompiled.
+	subtract "portalgun_standing_aimmatrix_mid_left_corrective_animation" 0
+	weightlist "weights_portal_aimmatrix"
+}
+
+$animation "portalgun_standing_aimmatrix_up_right" "chell_animations_anims\portalgun_standing_aimmatrix_up_right.smd" {
+	fps 30
+	// Crowbar writes this subtract option to prevent jigglebone and poseparameter problems when delta sequences are recompiled.
+	subtract "portalgun_standing_aimmatrix_up_right_corrective_animation" 0
+	weightlist "weights_portal_aimmatrix"
+}
+
+$animation "portalgun_standing_aimmatrix_up_center" "chell_animations_anims\portalgun_standing_aimmatrix_up_center.smd" {
+	fps 30
+	// Crowbar writes this subtract option to prevent jigglebone and poseparameter problems when delta sequences are recompiled.
+	subtract "portalgun_standing_aimmatrix_up_center_corrective_animation" 0
+	weightlist "weights_portal_aimmatrix"
+}
+
+$animation "portalgun_standing_aimmatrix_up_left" "chell_animations_anims\portalgun_standing_aimmatrix_up_left.smd" {
+	fps 30
+	// Crowbar writes this subtract option to prevent jigglebone and poseparameter problems when delta sequences are recompiled.
+	subtract "portalgun_standing_aimmatrix_up_left_corrective_animation" 0
+	weightlist "weights_portal_aimmatrix"
+}
+
+$animation "portalgun_standing_aimmatrix_straight_up" "chell_animations_anims\portalgun_standing_aimmatrix_straight_up.smd" {
+	fps 30
+}
+
+$sequence "portalgun_standing_aimmatrix" {
+	"portalgun_standing_aimmatrix_up_right"
+	"portalgun_standing_aimmatrix_up_center"
+	"portalgun_standing_aimmatrix_up_left"
+	"portalgun_standing_aimmatrix_mid_right"
+	"portalgun_standing_aimmatrix_mid_center"
+	"portalgun_standing_aimmatrix_mid_left"
+	"portalgun_standing_aimmatrix_down_right"
+	"portalgun_standing_aimmatrix_down_center"
+	"portalgun_standing_aimmatrix_down_left"
+	blend "body_yaw" 45 -45
+	blend "body_pitch" 45 -45
+	delta
+	fadein 0.2
+	fadeout 0.2
+	iklock "rfoot" 1 0
+	iklock "lfoot" 1 0
+	hidden
+}
+
+$animation "portalgun_runCenter" "chell_animations_anims\portalgun_runCenter.smd" {
+	fps 30
+	loop
+	ikrule "lfoot" footstep contact 1 fakeorigin 12.86 0.86 0 fakerotate 0 0 0 floor 0 height 18 radius 0 range 16 30 2 16 target 3
+	ikrule "rfoot" footstep contact 0 fakeorigin -7.59 1.19 0 fakerotate 0 0 0 floor 0 height 18 radius 0 range 0 0 0 0 target 2
+	ikrule "rhand" release contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 30 30 target 0
+	ikrule "lhand" release contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 30 30 target 1
+}
+
+$animation "portalgun_runS" "chell_animations_anims\portalgun_runS.smd" {
+	fps 30
+	loop
+	ikrule "lfoot" footstep contact 1 fakeorigin 14.05 0.9 0 fakerotate 0 0 0 floor 0 height 18 radius 0 range 16 30 2 16 target 3
+	ikrule "rfoot" footstep contact 0 fakeorigin 5.47 -2.63 0 fakerotate 0 0 0 floor 0 height 18 radius 0 range 0 0 0 0 target 2
+	ikrule "rhand" release contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 30 30 target 0
+	ikrule "lhand" release contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 30 30 target 1
+	walkframe 30 LX LY
+}
+
+$animation "portalgun_runSE" "chell_animations_anims\portalgun_runSE.smd" {
+	fps 30
+	loop
+	ikrule "lfoot" footstep contact 1 fakeorigin 14.3 8.72 0 fakerotate 0 0 0 floor 0 height 18 radius 0 range 16 30 2 16 target 3
+	ikrule "rfoot" footstep contact 0 fakeorigin 5.37 -15.27 0 fakerotate 0 0 0 floor 0 height 18 radius 0 range 0 0 0 0 target 2
+	ikrule "rhand" release contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 30 30 target 0
+	ikrule "lhand" release contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 30 30 target 1
+	walkframe 30 LX LY
+}
+
+$animation "portalgun_runE" "chell_animations_anims\portalgun_runE.smd" {
+	fps 30
+	loop
+	ikrule "lfoot" footstep contact 1 fakeorigin 4.05 16.53 0 fakerotate 0 0 0 floor 0 height 18 radius 0 range 16 30 2 16 target 3
+	ikrule "rfoot" footstep contact 1 fakeorigin -12.36 -2.47 0 fakerotate 0 0 0 floor 0 height 18 radius 0 range 16 30 2 16 target 2
+	ikrule "rhand" release contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 30 30 target 0
+	ikrule "lhand" release contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 30 30 target 1
+	walkframe 30 LX LY
+}
+
+$animation "portalgun_runNE" "chell_animations_anims\portalgun_runNE.smd" {
+	fps 30
+	loop
+	ikrule "lfoot" footstep contact 1 fakeorigin -11.79 4.88 0 fakerotate 0 0 0 floor 0 height 18 radius 0 range 16 30 2 16 target 3
+	ikrule "rfoot" footstep contact 1 fakeorigin 4.83 -13.36 0 fakerotate 0 0 0 floor 0 height 18 radius 0 range 16 30 2 16 target 2
+	ikrule "rhand" release contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 30 30 target 0
+	ikrule "lhand" release contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 30 30 target 1
+	walkframe 30 LX LY
+}
+
+$animation "portalgun_runN" "chell_animations_anims\portalgun_runN.smd" {
+	fps 30
+	loop
+	ikrule "lfoot" footstep contact 1 fakeorigin -5.05 0.77 0 fakerotate 0 0 0 floor 0 height 18 radius 0 range 16 30 2 16 target 3
+	ikrule "rfoot" footstep contact 1 fakeorigin -2.77 -1.74 0 fakerotate 0 0 0 floor 0 height 18 radius 0 range 16 30 2 16 target 2
+	ikrule "rhand" release contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 30 30 target 0
+	ikrule "lhand" release contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 30 30 target 1
+	walkframe 30 LX LY
+}
+
+$animation "portalgun_runNW" "chell_animations_anims\portalgun_runNW.smd" {
+	fps 30
+	loop
+	ikrule "lfoot" footstep contact 1 fakeorigin 4.92 3.33 0 fakerotate 0 0 0 floor 0 height 18 radius 0 range 16 30 2 16 target 3
+	ikrule "rfoot" footstep contact 1 fakeorigin 3.46 -9.8 0 fakerotate 0 0 0 floor 0 height 18 radius 0 range 16 30 2 16 target 2
+	ikrule "rhand" release contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 30 30 target 0
+	ikrule "lhand" release contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 30 30 target 1
+	walkframe 30 LX LY
+}
+
+$animation "portalgun_runW" "chell_animations_anims\portalgun_runW.smd" {
+	fps 30
+	loop
+	ikrule "lfoot" footstep contact 1 fakeorigin -5.75 2.42 0 fakerotate 0 0 0 floor 0 height 18 radius 0 range 16 30 2 16 target 3
+	ikrule "rfoot" footstep contact 1 fakeorigin 13.11 -7.17 0 fakerotate 0 0 0 floor 0 height 18 radius 0 range 16 30 2 16 target 2
+	ikrule "rhand" release contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 30 30 target 0
+	ikrule "lhand" release contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 30 30 target 1
+	walkframe 30 LX LY
+}
+
+$animation "portalgun_runSW" "chell_animations_anims\portalgun_runSW.smd" {
+	fps 30
+	loop
+	ikrule "lfoot" footstep contact 1 fakeorigin -6.27 -1.49 0 fakerotate 0 0 0 floor 0 height 18 radius 0 range 16 30 2 16 target 3
+	ikrule "rfoot" footstep contact 1 fakeorigin -0.25 -7.83 0 fakerotate 0 0 0 floor 0 height 18 radius 0 range 16 30 2 16 target 2
+	ikrule "rhand" release contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 30 30 target 0
+	ikrule "lhand" release contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 30 30 target 1
+	walkframe 30 LX LY
+}
+
+// --------------------------------------------------------------------------------------------------------------------------------------------------------------
+// -CROUCHING----------------------------------------------------------------------------------------------------------------------------------------------------
+// --------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+$animation "@portalgun_crouch_fire_corrective_animation" "chell_animations_anims\@portalgun_crouch_fire_corrective_animation.smd" { }
+
+$animation "portalgun_crouch_aimmatrix_up_right_corrective_animation" "chell_animations_anims\portalgun_crouch_aimmatrix_up_right_corrective_animation.smd" { }
+$animation "portalgun_crouch_aimmatrix_up_center_corrective_animation" "chell_animations_anims\portalgun_crouch_aimmatrix_up_center_corrective_animation.smd" { }
+$animation "portalgun_crouch_aimmatrix_up_left_corrective_animation" "chell_animations_anims\portalgun_crouch_aimmatrix_up_left_corrective_animation.smd" { }
+$animation "portalgun_crouch_aimmatrix_mid_right_corrective_animation" "chell_animations_anims\portalgun_crouch_aimmatrix_mid_right_corrective_animation.smd" { }
+$animation "portalgun_crouch_aimmatrix_mid_center_corrective_animation" "chell_animations_anims\portalgun_crouch_aimmatrix_mid_center_corrective_animation.smd" { }
+$animation "portalgun_crouch_aimmatrix_mid_left_corrective_animation" "chell_animations_anims\portalgun_crouch_aimmatrix_mid_left_corrective_animation.smd" { }
+$animation "portalgun_crouch_aimmatrix_down_right_corrective_animation" "chell_animations_anims\portalgun_crouch_aimmatrix_down_right_corrective_animation.smd" { }
+$animation "portalgun_crouch_aimmatrix_down_center_corrective_animation" "chell_animations_anims\portalgun_crouch_aimmatrix_down_center_corrective_animation.smd" { }
+$animation "portalgun_crouch_aimmatrix_down_left_corrective_animation" "chell_animations_anims\portalgun_crouch_aimmatrix_down_left_corrective_animation.smd" { }
+
+$animation "portalgun_crouch_aimmatrix_neutral" "chell_animations_anims\portalgun_crouch_aimmatrix_neutral.smd" {
+	fps 30
+	ikrule "lhand" touch "root" contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 0 0 target 1
+	ikrule "rhand" release contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 0 0 target 0
+}
+
+$animation "portalgun_crouch_aimmatrix_down_right" "chell_animations_anims\portalgun_crouch_aimmatrix_down_right.smd" {
+	fps 30
+	// Crowbar writes this subtract option to prevent jigglebone and poseparameter problems when delta sequences are recompiled.
+	subtract "portalgun_crouch_aimmatrix_down_right_corrective_animation" 0
+	ikrule "lhand" touch "root" contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 0 0 target 1
+	weightlist "weights_portal_aimmatrix"
+}
+
+$animation "portalgun_crouch_aimmatrix_down_center" "chell_animations_anims\portalgun_crouch_aimmatrix_down_center.smd" {
+	fps 30
+	// Crowbar writes this subtract option to prevent jigglebone and poseparameter problems when delta sequences are recompiled.
+	subtract "portalgun_crouch_aimmatrix_down_center_corrective_animation" 0
+	ikrule "lhand" touch "root" contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 0 0 target 1
+	weightlist "weights_portal_aimmatrix"
+}
+
+$animation "portalgun_crouch_aimmatrix_down_left" "chell_animations_anims\portalgun_crouch_aimmatrix_down_left.smd" {
+	fps 30
+	// Crowbar writes this subtract option to prevent jigglebone and poseparameter problems when delta sequences are recompiled.
+	subtract "portalgun_crouch_aimmatrix_down_left_corrective_animation" 0
+	ikrule "lhand" touch "root" contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 0 0 target 1
+	weightlist "weights_portal_aimmatrix"
+}
+
+$animation "portalgun_crouch_aimmatrix_mid_right" "chell_animations_anims\portalgun_crouch_aimmatrix_mid_right.smd" {
+	fps 30
+	// Crowbar writes this subtract option to prevent jigglebone and poseparameter problems when delta sequences are recompiled.
+	subtract "portalgun_crouch_aimmatrix_mid_right_corrective_animation" 0
+	ikrule "lhand" touch "root" contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 0 0 target 1
+	weightlist "weights_portal_aimmatrix"
+}
+
+$animation "portalgun_crouch_aimmatrix_mid_center" "chell_animations_anims\portalgun_crouch_aimmatrix_mid_center.smd" {
+	fps 30
+	// Crowbar writes this subtract option to prevent jigglebone and poseparameter problems when delta sequences are recompiled.
+	subtract "portalgun_crouch_aimmatrix_mid_center_corrective_animation" 0
+	ikrule "lhand" touch "root" contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 0 0 target 1
+	weightlist "weights_portal_aimmatrix"
+}
+
+$animation "portalgun_crouch_aimmatrix_mid_left" "chell_animations_anims\portalgun_crouch_aimmatrix_mid_left.smd" {
+	fps 30
+	// Crowbar writes this subtract option to prevent jigglebone and poseparameter problems when delta sequences are recompiled.
+	subtract "portalgun_crouch_aimmatrix_mid_left_corrective_animation" 0
+	ikrule "lhand" touch "root" contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 0 0 target 1
+	weightlist "weights_portal_aimmatrix"
+}
+
+$animation "portalgun_crouch_aimmatrix_up_right" "chell_animations_anims\portalgun_crouch_aimmatrix_up_right.smd" {
+	fps 30
+	// Crowbar writes this subtract option to prevent jigglebone and poseparameter problems when delta sequences are recompiled.
+	subtract "portalgun_crouch_aimmatrix_up_right_corrective_animation" 0
+	ikrule "lhand" touch "root" contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 0 0 target 1
+	weightlist "weights_portal_aimmatrix"
+}
+
+$animation "portalgun_crouch_aimmatrix_up_center" "chell_animations_anims\portalgun_crouch_aimmatrix_up_center.smd" {
+	fps 30
+	// Crowbar writes this subtract option to prevent jigglebone and poseparameter problems when delta sequences are recompiled.
+	subtract "portalgun_crouch_aimmatrix_up_center_corrective_animation" 0
+	ikrule "lhand" touch "root" contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 0 0 target 1
+	weightlist "weights_portal_aimmatrix"
+}
+
+$animation "portalgun_crouch_aimmatrix_up_left" "chell_animations_anims\portalgun_crouch_aimmatrix_up_left.smd" {
+	fps 30
+	// Crowbar writes this subtract option to prevent jigglebone and poseparameter problems when delta sequences are recompiled.
+	subtract "portalgun_crouch_aimmatrix_up_left_corrective_animation" 0
+	ikrule "lhand" touch "root" contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 0 0 target 1
+	weightlist "weights_portal_aimmatrix"
+}
+
+$animation "portalgun_crouch_aimmatrix_straight_up" "chell_animations_anims\portalgun_crouch_aimmatrix_straight_up.smd" {
+	fps 30
+	ikrule "lhand" touch "root" contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 0 0 target 1
+}
+
+$sequence "portalgun_crouch_aim_matrix" {
+	"portalgun_crouch_aimmatrix_up_right"
+	"portalgun_crouch_aimmatrix_up_center"
+	"portalgun_crouch_aimmatrix_up_left"
+	"portalgun_crouch_aimmatrix_mid_right"
+	"portalgun_crouch_aimmatrix_mid_center"
+	"portalgun_crouch_aimmatrix_mid_left"
+	"portalgun_crouch_aimmatrix_down_right"
+	"portalgun_crouch_aimmatrix_down_center"
+	"portalgun_crouch_aimmatrix_down_left"
+	blend "body_yaw" 45 -45
+	blend "body_pitch" 45 -45
+	delta
+	fadein 0.2
+	fadeout 0.2
+	iklock "rfoot" 1 0
+	iklock "lfoot" 1 0
+	hidden
+}
+
+$animation "portalgun_crouchCenter" "chell_animations_anims\portalgun_crouchCenter.smd" {
+	fps 30
+	loop
+	ikrule "lfoot" footstep contact 1 fakeorigin 22.53 -0.29 0 fakerotate 0 0 0 floor 0 height 18 radius 0 range 14 25 2 14 target 3
+	ikrule "rfoot" footstep contact 0 fakeorigin -14.94 -4.03 0 fakerotate 0 0 0 floor 0 height 18 radius 0 range 0 0 0 0 target 2
+	ikrule "rhand" release contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 25 25 target 0
+	ikrule "lhand" release contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 25 25 target 1
+	walkframe 25 LX LY
+}
+
+
+$animation "portalgun_crouchS" "chell_animations_anims\portalgun_crouchS.smd" {
+	fps 30
+	loop
+	ikrule "lfoot" footstep contact 1 fakeorigin 7.83 -0.33 0 fakerotate 0 0 0 floor 0 height 18 radius 0 range 14 25 2 14 target 3
+	ikrule "rfoot" footstep contact 1 fakeorigin -0.55 -4.19 0 fakerotate 0 0 0 floor 0 height 18 radius 0 range 14 25 2 14 target 2
+	ikrule "rhand" release contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 25 25 target 0
+	ikrule "lhand" release contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 25 25 target 1
+	walkframe 25 LX LY
+}
+
+$animation "portalgun_crouchSE" "chell_animations_anims\portalgun_crouchSE.smd" {
+	fps 30
+	loop
+	ikrule "lfoot" footstep contact 1 fakeorigin 8.63 0.73 0 fakerotate 0 0 0 floor 0 height 18 radius 0 range 14 25 2 14 target 3
+	ikrule "rfoot" footstep contact 1 fakeorigin 5.5 -9.95 0 fakerotate 0 0 0 floor 0 height 18 radius 0 range 14 25 2 14 target 2
+	ikrule "rhand" release contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 25 25 target 0
+	ikrule "lhand" release contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 25 25 target 1
+	walkframe 25 LX LY
+}
+
+$animation "portalgun_crouchE" "chell_animations_anims\portalgun_crouchE.smd" {
+	fps 30
+	loop
+	ikrule "lfoot" footstep contact 1 fakeorigin 15.54 -1.94 0 fakerotate 0 0 0 floor 0 height 18 radius 0 range 14 25 2 14 target 3
+	ikrule "rfoot" footstep contact 1 fakeorigin 4.83 -14.71 0 fakerotate 0 0 0 floor 0 height 18 radius 0 range 14 25 2 14 target 2
+	ikrule "rhand" release contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 25 25 target 0
+	ikrule "lhand" release contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 25 25 target 1
+	walkframe 25 LX LY
+}
+
+$animation "portalgun_crouchNE" "chell_animations_anims\portalgun_crouchNE.smd" {
+	fps 30
+	loop
+	ikrule "lfoot" footstep contact 1 fakeorigin 9.99 0.11 0 fakerotate 0 0 0 floor 0 height 18 radius 0 range 14 25 2 14 target 3
+	ikrule "rfoot" footstep contact 1 fakeorigin 2.63 -6.22 0 fakerotate 0 0 0 floor 0 height 18 radius 0 range 14 25 2 14 target 2
+	ikrule "rhand" release contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 25 25 target 0
+	ikrule "lhand" release contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 25 25 target 1
+	walkframe 25 LX LY
+}
+
+$animation "portalgun_crouchN" "chell_animations_anims\portalgun_crouchN.smd" {
+	fps 30
+	loop
+	ikrule "lfoot" footstep contact 1 fakeorigin 5.55 -0.23 0 fakerotate 0 0 0 floor 0 height 18 radius 0 range 14 25 2 14 target 3
+	ikrule "rfoot" footstep contact 1 fakeorigin 10.49 -5.59 0 fakerotate 0 0 0 floor 0 height 18 radius 0 range 14 25 2 14 target 2
+	ikrule "rhand" release contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 25 25 target 0
+	ikrule "lhand" release contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 25 25 target 1
+	walkframe 25 LX LY
+}
+
+$animation "portalgun_crouchNW" "chell_animations_anims\portalgun_crouchNW.smd" {
+	fps 30
+	loop
+	ikrule "lfoot" footstep contact 1 fakeorigin 0.23 5.09 0 fakerotate 0 0 0 floor 0 height 18 radius 0 range 14 25 2 14 target 3
+	ikrule "rfoot" footstep contact 1 fakeorigin 12.42 -0.78 0 fakerotate 0 0 0 floor 0 height 18 radius 0 range 14 25 2 14 target 2
+	ikrule "rhand" release contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 25 25 target 0
+	ikrule "lhand" release contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 25 25 target 1
+	walkframe 25 LX LY
+}
+
+$animation "portalgun_crouchW" "chell_animations_anims\portalgun_crouchW.smd" {
+	fps 30
+	loop
+	ikrule "lfoot" footstep contact 1 fakeorigin 9.13 -2.66 0 fakerotate 0 0 0 floor 0 height 18 radius 0 range 14 25 2 14 target 3
+	ikrule "rfoot" footstep contact 1 fakeorigin -9.78 -5.29 0 fakerotate 0 0 0 floor 0 height 18 radius 0 range 14 25 2 14 target 2
+	ikrule "rhand" release contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 25 25 target 0
+	ikrule "lhand" release contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 25 25 target 1
+	walkframe 25 LX LY
+}
+
+$animation "portalgun_crouchSW" "chell_animations_anims\portalgun_crouchSW.smd" {
+	fps 30
+	loop
+	ikrule "lfoot" footstep contact 1 fakeorigin 3.1 5.49 0 fakerotate 0 0 0 floor 0 height 18 radius 0 range 14 25 2 14 target 3
+	ikrule "rfoot" footstep contact 1 fakeorigin 9.33 -13.26 0 fakerotate 0 0 0 floor 0 height 18 radius 0 range 14 25 2 14 target 2
+	ikrule "rhand" release contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 25 25 target 0
+	ikrule "lhand" release contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 25 25 target 1
+	walkframe 25 LX LY
+}
+
+// --------------------------------------------------------------------------------------------------------------------------------------------------------------
+// -SEQUENCES----------------------------------------------------------------------------------------------------------------------------------------------------
+// --------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+$sequence "portalgun_standing_idle" {
+	"chell_animations_anims\portalgun_standing_idle.smd"
+	activity "ACT_MP_STAND_PRIMARY" 1
+	blend "move_y" -1 1
+	blend "move_x" -1 1
+	fadein 0.2
+	fadeout 0.2
+	addlayer "portalgun_standing_aimmatrix"
+	fps 30
+	loop
+	ikrule "lfoot" footstep contact 1 fakeorigin 14.28 0.49 0 fakerotate 0 0 0 floor 0 height 18 radius 0 range 81 160 2 81 target 3
+	ikrule "rfoot" footstep contact 1 fakeorigin -7.28 1.86 0 fakerotate 0 0 0 floor 0 height 18 radius 0 range 81 160 2 81 target 2
+	ikrule "rhand" release contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 160 160 target 0
+	ikrule "lhand" release contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 160 160 target 1
+	walkframe 160 LX LY
+}
+
+$sequence "portalgun_standing_fire" {
+	"chell_animations_anims\portalgun_standing_fire.smd"
+	activity "ACT_MP_ATTACK_STAND_PRIMARYFIRE" 1
+	blend "move_y" -1 1
+	blend "move_x" -1 1
+	delta
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+	loop
+	// Crowbar writes this subtract option to prevent jigglebone and poseparameter problems when delta sequences are recompiled.
+	subtract "@portalgun_standing_fire_corrective_animation" 0
+	ikrule "lfoot" footstep contact 1 fakeorigin 14.23 0.59 0 fakerotate 0 0 0 floor 0 height 18 radius 0 range 14 25 2 14 target 3
+	ikrule "rfoot" footstep contact 1 fakeorigin -7.25 1.63 0 fakerotate 0 0 0 floor 0 height 18 radius 0 range 14 25 2 14 target 2
+	walkframe 25 LX LY
+}
+
+$sequence "portalgun_run" {
+	"portalgun_runSW"
+	"portalgun_runS"
+	"portalgun_runSE"
+	"portalgun_runW"
+	"portalgun_runCenter"
+	"portalgun_runE"
+	"portalgun_runNW"
+	"portalgun_runN"
+	"portalgun_runNE"
+	activity "ACT_MP_RUN_PRIMARY" 1
+	blend "move_y" -1 1
+	blend "move_x" -1 1
+	fadein 0.2
+	fadeout 0.2
+}
+
+$sequence "portalgun_standing_jump" {
+	"chell_animations_anims\portalgun_standing_jump.smd"
+	activity "ACT_MP_JUMP_START_PRIMARY" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+	ikrule "lfoot" release contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 25 25 target 3 usesequence 
+	ikrule "rfoot" release contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 25 25 target 2 usesequence 
+	ikrule "rhand" release contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 25 25 target 0 usesequence 
+	ikrule "lhand" release contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 25 25 target 1 usesequence 
+	walkframe 16
+}
+
+
+$sequence "portalgun_crouch_idle" {
+	"chell_animations_anims\portalgun_crouch_idle.smd"
+	activity "ACT_MP_CROUCH_PRIMARY" 1
+	blend "move_y" -1 1
+	blend "move_x" -1 1
+	fadein 0.2
+	fadeout 0.2
+	addlayer "portalgun_crouch_aim_matrix"
+	fps 30
+	loop
+	ikrule "rhand" release contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 160 160 target 0
+	ikrule "lhand" release contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 160 160 target 1
+	ikrule "rfoot" release contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 160 160 target 2
+	ikrule "lfoot" release contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 160 160 target 3
+	walkframe 160 LX LY
+}
+
+$sequence "portalgun_crouch_fire" {
+	"chell_animations_anims\portalgun_crouch_fire.smd"
+	activity "ACT_MP_ATTACK_CROUCH_PRIMARYFIRE" 1
+	blend "move_y" -1 1
+	blend "move_x" -1 1
+	delta
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+	loop
+	// Crowbar writes this subtract option to prevent jigglebone and poseparameter problems when delta sequences are recompiled.
+	subtract "@portalgun_crouch_fire_corrective_animation" 0
+	ikrule "lfoot" footstep contact 1 fakeorigin 14.2 0.44 0 fakerotate 0 0 0 floor 0 height 18 radius 0 range 14 25 2 14 target 3
+	ikrule "rfoot" footstep contact 1 fakeorigin -7.2 2.29 0 fakerotate 0 0 0 floor 0 height 18 radius 0 range 14 25 2 14 target 2
+	walkframe 25 LX LY
+}
+
+$sequence "portalgun_crouchWalk" {
+	"portalgun_crouchSW"
+	"portalgun_crouchS"
+	"portalgun_crouchSE"
+	"portalgun_crouchW"
+	"portalgun_crouchCenter"
+	"portalgun_crouchE"
+	"portalgun_crouchNW"
+	"portalgun_crouchN"
+	"portalgun_crouchNE"
+	activity "ACT_MP_CROUCHWALK_PRIMARY" 1
+	blend "move_y" -1 1
+	blend "move_x" -1 1
+	fadein 0.2
+	fadeout 0.2
+}
+
+// --------------------------------------------------------------------------------------------------------------------------------------------------------------
+// -PORTAL 2 ANIMATION FIXES-------------------------------------------------------------------------------------------------------------------------------------
+// --------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+$sequence "portalgun_airwalk" {
+	"chell_animations_anims\portalgun_airwalk.smd"
+	activity "ACT_MP_AIRWALK_PRIMARY" 1
+	fadein 0.2
+	fadeout 0.2
+//	addlayer "portalgun_standing_aimmatrix"
+	fps 30
+	loop
+	ikrule "lfoot" release contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 25 25 target 3 usesequence 
+	ikrule "rfoot" release contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 25 25 target 2 usesequence 
+	ikrule "rhand" release contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 25 25 target 0 usesequence 
+	ikrule "lhand" release contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 25 25 target 1 usesequence 
+	walkframe 29 LX LY
+}
