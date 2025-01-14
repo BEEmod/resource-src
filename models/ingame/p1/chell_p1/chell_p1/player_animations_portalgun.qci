@@ -532,17 +532,83 @@ $sequence "portalgun_crouchWalk" {
 // -PORTAL 2 ANIMATION FIXES-------------------------------------------------------------------------------------------------------------------------------------
 // --------------------------------------------------------------------------------------------------------------------------------------------------------------
 
+// Animation that plays when player is in the air
 $sequence "portalgun_airwalk" {
 	"chell_animations_anims\portalgun_airwalk.smd"
 	activity "ACT_MP_AIRWALK_PRIMARY" 1
 	fadein 0.2
 	fadeout 0.2
-//	addlayer "portalgun_standing_aimmatrix"
+	//addlayer "portalgun_standing_aimmatrix"
 	fps 30
 	loop
 	ikrule "lfoot" release contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 25 25 target 3 usesequence 
 	ikrule "rfoot" release contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 25 25 target 2 usesequence 
 	ikrule "rhand" release contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 25 25 target 0 usesequence 
 	ikrule "lhand" release contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 25 25 target 1 usesequence 
+	walkframe 29 LX LY
+}
+
+// Animation that plays when the player jumps on blue paint (repulsion gel)
+$sequence "portalgun_standing_jump_blue_paint" {
+	"chell_animations_anims\portalgun_standing_jump.smd"
+	activity "ACT_MP_DOUBLEJUMP" 1
+	fadein 0.2
+	fadeout 0.2
+	addlayer "portalgun_standing_aimmatrix"
+	fps 30
+	ikrule "lhand" touch "wrist_R" contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 18 18 target 1 usesequence 
+	ikrule "rhand" release contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 18 18 target 0 usesequence 
+	ikrule "rfoot" release contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 18 18 target 2 usesequence 
+	ikrule "lfoot" release contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 18 18 target 3 usesequence 
+	walkframe 9 LX LY
+}
+
+// Animation that plays when the player is running on speed paint (propulsion gel)
+$sequence "portalgun_speedrun" {
+	"portalgun_runSW"
+	"portalgun_runS"
+	"portalgun_runSE"
+	"portalgun_runW"
+	"portalgun_runCenter"
+	"portalgun_runE"
+	"portalgun_runNW"
+	"portalgun_runN"
+	"portalgun_runNE"
+	activity "ACT_MP_RUN_SPEEDPAINT_PRIMARY" 1
+	blend "move_y" -1 1
+	blend "move_x" -1 1
+	fadein 0.2
+	fadeout 0.2
+}
+
+// Animation that plays when the player is in a tractor beam (excursion funnel)
+$sequence "portalgun_tractorbeam_float" {
+	"chell_animations_anims\portalgun_airwalk.smd"
+	activity "ACT_MP_TRACTORBEAM_FLOAT_PRIMARY" 1
+	fadein 0.2
+	fadeout 0.2
+	addlayer "portalgun_standing_aimmatrix"
+	fps 30
+	loop
+	ikrule "rhand" release contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 29 29 target 0 usesequence 
+	ikrule "lhand" release contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 29 29 target 1 usesequence 
+	ikrule "rfoot" release contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 29 29 target 2 usesequence 
+	ikrule "lfoot" release contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 29 29 target 3 usesequence 
+	walkframe 29 LX LY
+}
+
+// Animation that plays after the player leaves a tractor beam (excursion funnel)
+$sequence "portalgun_jump_float_tbeam" {
+	"chell_animations_anims\portalgun_airwalk.smd"
+	activity "ACT_MP_LONG_FALL_PRIMARY" 1
+	fadein 0.2
+	fadeout 0.2
+	addlayer "portalgun_standing_aimmatrix"
+	fps 30
+	loop
+	ikrule "rhand" release contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 29 29 target 0 usesequence 
+	ikrule "lhand" release contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 29 29 target 1 usesequence 
+	ikrule "rfoot" release contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 29 29 target 2 usesequence 
+	ikrule "lfoot" release contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 29 29 target 3 usesequence 
 	walkframe 29 LX LY
 }
