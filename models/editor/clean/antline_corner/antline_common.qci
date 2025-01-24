@@ -1,6 +1,4 @@
-// Created by Crowbar 0.55
-
-$ModelName props_map_editor/BEE2_antline_corner_$i$.mdl
+$ModelName props_map_editor/bee2/logic/antline_corner_$i$.mdl
 
 $BodyGroup "Body"
 {
