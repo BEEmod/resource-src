@@ -1,28 +1,26 @@
-// Created by Crowbar 0.19.0.0
-
-$modelname "BEE2/cube_color/rusty_standard.mdl"
+$modelname "BEE2/cube_color/clean_standard.mdl"
 
 $bodygroup "Body"
 {
-	studio "metal_box_reference.smd"
+	studio "color_cube_clean_reference.smd"
 }
 
 $lod 15
 {
-	replacemodel "metal_box_reference.smd" "metal_box_reference_lod1.smd"
+	replacemodel "color_cube_clean_reference.smd" "color_cube_clean_lod1.smd"
 }
 $lod 30
 {
-	replacemodel "metal_box_reference.smd" "metal_box_reference_lod2.smd"
+	replacemodel "color_cube_clean_reference.smd" "color_cube_clean_lod2.smd"
 }
 $lod 90
 {
-	replacemodel "metal_box_reference.smd" "metal_box_reference_lod3.smd"
+	replacemodel "color_cube_clean_reference.smd" "color_cube_clean_lod3.smd"
 }
 
 $mostlyopaque
 
-$cdmaterials "BEE2/models/cube_color/rusty_cube/" "BEE2/models/cube_color/"
+$cdmaterials "BEE2/models/cube_color/clean_cube/" "BEE2/models/cube_color/"
 
 $texturegroup "skinfamilies"
 {
@@ -72,7 +70,7 @@ $sequence "idle" "anim_idle.smd" {
 	"ACT_IDLE" 1
 }
 
-$collisionmodel "metal_box_physics.smd"
+$collisionmodel "color_cube_clean_physics.smd"
 {
 	$mass 40
 	$inertia 1
