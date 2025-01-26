@@ -1,0 +1,14 @@
+$ModelName props_map_editor\bee2\logic\blocks\tile_quarter_$i$.mdl
+
+$BodyGroup "Body"
+{
+	studio tile_quarter_$i$_ref.smd
+}
+
+$SurfaceProp "metalpanel"
+
+$Contents "solid"
+
+$CDMaterials "BEE2/models/props_map_editor/"
+
+$Sequence "idle" tile_quarter_$i$_ref.smd
