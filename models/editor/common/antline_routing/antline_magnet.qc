@@ -11,6 +11,6 @@ $surfaceprop "no_decal"
 
 $contents "solid"
 
-$cdmaterials "BEE2\models\props_map_editor\logic\"
+$cdmaterials "BEE2\models\props_map_editor\"
 
 $sequence "idle" "antline_magnet_ref.smd"
