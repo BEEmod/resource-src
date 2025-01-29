@@ -1,5 +1,3 @@
-// Created by Crowbar 0.44.0.0
-
 $modelname "props_map_editor/bee2/clean/btn_floor_34.mdl"
 
 $bodygroup "Body"
@@ -13,8 +11,6 @@ $contents "solid"
 
 $cdmaterials "models/props_map_editor/"
 $cdmaterials "BEE2/models/props_map_editor/"
-
-$origin 0 0 -96
 
 $sequence "idle" {
 	"idle.smd"
