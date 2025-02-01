@@ -1,4 +1,4 @@
-$ModelName "props_map_editor/BEE2/50s/stair_retracted"
+$ModelName "props_map_editor/BEE2/retro/stair_retracted"
 
 $BodyGroup "Body"
 {
