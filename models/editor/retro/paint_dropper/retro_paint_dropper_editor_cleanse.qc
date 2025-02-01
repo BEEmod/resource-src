@@ -1,4 +1,4 @@
-$modelname "props_map_editor/BEE2/50s/retro_paint_dropper_cleanse.mdl"
+$modelname "props_map_editor/BEE2/retro/paint_dropper_cleanse.mdl"
 
 $bodygroup "Body"
 {
