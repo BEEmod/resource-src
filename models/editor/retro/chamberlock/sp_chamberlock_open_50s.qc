@@ -1,14 +1,14 @@
-$modelname "props_map_editor/BEE2/70s/chamberlock_open.mdl"
+$modelname "props_map_editor/BEE2/retro/chamberlock_open.mdl"
 
 $bodygroup "Body"
 {
-	studio "sp_chamberlock_open_70s.smd"
+	studio "sp_chamberlock_open_50s.smd"
 }
 
 $cdmaterials "BEE2/models/props_map_editor/under/"
 $cdmaterials "BEE2/models/props_map_editor/"
 $cdmaterials "models/props_map_editor/"
 
-$sequence "idle" "sp_chamberlock_open_70s.smd" {
+$sequence "idle" "sp_chamberlock_open_50s.smd" {
 	fps 30
 }
