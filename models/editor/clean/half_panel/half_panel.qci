@@ -1,0 +1,14 @@
+$ModelName props_map_editor/bee2/clean/half_panel_$type$.mdl
+
+$BodyGroup "Body"
+{
+	studio half_panel_$type$_ref.smd
+}
+
+$SurfaceProp "metalpanel"
+
+$Contents "solid"
+
+$CDMaterials "models\props_map_editor"
+
+$Sequence "idle" half_panel_$type$_ref.smd
