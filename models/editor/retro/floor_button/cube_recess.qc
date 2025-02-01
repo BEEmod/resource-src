@@ -1,5 +1,5 @@
 
-$modelname "props_map_editor/BEE2/50s/btn_cube.mdl"
+$modelname "props_map_editor/BEE2/retro/btn_cube.mdl"
 
 $cdmaterials "BEE2/models/props_map_editor/" "models/props_map_editor/"
 
