@@ -1,9 +1,10 @@
-$ModelName "props_map_editor/bee2/clean/glass_door.mdl"
+$ModelName "props_map_editor/bee2/over/glass_door.mdl"
 
 $BodyGroup "Body"
 {
 	studio "glass_door_ref.smd"
 }
+
 $Contents "solid"
 
 $MostlyOpaque
