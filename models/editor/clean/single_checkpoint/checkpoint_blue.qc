@@ -1,4 +1,4 @@
-$ModelName "props_map_editor/bee2_coop_checkpoint_single_blue.mdl"
+$ModelName "props_map_editor/bee2/clean/coop_checkpoint_single_blue.mdl"
 
 $BodyGroup "Body"
 {

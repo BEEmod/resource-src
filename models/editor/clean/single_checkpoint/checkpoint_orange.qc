@@ -1,8 +1,8 @@
-$ModelName "props_map_editor/bee2_coop_checkpoint_single_oran.mdl"
+$ModelName "props_map_editor/bee2/clean/coop_checkpoint_single_orange.mdl"
 
 $BodyGroup "Body"
 {
-	studio "checkpoint_oran_ref.smd"
+	studio "checkpoint_orange_ref.smd"
 }
 
 $CDMaterials "models\props_map_editor"
