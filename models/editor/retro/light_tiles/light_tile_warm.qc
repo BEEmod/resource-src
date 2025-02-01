@@ -1,4 +1,4 @@
-$modelname "props_map_editor/BEE2/50s/lights/light_tile_warm.mdl"
+$modelname "props_map_editor/BEE2/retro/lights/light_tile_warm.mdl"
 
 $staticprop
 
