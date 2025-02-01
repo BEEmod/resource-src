@@ -1,6 +1,6 @@
-$modelname "props_map_editor/under_vent"
+$modelname "props_map_editor/bee2/retro/diversity_vent"
 
-$body "Body" "vent"
+$body "Body" "diversity_vent_ref"
 
 $cdmaterials "BEE2/models/props_map_editor/"
 
