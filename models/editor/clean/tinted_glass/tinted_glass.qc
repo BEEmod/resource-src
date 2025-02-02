@@ -1,4 +1,4 @@
-$ModelName "props_map_editor/BEE2/clean/tinted_glass.mdl"
+$ModelName "props_map_editor/BEE2/logic/barriers/tinted_glass.mdl"
 
 // Render laser both before and after glass, to ensure it's always visible.
 // Puzzlemaker 
