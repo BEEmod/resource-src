@@ -15,17 +15,14 @@ $cdmaterials "BEE2/models/props_clean/antlaser/" "models/props_underground/"
 
 $texturegroup "skinfamilies"
 {
-	{ "antlaser_glow" }
-	{ "antlaser_glow_active" }
+	{ "antlaser_glow_blue" }
+	{ "antlaser_glow_orange" }
+	{ "antlaser_glow_white" }
+	{ "antlaser_glow_yellow" }
+	{ "antlaser_glow_green" }
 }
 
-$sequence "idle" {
-	"anims\idle.smd"
-	activity "ACT_IDLE" 1
-	fadein 0.2
-	fadeout 0.2
-	fps 30
-}
+$sequence "idle" "antlaser_emitter_retro_reference.smd"
 
 $collisionmodel "antlaser_emitter_retro_physics.smd"
 {

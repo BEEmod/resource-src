@@ -15,19 +15,19 @@ $cdmaterials "BEE2/models/props_clean/antlaser/" "models/props/"
 
 $texturegroup "skinfamilies"
 {
-	{ "laser_emitter" "antlaser_glow" }
-	{ "laser_emitter" "antlaser_glow_active" }
-	{ "laser_emitter_rusted" "antlaser_glow" }
-	{ "laser_emitter_rusted" "antlaser_glow_active" }
+	{ "laser_emitter" "antlaser_glow_blue" }
+	{ "laser_emitter" "antlaser_glow_orange" }
+	{ "laser_emitter" "antlaser_glow_white" }
+	{ "laser_emitter" "antlaser_glow_yellow" }
+	{ "laser_emitter" "antlaser_glow_green" }
+	{ "laser_emitter_rusted" "antlaser_glow_blue" }
+	{ "laser_emitter_rusted" "antlaser_glow_orange" }
+	{ "laser_emitter_rusted" "antlaser_glow_white" }
+	{ "laser_emitter_rusted" "antlaser_glow_yellow" }
+	{ "laser_emitter_rusted" "antlaser_glow_green" }
 }
 
-$sequence "idle" {
-	"anims\idle.smd"
-	activity "ACT_IDLE" 1
-	fadein 0.2
-	fadeout 0.2
-	fps 30
-}
+$sequence "idle" "antlaser_emitter_reference.smd"
 
 $collisionmodel "antlaser_emitter_physics.smd"
 {
