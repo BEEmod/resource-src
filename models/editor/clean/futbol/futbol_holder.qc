@@ -1,4 +1,4 @@
-$modelname "props_map_editor/bee2_futbol_holder.mdl"
+$modelname "props_map_editor/bee2/clean/futbol_holder.mdl"
 $bodygroup "Body"
 {
 	studio "futbol_holder_ref.smd"
