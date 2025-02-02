@@ -1,4 +1,4 @@
-$modelname "props_map_editor/bee2_monitor_clean.mdl"
+$modelname "props_map_editor/bee2/clean/monitor.mdl"
 $bodygroup "Body"
 {
 	studio "monitor_ref.smd"
