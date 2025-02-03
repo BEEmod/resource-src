@@ -1,4 +1,4 @@
-$ModelName "props_map_editor/bee2_pgun_pedestal_oran.mdl"
+$ModelName "props_map_editor/bee2/clean/pgun_pedestal_orange.mdl"
 
 $cdmaterials "models/props_map_editor/"
 
