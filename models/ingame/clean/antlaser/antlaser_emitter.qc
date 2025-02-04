@@ -17,14 +17,8 @@ $texturegroup "skinfamilies"
 {
 	{ "laser_emitter" "antlaser_glow_blue" }
 	{ "laser_emitter" "antlaser_glow_orange" }
-	{ "laser_emitter" "antlaser_glow_white" }
-	{ "laser_emitter" "antlaser_glow_yellow" }
-	{ "laser_emitter" "antlaser_glow_green" }
 	{ "laser_emitter_rusted" "antlaser_glow_blue" }
 	{ "laser_emitter_rusted" "antlaser_glow_orange" }
-	{ "laser_emitter_rusted" "antlaser_glow_white" }
-	{ "laser_emitter_rusted" "antlaser_glow_yellow" }
-	{ "laser_emitter_rusted" "antlaser_glow_green" }
 }
 
 $sequence "idle" "antlaser_emitter_reference.smd"
