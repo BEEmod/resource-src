@@ -1,6 +1,6 @@
 // Created by Crowbar 0.19.0.0
 
-$modelname "props_map_editor/BEE2_ret_btn_clean_cube.mdl"
+$modelname "props_map_editor/BEE2/clean/ret_btn_cube.mdl"
 
 $bodygroup "Body"
 {
