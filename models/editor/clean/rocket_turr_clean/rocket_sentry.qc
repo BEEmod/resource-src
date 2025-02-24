@@ -1,6 +1,6 @@
 // Created by Crowbar 0.34.0.0
 
-$ModelName "props_map_editor/BEE2_rocket_sentry_clean.mdl"
+$ModelName "props_map_editor/BEE2/clean/rocket_sentry.mdl"
 
 $BodyGroup "studio"
 {
