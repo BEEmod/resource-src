@@ -1,6 +1,6 @@
 // Created by Crowbar 0.44.0.0
 
-$modelname "props_map_editor/bee2_under_ped_button.mdl"
+$modelname "props_map_editor/bee2/retro/ped_button.mdl"
 
 $bodygroup "Body"
 {
