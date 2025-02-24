@@ -1,4 +1,4 @@
-$ModelName "props_map_editor/bee2_turr_dropper.mdl"
+$ModelName "props_map_editor/bee2/clean/turr_dropper.mdl"
 
 $BodyGroup "Body"
 {
