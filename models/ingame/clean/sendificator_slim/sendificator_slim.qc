@@ -15,15 +15,13 @@ $contents "solid"
 
 $illumposition 0 0 12
 
-$cdmaterials "bee2/models/props_clean/sendificator/"
+$cdmaterials "models\props\konclan\"
 
 $texturegroup "skinfamilies"
 {
 	{ "sendificator_slim_r", "sendificator_slim" }
 	{ "sendificator_slim_dirty_r", "sendificator_slim_dirty" }
 }
-
-$definebone "static_prop" "" 0 0 0 0 0 0 0 0 0 0 0 0
 
 $sequence "idle" "sendificator_slim_reference.smd"
 
