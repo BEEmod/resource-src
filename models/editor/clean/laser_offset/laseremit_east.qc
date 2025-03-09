@@ -1,4 +1,4 @@
-$modelname "props_map_editor/laseremit_off_east.mdl"
+$modelname "props_map_editor/bee2/clean/laseremit_off_east.mdl"
 
 $bodygroup "Body"
 {
