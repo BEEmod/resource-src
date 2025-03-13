@@ -1,4 +1,4 @@
-$modelname "props_map_editor/under_rail_plat_white.mdl"
+$modelname "props_map_editor/bee2/retro/rail_plat_white.mdl"
 
 $body "Body" "under_rail_plat_white.smd"
 

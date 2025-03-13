@@ -1,4 +1,4 @@
-$modelname "props_map_editor/under_mech_faith_plate.mdl"
+$modelname "props_map_editor/bee2/retro/faith_plate_mech.mdl"
 
 $cdmaterials "BEE2/models/props_map_editor/"
 

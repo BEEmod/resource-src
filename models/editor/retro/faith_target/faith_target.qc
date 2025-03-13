@@ -1,4 +1,4 @@
-$ModelName "props_map_editor/under_faith_targ.mdl"
+$ModelName "props_map_editor/bee2/retro/faith_targ.mdl"
 
 $BodyGroup "Body"
 {

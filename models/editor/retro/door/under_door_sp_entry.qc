@@ -1,4 +1,4 @@
-$modelname "props_map_editor/under_door_entry.mdl"
+$modelname "props_map_editor/bee2/retro/door_entry.mdl"
 
 $bodygroup "Body"
 {

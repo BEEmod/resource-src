@@ -1,6 +1,6 @@
 // New model, using original meshes.
 
-$modelname "props_map_editor/under_dropper.mdl"
+$modelname "props_map_editor/bee2/retro/dropper.mdl"
 
 $cdmaterials "BEE2/models/props_map_editor/"
 

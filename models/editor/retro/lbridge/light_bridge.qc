@@ -1,4 +1,4 @@
-$modelname "props_map_editor/under_light_bridge.mdl"
+$modelname "props_map_editor/bee2/retro/light_bridge.mdl"
 
 $body "Body" "light_bridge.smd"
 
