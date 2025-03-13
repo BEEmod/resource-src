@@ -1,6 +1,6 @@
 // Created by Crowbar 0.19.0.0
 
-$modelname "props_map_editor/p1_cube_dropper.mdl"
+$modelname "props_map_editor/bee2/p1/cube_dropper.mdl"
 $bodygroup "Body"
 {
 	studio "p1_dropper.smd"
