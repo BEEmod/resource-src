@@ -1,6 +1,6 @@
 // Created by Crowbar 0.36.0.0
 
-$ModelName "props_map_editor/under_light_bridge.mdl"
+$ModelName "props_map_editor/bee2/retro/light_bridge.mdl"
 
 $BodyGroup "Body"
 {
