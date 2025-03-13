@@ -1,4 +1,4 @@
-$modelname "props_map_editor/wom_cond_plate_clean.mdl"
+$modelname "props_map_editor/bee2/clean/wom_cond_plate.mdl"
 
 $body "Body" "wom_plate.smd"
 
