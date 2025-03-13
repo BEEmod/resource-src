@@ -5,6 +5,6 @@ $bodygroup "Body"
 	studio "pist_top_ref.smd"
 }
 
-$cdmaterials "BEE2\models\props_map_editor\pist_top\"
+$cdmaterials "BEE2/models/props_map_editor/p1_pist_top/"
 
 $sequence "idle" "pist_top_ref.smd"
