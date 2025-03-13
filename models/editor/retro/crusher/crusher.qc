@@ -1,4 +1,4 @@
-$modelname "props_map_editor/under_crusher.mdl"
+$modelname "props_map_editor/bee2/retro/crusher.mdl"
 
 $body "Body" "crusher_old.smd"
 

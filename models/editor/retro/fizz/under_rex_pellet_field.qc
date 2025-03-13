@@ -1,4 +1,4 @@
-$ModelName "props_map_editor/under_rex_pellet_field.mdl"
+$ModelName "props_map_editor/bee2/retro/rex_pellet_field.mdl"
 
 $CDMaterials "BEE2/models/props_map_editor/under_fizz/" "BEE2/models/props_map_editor/rex/"
 

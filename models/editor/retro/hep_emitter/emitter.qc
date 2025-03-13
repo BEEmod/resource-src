@@ -1,4 +1,4 @@
-$modelname "props_map_editor/under_hep_emitter.mdl"
+$modelname "props_map_editor/bee2/retro/hep_emitter.mdl"
 
 $body "Body" "emitter.smd"
 

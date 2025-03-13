@@ -1,4 +1,4 @@
-$modelname "props_map_editor/tag_gel_fizz_sign.mdl"
+$modelname "props_map_editor/bee2/logic/tag_gel_fizz_sign.mdl"
 
 $body "Body" "tag_sign.smd"
 
