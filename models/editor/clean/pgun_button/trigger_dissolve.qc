@@ -1,5 +1,4 @@
-
-$ModelName "props_map_editor/tuleby_trigger_dissolve.mdl"
+$ModelName "props_map_editor/bee2/logic/trigger_dissolve.mdl"
 
 $BodyGroup "Body"
 {

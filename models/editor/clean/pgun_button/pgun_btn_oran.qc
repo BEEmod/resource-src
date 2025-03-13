@@ -1,6 +1,4 @@
-// Created by Crowbar 0.36.0.0
-
-$ModelName "props_map_editor/tuleby_button_oran_clean.mdl"
+$ModelName "props_map_editor/bee2/clean/pgun_button_oran.mdl"
 
 $BodyGroup "Body"
 {
