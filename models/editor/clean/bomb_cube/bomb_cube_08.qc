@@ -1,6 +1,4 @@
-// Created by Crowbar 0.36.0.0
-
-$ModelName "props_map_editor/tuleby_bomb_cube_clean_08.mdl"
+$ModelName "props_map_editor/bee2/clean/bomb_cube_08.mdl"
 $BodyGroup "Body"
 {
 	studio "bomb_cube_ref.smd"
