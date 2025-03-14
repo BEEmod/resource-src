@@ -1,6 +1,6 @@
 $hbox 0 "root" 0 -16 -64  32 16 -63
 $CDMaterials "BEE2/models/props_map_editor"
 
-$Sequence "idle" {
-	"idle.smd"
-}
+$Sequence "idle" "anims/idle.smd"
+$Sequence "explodeOut" "anims/explodeOut.smd"
+$Sequence "explodeIn" "anims/explodeIn.smd"

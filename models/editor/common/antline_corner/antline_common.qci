@@ -1,4 +1,4 @@
-$ModelName props_map_editor/bee2/logic/antline_corner_$i$.mdl
+// $ModelName props_map_editor/bee2/logic/antline_corner_$i$.mdl
 
 $BodyGroup "Body"
 {
@@ -7,6 +7,6 @@ $BodyGroup "Body"
 
 $CDMaterials "BEE2/models/props_map_editor"
 
-$Sequence "idle" {
-	"idle.smd"
-}
+$Sequence "idle" "anims/idle.smd"
+$Sequence "explodeOut" "anims/explodeOut.smd"
+$Sequence "explodeIn" "anims/explodeIn.smd"
