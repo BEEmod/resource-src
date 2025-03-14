@@ -1,4 +1,4 @@
-$modelname "props_map_editor/BEE2/error_marker.mdl"
+$modelname "props_map_editor/BEE2/logic/error_marker_voxel.mdl"
 
 $staticprop
 
