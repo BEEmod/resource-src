@@ -21,6 +21,7 @@ $lod 55
 $surfaceprop "metal"
 
 $contents "solid"
+$mostlyopaque
 
 $texturegroup "skinfamilies" {
 	{
