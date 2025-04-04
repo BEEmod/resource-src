@@ -1,0 +1,11 @@
+// Created by Crowbar 0.74
+version 1
+nodes
+  0 "polymsh70" -1
+  1 "underground_weighted_cube_model" -1
+end
+skeleton
+  time 0
+    0 0.000000 0.000000 0.000000 1.570788 0.000007 -0.000007
+    1 0.000000 0.000000 0.000000 0.000000 0.000000 -1.570796
+end
