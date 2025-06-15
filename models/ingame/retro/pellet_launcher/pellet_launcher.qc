@@ -19,8 +19,8 @@ $CDMaterials "BEE2/models/props_underground/pellet_launcher/"
 $Sequence "idle" "anims/idle.smd"
 $Sequence "close" "anims/close.smd"
 
-$CollisionModel "pellet_launcher_phys.smd" {
-	$maxconvexpieces 20
+$CollisionModel "pellet_launcher_phy.smd" {
+	$maxconvexpieces 4
 	$mass 1000
 	$concave
 }
