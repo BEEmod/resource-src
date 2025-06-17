@@ -6,8 +6,8 @@ $BodyGroup "Body"
 }
 
 $texturegroup skinfamilies {
-	{ "pellet_launcher" "pellet_launcher_energy" 		}
-	{ "pellet_launcher_inf" "pellet_launcher_inf_energy"}
+	{ "pellet_launcher"		}
+	{ "pellet_launcher_inf" }
 }
 
 $SurfaceProp "metal"
