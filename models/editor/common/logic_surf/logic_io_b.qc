@@ -9,7 +9,7 @@ $surfaceprop "default"
 
 $contents "solid"
 
-$renamematerial "logic" "io_b"
+$renamematerial "logic_sheet" "input_b"
 
 $cdmaterials "BEE2/models/props_map_editor/logic/"
 

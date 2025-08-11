@@ -9,7 +9,7 @@ $surfaceprop "default"
 
 $contents "solid"
 
-$renamematerial "logic" "flip_flop"
+$renamematerial "logic_sheet" "flip_flop"
 
 $cdmaterials "BEE2/models/props_map_editor/logic/"
 
