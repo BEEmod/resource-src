@@ -9,7 +9,7 @@ $surfaceprop "default"
 
 $contents "solid"
 
-$renamematerial "logic_strip_tex" "or"
+$renamematerial "logic_sheet" "or"
 
 $cdmaterials "BEE2/models/props_map_editor/logic/"
 

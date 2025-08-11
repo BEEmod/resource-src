@@ -9,7 +9,7 @@ $surfaceprop "default"
 
 $contents "solid"
 
-$renamematerial "logic" "sr_latch"
+$renamematerial "logic_sheet" "sr_latch"
 
 $cdmaterials "BEE2/models/props_map_editor/logic/"
 

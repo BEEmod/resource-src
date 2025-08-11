@@ -1,4 +1,4 @@
-$modelname "props_map_editor/BEE2/logic/strip_and.mdl"
+$modelname "props_map_editor/BEE2/logic/strip_input_a.mdl"
 
 $bodygroup "Body"
 {
@@ -9,7 +9,7 @@ $surfaceprop "default"
 
 $contents "solid"
 
-$renamematerial "logic_sheet" "and"
+$renamematerial "logic_sheet" "input_a"
 
 $cdmaterials "BEE2/models/props_map_editor/logic/"
 

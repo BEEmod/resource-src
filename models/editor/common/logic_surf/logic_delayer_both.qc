@@ -9,7 +9,7 @@ $surfaceprop "default"
 
 $contents "solid"
 
-$renamematerial "logic" "delayer_both"
+$renamematerial "logic_sheet" "delayer_both"
 
 $cdmaterials "BEE2/models/props_map_editor/logic/"
 
