@@ -5,4 +5,4 @@ $bodygroup "Body"
 	studio "block_1x1x8_ref.smd"
 }
 
-$include "common.qci"
+$include "pillar_common.qci"

@@ -1,0 +1,26 @@
+$surfaceprop "no_decal"
+
+$contents "solid"
+
+$cdmaterials "BEE2\models\props_map_editor\"
+
+$sequence "idle" {
+	"pillar_anims\idle.smd"
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+}
+
+$sequence "explodeOut" {
+	"pillar_anims\explodeOut.smd"
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+}
+
+$sequence "explodeIn" {
+	"pillar_anims\explodeIn.smd"
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+}
