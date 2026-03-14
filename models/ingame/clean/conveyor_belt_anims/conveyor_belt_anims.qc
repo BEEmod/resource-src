@@ -1,6 +1,4 @@
-// Created by Crowbar 0.74
-
-$modelname "bee2\props\logic\conveyor_belt_anims.mdl"
+$modelname "bee2\props_clean\conveyor_belt_anims.mdl"
 
 $bodygroup "Body"
 {
