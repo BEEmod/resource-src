@@ -1,7 +1,6 @@
-// Created by Crowbar 0.34.0.0
 version 1
 nodes
-  0 "static_prop" -1
+  0 "root" -1
 end
 skeleton
   time 0
