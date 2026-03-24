@@ -12,6 +12,13 @@ $surfaceprop "default"
 $contents "solid"
 
 $cdmaterials "models\anim_wp\circle_shield"
+$cdmaterials "BEE2\models\anim_wp\circle_shield"
+
+$texturegroup "skinfamilies"
+{
+	{ "circle_shield_main" }
+	{ "circle_shield_main_off" }
+}
 
 $sequence "BindPose" {
 	"BindPose.smd"
