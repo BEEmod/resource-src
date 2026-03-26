@@ -24,6 +24,7 @@ print(frame_temp)
 ANIMS = 25
 FPS: int = 60
 OFFSET = 128
+BUFFER = 2
 
 def build_frames(file, size):
     true_size = size + 384
@@ -34,10 +35,15 @@ def build_frames(file, size):
         for s in range(segments):
             step = (i * 128/FPS)
             pos = (s * 128) + OFFSET
-            segment_list["segment{:02d}".format(s+1)] = round((pos + step), 6) % true_size
+            next_pos = round((pos + step), 6) % true_size
+            
+            segment_list["segment{:02d}".format(s+1)] = next_pos
 
         for x in range(1, 28+1):
-            frames += f'{x}\t{segment_list[f"segment{x:02d}"]:.6f} 0 0\t0 0 0'
+            frame_pos = segment_list[f"segment{x:02d}"]
+            if frame_pos < BUFFER: frame_pos = BUFFER
+            if frame_pos > true_size - BUFFER: frame_pos = true_size - BUFFER
+            frames += f'{x}\t{frame_pos:.6f} 0 0\t0 0 0'
             if x < 28:
                 frames += "\n"
 
@@ -74,7 +80,10 @@ for i in range(0, ANIMS+1):
     with open(file, 'w') as f:
         f.write(header.format(bones = segment_bones))
         for x in range(1, 28+1):
-            frames += f'{x}\t{segment_list[f"segment{x:02d}"]:.6f} 0 0\t0 0 0'
+            frame_pos = segment_list[f"segment{x:02d}"]
+            if frame_pos < BUFFER: frame_pos = BUFFER
+            if frame_pos > (28 * 128) - BUFFER: frame_pos = (28 * 128) - BUFFER
+            frames += f'{x}\t{frame_pos:.6f} 0 0\t0 0 0'
             if x < 28:
                 frames += "\n"
         f.write(frame_temp.format(time=0, frames=frames))
