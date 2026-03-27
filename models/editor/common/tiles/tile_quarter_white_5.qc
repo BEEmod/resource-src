@@ -1,2 +1,2 @@
-$definevariable i "5"
+$definevariable i "white_5"
 $include "tile_quarter_common.qci"
