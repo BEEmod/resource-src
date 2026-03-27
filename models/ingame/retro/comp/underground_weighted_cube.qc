@@ -39,6 +39,7 @@ $collisionmodel "underground_weighted_cube_physics.smd"
 	$inertia 1
 	$damping 0.1
 	$rotdamping 0
+	$drag 0
 }
 
 $keyvalues

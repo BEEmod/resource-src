@@ -75,6 +75,7 @@ $collisionmodel "color_cube_clean_physics.smd"
 	$mass 40
 	$inertia 1
 	$damping 0.1
+	$drag 0
 	$rotdamping 0
 }
 

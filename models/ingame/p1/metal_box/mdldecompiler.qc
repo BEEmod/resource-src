@@ -48,7 +48,8 @@ $scale 1
 
 $collisionmodel "phymodel.smd" {
 	$mass 40.0
-	$inertia 1.00
-	$damping 0.10
-	$rotdamping 0.00
+	$inertia 1
+	$damping 0.1
+	$rotdamping 0
+	$drag 0
 }

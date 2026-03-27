@@ -50,7 +50,7 @@ $collisionmodel "underground_reflecto_cube_physics.smd"
 	$inertia 1
 	$damping 0.1
 	$rotdamping 0
-	$rootbone " "
+	$drag 0
 	$concave
 	$maxconvexpieces 1
 

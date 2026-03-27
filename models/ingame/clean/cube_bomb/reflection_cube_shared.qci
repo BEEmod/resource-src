@@ -74,6 +74,10 @@ $Sequence "idle" {
 $CollisionModel "bomb_cube_phy.smd"
 {
 	$mass 40
+	$inertia 1
+	$damping 0.1
+	$rotdamping 0
+	$drag 0
 }
 
 $KeyValues

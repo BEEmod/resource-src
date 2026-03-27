@@ -37,6 +37,10 @@ $Sequence "ref" {
 $CollisionModel "mp_ball_physics.smd"
 {
 	$mass 75
+	$inertia 1
+	$damping 0.35
+	$rotdamping 0
+	$drag 0
 }
 
 $KeyValues

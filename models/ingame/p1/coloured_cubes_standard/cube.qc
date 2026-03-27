@@ -46,7 +46,8 @@ $sequence idle "../../p1_metal_box/idle.smd" ACT_IDLE 1 fps 30.00
 
 $collisionmodel "../../p1_metal_box/phymodel.smd" {
 	$mass 40.0
-	$inertia 1.00
-	$damping 0.10
-	$rotdamping 0.00
+	$inertia 1
+	$damping 0.1
+	$rotdamping 0
+	$drag 0
 }

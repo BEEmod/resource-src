@@ -31,6 +31,7 @@ $collisionmodel "../p1_sphere/sphere_physics.smd"
 	$inertia 1
 	$damping 0.35
 	$rotdamping 0
+	$drag 0
 	}
 
 
